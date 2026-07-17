@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AMAZON_STOREFRONT } from '../config'
+import SearchBar from './SearchBar'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -18,16 +19,18 @@ export default function Navbar() {
     }`
 
   return (
-    <header className="sticky top-0 z-40 border-b border-blush bg-cream/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link to="/" className="font-display text-2xl font-semibold tracking-tight text-terra">
+    <header className="sticky top-0 z-40 border-b border-blush bg-cream/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 lg:gap-8">
+        <Link to="/" className="shrink-0 font-display text-2xl font-semibold tracking-tight text-terra">
           Atreya
-          <span className="ml-2 hidden align-middle text-[11px] font-body font-medium uppercase tracking-[0.2em] text-gold sm:inline">
+          <span className="ml-2 hidden align-middle text-[11px] font-body font-medium uppercase tracking-[0.2em] text-gold xl:inline">
             Handmade
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <SearchBar className="hidden max-w-md flex-1 md:block" />
+
+        <nav className="ml-auto hidden items-center gap-1 md:flex">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} className={navItem} end={l.to === '/'}>
               {l.label}
@@ -44,7 +47,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          className="p-2 text-ink md:hidden"
+          className="ml-auto p-2 text-ink md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -53,6 +56,10 @@ export default function Navbar() {
             {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
           </svg>
         </button>
+      </div>
+
+      <div className="px-4 pb-3 md:hidden">
+        <SearchBar onSubmitted={() => setOpen(false)} />
       </div>
 
       {open && (

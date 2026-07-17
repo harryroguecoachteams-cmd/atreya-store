@@ -8,6 +8,9 @@ export interface Product {
   price: number;
   mrp: number | null;
   image: string | null;
+  images: string[];
+  specs: { label: string; value: string }[];
+  bullets: string[];
   amazonUrl: string;
 }
 
@@ -23,6 +26,57 @@ export const PRODUCTS: Product[] = [
     "price": 189,
     "mrp": 499,
     "image": "/products/B0GG5BVR7R.jpg",
+    "images": [
+      "/products/B0GG5BVR7R.jpg",
+      "/products/B0GG5BVR7R_2.jpg",
+      "/products/B0GG5BVR7R_3.jpg",
+      "/products/B0GG5BVR7R_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Blue"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "crochet"
+      },
+      {
+        "label": "Occasion",
+        "value": "Valentine's Day"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Shape",
+        "value": "Round"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Handmade Crochet Evil Eye: Neatly hand-crocheted evil eye motif with a scalloped border for a premium, clean finish.",
+      "Elegant Blue Palette: Deep blue + sky blue + white design that looks classy on doors, car mirrors, wardrobes, and wall hooks.",
+      "Pearl Bead Detail: Finished with pearl-style beads for a minimal, aesthetic look (adds a subtle premium touch).",
+      "Soft Tassel Finish: Long yarn tassel gives a traditional “latkan” feel—perfect for home decor and gifting.",
+      "Multi-Use Hanging Charm: Use as door hanging, car rear-view charm, bag charm, nursery decor, or key holder accent."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GG5BVR7R"
   },
   {
@@ -34,6 +88,42 @@ export const PRODUCTS: Product[] = [
     "price": 1299,
     "mrp": 1699,
     "image": "/products/B0GDXXM3PR.jpg",
+    "images": [
+      "/products/B0GDXXM3PR.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Mix"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Included Components",
+        "value": "Gajra"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas, Diwali, Valentine's Day, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "HANDMADE MINI HEARTS (SET OF 12): Atreya crochet hearts are carefully handcrafted to add a cozy, premium handmade touch to your décor and gifting.",
+      "PERFECT FOR BOWL FILLERS & TRAYS: Tiny hearts (approx. 1.25 inch) are ideal for bowls, tiered trays, jars, coffee tables, bedside décor, and festive styling.",
+      "MULTI-USE CRAFT DECOR: Use for DIY crafts, garlands, scrapbooking, gift wrapping, party favors, wedding décor, table scatter, and hamper styling.",
+      "HANDMADE DISCLAIMER + SAFETY: Slight variations in size/shape/color are natural in handmade items. Not a toy—keep away from children under 4 and pets (small parts).",
+      "🎁 Ideal for Gifting & Festive Styling"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GDXXM3PR"
   },
   {
@@ -45,6 +135,43 @@ export const PRODUCTS: Product[] = [
     "price": 699,
     "mrp": 999,
     "image": "/products/B0GC6KJCSC.jpg",
+    "images": [
+      "/products/B0GC6KJCSC.jpg",
+      "/products/B0GC6KJCSC_2.jpg",
+      "/products/B0GC6KJCSC_3.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Included Components",
+        "value": "Hearts"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas, Diwali, Valentine's Day, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Handmade, artisan-crafted: Each mini heart is individually crocheted for a charming, handmade finish.",
+      "Curated multicolor set: A balanced mix of colors that adds a cozy, romantic accent to any space.",
+      "Easy home styling: Use as bowl filler, vase filler, tiered tray decor, shelf styling, hamper filler, or craft embellishments.",
+      "Size & pack details: Set of 6 mini crochet hearts. Each heart is approx. 1.25 inches (handmade sizing may vary slightly)."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GC6KJCSC"
   },
   {
@@ -56,6 +183,54 @@ export const PRODUCTS: Product[] = [
     "price": 1299,
     "mrp": 1699,
     "image": "/products/B0G95YC1T9.jpg",
+    "images": [
+      "/products/B0G95YC1T9.jpg",
+      "/products/B0G95YC1T9_2.jpg",
+      "/products/B0G95YC1T9_3.jpg",
+      "/products/B0G95YC1T9_4.jpg",
+      "/products/B0G95YC1T9_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "Hearts"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas, Diwali, Valentine's Day, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "1. Value Pack for Instant Decor Set of 12 crochet heart ornaments in a charming red, pink & white mix — perfect for quick festive styling and craft projects.",
+      "2. Perfect Mini Size (Looks Cute Everywhere) Each heart is approx 6.5 × 5.5 cm (2.56 × 2.17 in) — ideal for small corners, centrepieces, hampers, jars, baskets, and hanging décor",
+      "3. Ready to Hang + Easy to Style Comes with rope/loop for hanging — decorate trees, windows, mirrors, gift wraps, garlands, photo walls, or use as table accents",
+      "4. Handcrafted Look, Soft & Lightweight Finely crocheted with a neat, dense texture and a soft feel — lightweight pieces that add warmth and a handmade vibe to your space",
+      "5. Made for Love-Themed Moments Great for Valentine’s Day, anniversaries, engagements, weddings, party décor, return gifts, and romantic room styling."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0G95YC1T9"
   },
   {
@@ -67,6 +242,40 @@ export const PRODUCTS: Product[] = [
     "price": 199,
     "mrp": 499,
     "image": "/products/B0GDY7RSXY.jpg",
+    "images": [
+      "/products/B0GDY7RSXY.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red, Green"
+      },
+      {
+        "label": "Item Weight",
+        "value": "15 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "1 Keychain With Heart Charm And Flower Decoration, 1 Metal Key Ring, 1 Chain Connector"
+      },
+      {
+        "label": "Theme",
+        "value": "Heart, Flower, Love, Valentine, Romantic, Handmade, Cute, Kawaii"
+      },
+      {
+        "label": "Pattern",
+        "value": "Fruit"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [],
     "amazonUrl": "https://www.amazon.in/dp/B0GDY7RSXY"
   },
   {
@@ -78,6 +287,44 @@ export const PRODUCTS: Product[] = [
     "price": 299,
     "mrp": 499,
     "image": "/products/B0GDY4D9FN.jpg",
+    "images": [
+      "/products/B0GDY4D9FN.jpg",
+      "/products/B0GDY4D9FN_2.jpg",
+      "/products/B0GDY4D9FN_3.jpg",
+      "/products/B0GDY4D9FN_4.jpg",
+      "/products/B0GDY4D9FN_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red, White, Yellow"
+      },
+      {
+        "label": "Item Weight",
+        "value": "15 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "1 Keychain With Heart Charm And Flower Decoration, 1 Metal Key Ring, 1 Chain Connector"
+      },
+      {
+        "label": "Theme",
+        "value": "Heart, Flower, Love, Valentine, Romantic, Handmade, Cute, Kawaii"
+      },
+      {
+        "label": "Pattern",
+        "value": "Crochet Textured Heart With Daisy Flower"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [],
     "amazonUrl": "https://www.amazon.in/dp/B0GDY4D9FN"
   },
   {
@@ -89,6 +336,47 @@ export const PRODUCTS: Product[] = [
     "price": 499,
     "mrp": 999,
     "image": "/products/B0GDV4HTRJ.jpg",
+    "images": [
+      "/products/B0GDV4HTRJ.jpg",
+      "/products/B0GDV4HTRJ_2.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "White"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Included Components",
+        "value": "Gajra"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas, Diwali, Valentine's Day, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "🌹 100% Handmade Crochet Work",
+      "🌼 Soft & Skin-Friendly Yarn",
+      "♻️ Reusable – No Wilting, No Mess",
+      "💃 Lightweight & Comfortable to Wea",
+      "🎁 Ideal for Gifting & Festive Styling"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GDV4HTRJ"
   },
   {
@@ -100,6 +388,37 @@ export const PRODUCTS: Product[] = [
     "price": 199,
     "mrp": null,
     "image": "/products/B0GDY833NN.jpg",
+    "images": [
+      "/products/B0GDY833NN.jpg",
+      "/products/B0GDY833NN_2.jpg",
+      "/products/B0GDY833NN_3.jpg",
+      "/products/B0GDY833NN_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Acrylic Yarn, Cotton Yarn"
+      },
+      {
+        "label": "Item Weight",
+        "value": "5 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "HANDMADE CROCHET DESIGN: Atreya scrunchie features charming popcorn stitch bobbles in a delightful teal and pink colour combination, handcrafted with care for a unique cottagecore aesthetic",
+      "SOFT AND GENTLE: Made with soft yarn material that is gentle on hair, preventing breakage and damage while providing a secure yet comfortable hold for all hair types",
+      "VERSATILE HAIR ACCESSORY: Perfect for ponytails, buns, and half-up hairstyles, this pastel scrunchie adds a cute and playful touch to everyday looks or special occasions",
+      "THOUGHTFUL GIFT IDEA: Makes a lovely gift for her, whether for birthdays, celebrations, or just because - a sweet handmade accessory that shows care and attention to detail",
+      "DURABLE CONSTRUCTION: Carefully crocheted with quality yarn to ensure long-lasting wear, maintaining its shape and vibrant colours through regular use"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GDY833NN"
   },
   {
@@ -111,6 +430,53 @@ export const PRODUCTS: Product[] = [
     "price": 549,
     "mrp": 699,
     "image": "/products/B0B8XR4XNW.jpg",
+    "images": [
+      "/products/B0B8XR4XNW.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Silver"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "Bells"
+      },
+      {
+        "label": "Occasion",
+        "value": "Birthday, Christmas, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Shape",
+        "value": "Bell"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Silver Colored Plastic Bells for Crafts/Decoration/Festive Decor",
+      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
+      "The embossed designs may vary.",
+      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0B8XR4XNW"
   },
   {
@@ -122,6 +488,53 @@ export const PRODUCTS: Product[] = [
     "price": 189,
     "mrp": 699,
     "image": "/products/B0B8XRDHPW.jpg",
+    "images": [
+      "/products/B0B8XRDHPW.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Silver"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "Bells"
+      },
+      {
+        "label": "Occasion",
+        "value": "Birthday, Christmas, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Shape",
+        "value": "Bell"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Silver Colored Plastic Bells for Crafts/Decoration/Festive Decor",
+      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
+      "The embossed designs may vary.",
+      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0B8XRDHPW"
   },
   {
@@ -133,6 +546,53 @@ export const PRODUCTS: Product[] = [
     "price": 529,
     "mrp": 1299,
     "image": "/products/B09QJVDNFW.jpg",
+    "images": [
+      "/products/B09QJVDNFW.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "gold"
+      },
+      {
+        "label": "Item Weight",
+        "value": "0.15 Pounds"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "48"
+      },
+      {
+        "label": "Included Components",
+        "value": "Plastic Bells"
+      },
+      {
+        "label": "Occasion",
+        "value": "Birthday, Christmas, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Shape",
+        "value": "Bell"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Golden Colored Plastic Bells for Crafts/Decoration/Festive Decor",
+      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
+      "The embossed designs may vary.",
+      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B09QJVDNFW"
   },
   {
@@ -144,6 +604,53 @@ export const PRODUCTS: Product[] = [
     "price": 499,
     "mrp": 1299,
     "image": "/products/B09QJV7VXZ.jpg",
+    "images": [
+      "/products/B09QJV7VXZ.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "gold"
+      },
+      {
+        "label": "Item Weight",
+        "value": "0.15 Pounds"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "24"
+      },
+      {
+        "label": "Included Components",
+        "value": "Plastic Bells"
+      },
+      {
+        "label": "Occasion",
+        "value": "Birthday, Christmas, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Shape",
+        "value": "Spherical"
+      },
+      {
+        "label": "Mounting Type",
+        "value": "Hanging"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Golden Colored Plastic Bells for Crafts/Decoration/Festive Decor",
+      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
+      "The embossed designs may vary.",
+      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B09QJV7VXZ"
   },
   {
@@ -155,6 +662,30 @@ export const PRODUCTS: Product[] = [
     "price": 399,
     "mrp": 1499,
     "image": "/products/B09Y2B4XHL.jpg",
+    "images": [
+      "/products/B09Y2B4XHL.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "White and golden"
+      },
+      {
+        "label": "Included Components",
+        "value": "garland"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Set of 4 Faux Jasmine Floral Petals with Plastic Bell",
+      "Length - 39 inches/100 cm drop of Hanging Garland with bell",
+      "Used for Home Decor, Wedding Decoration, Mehendi/Haldi Party, Venue Decoration, Special Event Decoration, Perfect for Diwali Gift.",
+      "Material : Faux Plastic Jasmine Petals. Gold Painted Bell, White Artificial Jasmine, Mild Jasmine Fragrance",
+      "Note : Please be advised that colours may vary in the photos advertised."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B09Y2B4XHL"
   },
   {
@@ -166,6 +697,34 @@ export const PRODUCTS: Product[] = [
     "price": 149,
     "mrp": 599,
     "image": "/products/B0CMDJR8QM.jpg",
+    "images": [
+      "/products/B0CMDJR8QM.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Included Components",
+        "value": "Arrangement Accessories"
+      },
+      {
+        "label": "Occasion",
+        "value": "Wedding"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
+      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
+      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
+      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
+      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0CMDJR8QM"
   },
   {
@@ -177,6 +736,34 @@ export const PRODUCTS: Product[] = [
     "price": 149,
     "mrp": 599,
     "image": "/products/B0CMDK5J4T.jpg",
+    "images": [
+      "/products/B0CMDK5J4T.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Included Components",
+        "value": "Arrangement Accessories"
+      },
+      {
+        "label": "Occasion",
+        "value": "Wedding"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
+      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
+      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
+      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
+      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0CMDK5J4T"
   },
   {
@@ -188,6 +775,35 @@ export const PRODUCTS: Product[] = [
     "price": 149,
     "mrp": 599,
     "image": "/products/B0CMDJBYZ4.jpg",
+    "images": [
+      "/products/B0CMDJBYZ4.jpg",
+      "/products/B0CMDJBYZ4_2.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Yellow"
+      },
+      {
+        "label": "Included Components",
+        "value": "Arrangement Accessories"
+      },
+      {
+        "label": "Occasion",
+        "value": "Wedding"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
+      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
+      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
+      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
+      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0CMDJBYZ4"
   },
   {
@@ -199,6 +815,32 @@ export const PRODUCTS: Product[] = [
     "price": 399,
     "mrp": 1499,
     "image": "/products/B09Y3J9PSQ.jpg",
+    "images": [
+      "/products/B09Y3J9PSQ.jpg",
+      "/products/B09Y3J9PSQ_2.jpg",
+      "/products/B09Y3J9PSQ_3.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Orange"
+      },
+      {
+        "label": "Included Components",
+        "value": "20 Sunflower Heads"
+      },
+      {
+        "label": "Occasion",
+        "value": "Wedding"
+      }
+    ],
+    "bullets": [
+      "Artificial silk, textile, wax flowers may be used for bridal bouquets and wedding accessories, home decoration, vase arrangement or DIY.",
+      "Colors: yellow - orange and dark brown pistil",
+      "Each flower has approximately: 10 cm in diameter",
+      "Material: fabric, plastic",
+      "Pack of 20"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B09Y3J9PSQ"
   },
   {
@@ -210,6 +852,56 @@ export const PRODUCTS: Product[] = [
     "price": 2699,
     "mrp": 4999,
     "image": "/products/B0GDY75WHT.jpg",
+    "images": [
+      "/products/B0GDY75WHT.jpg",
+      "/products/B0GDY75WHT_2.jpg",
+      "/products/B0GDY75WHT_3.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Item Weight",
+        "value": "2 Kilograms"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1"
+      },
+      {
+        "label": "Occasion",
+        "value": "Engagement, New Year, Valentine's Day, Wedding"
+      },
+      {
+        "label": "Theme",
+        "value": "Flowers"
+      },
+      {
+        "label": "Shape",
+        "value": "Pot"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      },
+      {
+        "label": "Room Type",
+        "value": "Bedroom, Dining Room, Home Office, Living Room"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "Handcrafted Excellence – Detailed hand carving with embedded brass leaf motifs",
+      "Antique Finish – Rich brown tone with golden highlights for a luxurious look",
+      "Premium Solid Wood – Made from high-quality seasoned wood for durability",
+      "Versatile Décor – Ideal for living rooms, bedrooms, offices, hotels & lobbies",
+      "Standalone Showpiece – Looks stunning with or without artificial flowers"
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B0GDY75WHT"
   },
   {
@@ -221,6 +913,39 @@ export const PRODUCTS: Product[] = [
     "price": 199,
     "mrp": 799,
     "image": "/products/B09Y29QS4V.jpg",
+    "images": [
+      "/products/B09Y29QS4V.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Ivory, White"
+      },
+      {
+        "label": "Item Weight",
+        "value": "100 Grams"
+      },
+      {
+        "label": "Number of Pieces",
+        "value": "1000"
+      },
+      {
+        "label": "Shape",
+        "value": "Round,Flower"
+      },
+      {
+        "label": "Country of Origin",
+        "value": "India"
+      }
+    ],
+    "bullets": [
+      "White Pearls Beads- Round Shape",
+      "QTY - 1000 Pieces , 100 Gram",
+      "Materials: Plastic & Resin",
+      "Bead size: 6 millimetres",
+      "Bead hole size: 1.5 millimetres",
+      "For jewelry, wedding lace/dress embellishment, framing and all kinds of craft."
+    ],
     "amazonUrl": "https://www.amazon.in/dp/B09Y29QS4V"
   }
 ];

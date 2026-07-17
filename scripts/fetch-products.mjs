@@ -14,7 +14,8 @@ const OUT = join(ROOT, 'src', 'data', 'products.ts');
 // (price, MRP, description) comes from the listings report.
 // Dead qty-0 listings (B09MNTPWCL, B09TZ32SND, B09MNSR7RT) are omitted.
 const CATALOG = [
-  { asin: 'B0GG5BVR7R', shortName: 'Crochet Evil Eye Hanging Charm', category: 'Crochet' },
+  // specOverrides: correct known-wrong attributes in the Amazon listing backend.
+  { asin: 'B0GG5BVR7R', shortName: 'Crochet Evil Eye Hanging Charm', category: 'Crochet', specOverrides: { Colour: 'Blue' } },
   { asin: 'B0GDXXM3PR', shortName: 'Mini Crochet Hearts — Set of 12', category: 'Crochet' },
   { asin: 'B0GC6KJCSC', shortName: 'Mini Crochet Hearts — Set of 6 (Multicolor)', category: 'Crochet' },
   { asin: 'B0G95YC1T9', shortName: 'Crochet Heart Ornaments — Set of 12 (Red)', category: 'Crochet' },
@@ -61,15 +62,73 @@ async function fetchRetry(url, opts = {}, tries = 5) {
   }
 }
 
-async function imageUrlFor(asin) {
+const decode = (s) =>
+  s
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
+    .replace(/[‎‏​]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+// Spec labels worth showing on a product page, in display order.
+const SPEC_LABELS = [
+  'Material', 'Colour', 'Color', 'Product Dimensions', 'Item Weight', 'Net Quantity',
+  'Number of Pieces', 'Included Components', 'Special Feature', 'Special Features',
+  'Care Instructions', 'Occasion', 'Theme', 'Shape', 'Style', 'Pattern', 'Finish Type',
+  'Mounting Type', 'Room Type', 'Country of Origin',
+];
+
+function parseSpecs(html) {
+  const found = new Map();
+  const add = (label, value) => {
+    label = decode(label).replace(/[:‎‏]+$/, '').trim();
+    value = decode(value);
+    const canon = SPEC_LABELS.find((l) => l.toLowerCase() === label.toLowerCase());
+    if (canon && value && !found.has(canon)) found.set(canon, value);
+  };
+  // Pattern 1: tech-spec / additional-info tables (th/td rows)
+  for (const m of html.matchAll(/<th[^>]*class="[^"]*prodDetSectionEntry[^"]*"[^>]*>([\s\S]*?)<\/th>\s*<td[^>]*>([\s\S]*?)<\/td>/g)) {
+    add(m[1], m[2]);
+  }
+  // Pattern 2: detail bullets ("<span class=a-text-bold>Label :</span><span>value</span>")
+  for (const m of html.matchAll(/<span class="a-text-bold">([\s\S]*?)<\/span>\s*<span>([\s\S]*?)<\/span>/g)) {
+    add(m[1], m[2]);
+  }
+  // Merge Colour/Color
+  if (found.has('Color') && !found.has('Colour')) found.set('Colour', found.get('Color'));
+  found.delete('Color');
+  return SPEC_LABELS.filter((l) => l !== 'Color' && found.has(l)).map((label) => ({ label, value: found.get(label) }));
+}
+
+function parseBullets(html) {
+  const section = html.match(/id="feature-bullets"[\s\S]*?<\/ul>/);
+  if (!section) return [];
+  return [...section[0].matchAll(/<span class="a-list-item">([\s\S]*?)<\/span>/g)]
+    .map((m) => decode(m[1]))
+    .filter((t) => t.length > 3 && !/^make sure this fits/i.test(t))
+    .slice(0, 6);
+}
+
+async function scrapeListing(asin) {
   const res = await fetchRetry(`https://www.amazon.in/dp/${asin}`);
   const html = await res.text();
-  const hiRes = html.match(/"hiRes":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/);
-  if (hiRes) return hiRes[1];
-  const large = html.match(/"large":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/);
-  if (large) return large[1];
-  const landing = html.match(/id="landingImage"[^>]*src="(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/);
-  return landing ? landing[1] : null;
+  const gallery = [...new Set(
+    [...html.matchAll(/"hiRes":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/g)].map((m) => m[1]),
+  )];
+  if (!gallery.length) {
+    const large = html.match(/"large":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/);
+    if (large) gallery.push(large[1]);
+    const landing = html.match(/id="landingImage"[^>]*src="(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/);
+    if (!gallery.length && landing) gallery.push(landing[1]);
+  }
+  return { gallery: gallery.slice(0, 5), specs: parseSpecs(html), bullets: parseBullets(html) };
+}
+
+async function downloadImage(url, path) {
+  const sized = url.replace(/\._[^.]*_\.jpg/, '._SL800_.jpg');
+  const img = await fetchRetry(sized);
+  writeFileSync(path, Buffer.from(await img.arrayBuffer()));
 }
 
 mkdirSync(IMG_DIR, { recursive: true });
@@ -80,26 +139,38 @@ for (const item of CATALOG) {
   const price = Math.round(parseFloat(f[col('price')]));
   const mrp = Math.round(parseFloat(f[col('maximum-retail-price')])) || null;
   const desc = (f[col('item-description')] || '').replace(/\s+/g, ' ').trim();
-  const imgPath = join(IMG_DIR, `${item.asin}.jpg`);
 
-  if (!existsSync(imgPath)) {
-    try {
-      const url = await imageUrlFor(item.asin);
-      if (url) {
-        // Cap at 800px for the web; media-amazon supports size suffixes.
-        const sized = url.replace(/\._[^.]*_\.jpg/, '._SL800_.jpg');
-        const img = await fetchRetry(sized);
-        writeFileSync(imgPath, Buffer.from(await img.arrayBuffer()));
-        console.log(`img OK  ${item.asin} ${item.shortName}`);
-      } else {
-        console.error(`img MISS ${item.asin} — no image found in page`);
-      }
-      await sleep(1500);
-    } catch (e) {
-      console.error(`img FAIL ${item.asin}: ${e.message}`);
+  let specs = [];
+  let bullets = [];
+  const images = [];
+  try {
+    const listing = await scrapeListing(item.asin);
+    specs = listing.specs;
+    bullets = listing.bullets;
+    for (const [label, value] of Object.entries(item.specOverrides ?? {})) {
+      const row = specs.find((s) => s.label === label);
+      if (row) row.value = value;
+      else specs.push({ label, value });
     }
-  } else {
-    console.log(`img cached ${item.asin}`);
+    for (let i = 0; i < listing.gallery.length; i++) {
+      const file = i === 0 ? `${item.asin}.jpg` : `${item.asin}_${i + 1}.jpg`;
+      const imgPath = join(IMG_DIR, file);
+      if (!existsSync(imgPath)) {
+        try {
+          await downloadImage(listing.gallery[i], imgPath);
+        } catch (e) {
+          console.error(`img FAIL ${item.asin} #${i + 1}: ${e.message}`);
+          continue;
+        }
+      }
+      images.push(`/products/${file}`);
+    }
+    console.log(`OK  ${item.asin} ${item.shortName} — ${images.length} imgs, ${specs.length} specs, ${bullets.length} bullets`);
+    await sleep(1500);
+  } catch (e) {
+    console.error(`PAGE FAIL ${item.asin}: ${e.message}`);
+    const mainPath = join(IMG_DIR, `${item.asin}.jpg`);
+    if (existsSync(mainPath)) images.push(`/products/${item.asin}.jpg`);
   }
 
   products.push({
@@ -110,7 +181,10 @@ for (const item of CATALOG) {
     category: item.category,
     price,
     mrp: mrp && mrp > price ? mrp : null,
-    image: existsSync(imgPath) ? `/products/${item.asin}.jpg` : null,
+    image: images[0] ?? null,
+    images,
+    specs,
+    bullets,
     amazonUrl: `https://www.amazon.in/dp/${item.asin}`,
   });
 }
@@ -125,6 +199,9 @@ export interface Product {
   price: number;
   mrp: number | null;
   image: string | null;
+  images: string[];
+  specs: { label: string; value: string }[];
+  bullets: string[];
   amazonUrl: string;
 }
 

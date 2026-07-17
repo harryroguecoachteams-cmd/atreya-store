@@ -3,8 +3,7 @@ export const SITE_URL = 'https://atreya.store';
 export const BRAND = 'Atreya';
 export const TAGLINE = 'Handmade décor & crochet keepsakes, crafted in India';
 
-// TODO(harsh): replace with the real WhatsApp business number (country code, no +)
-export const WHATSAPP_NUMBER = '919999999999';
+export const WHATSAPP_NUMBER = '919711548517';
 // TODO(harsh): create this mailbox in cPanel → Email Accounts (or change it)
 export const CONTACT_EMAIL = 'hello@atreya.store';
 
