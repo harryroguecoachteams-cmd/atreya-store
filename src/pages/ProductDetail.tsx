@@ -20,13 +20,20 @@ export default function ProductDetail() {
     product
       ? `${product.name}: handmade by Atreya. ${product.description.slice(0, 140)}`
       : 'This product could not be found.',
+    product?.image ? `${SITE_URL}${product.image}` : undefined,
   )
 
-  // Product JSON-LD for search engines.
+  // Product JSON-LD for search engines. Upsert by id so prerendered HTML
+  // and client hydration never leave duplicate schema blocks.
   useEffect(() => {
     if (!product) return
-    const el = document.createElement('script')
-    el.type = 'application/ld+json'
+    let el = document.getElementById('product-jsonld') as HTMLScriptElement | null
+    if (!el) {
+      el = document.createElement('script')
+      el.id = 'product-jsonld'
+      el.type = 'application/ld+json'
+      document.head.appendChild(el)
+    }
     el.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Product',
@@ -43,8 +50,7 @@ export default function ProductDetail() {
         availability: 'https://schema.org/InStock',
       },
     })
-    document.head.appendChild(el)
-    return () => el.remove()
+    return () => el?.remove()
   }, [product])
 
   if (!product) return <NotFound />
