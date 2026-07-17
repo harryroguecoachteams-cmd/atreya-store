@@ -30,7 +30,7 @@ const CURATED = [
   },
   {
     title: 'Thoughtful Gifts',
-    sub: 'Everlasting bouquets and crochet keepsakes — gifts that never wilt.',
+    sub: 'Everlasting bouquets and crochet keepsakes, gifts that never wilt.',
     ctaLabel: 'Shop gifting',
     to: '/shop?category=Artificial%20Flowers',
     asin: 'B0CMDK5J4T',
@@ -45,7 +45,7 @@ const CURATED = [
 ]
 
 export default function Home() {
-  usePageMeta('Atreya — Handmade Décor & Crochet Keepsakes', `${TAGLINE}. Shop the collection on Amazon.in.`)
+  usePageMeta('Atreya | Handmade Décor & Crochet Keepsakes', `${TAGLINE}. Shop the collection on Amazon.in.`)
 
   const trending = TRENDING_ASINS.map((a) => PRODUCTS.find((p) => p.asin === a)!).filter(Boolean)
 
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">Made by hand, meant to last</h2>
           <p className="mt-4 leading-relaxed text-soft">
-            Atreya began with a simple idea — that the little things in a home should carry warmth.
+            Atreya began with a simple idea: the little things in a home should carry warmth.
             From hand-crocheted hearts to festive torans that welcome guests at the door, every piece
             is crafted, checked and packed with the same care we'd want in our own homes.
           </p>

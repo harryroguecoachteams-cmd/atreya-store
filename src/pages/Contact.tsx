@@ -4,8 +4,8 @@ import { CONTACT_EMAIL, whatsappLink } from '../config'
 
 export default function Contact() {
   usePageMeta(
-    'Contact — Atreya',
-    'Questions about an Atreya product or a bulk/custom order? Reach us on WhatsApp or email — we reply within a day.',
+    'Contact | Atreya',
+    'Questions about an Atreya product or a bulk/custom order? Reach us on WhatsApp or email. We reply within a day.',
   )
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
@@ -24,7 +24,7 @@ export default function Contact() {
       <h1 className="font-display text-3xl font-semibold sm:text-4xl">Get in touch</h1>
       <p className="mt-3 max-w-xl leading-relaxed text-soft">
         Questions about a product, your Amazon order, or a bulk / custom order for weddings and events?
-        Send us a message — we usually reply within a day.
+        Send us a message and we usually reply within a day.
       </p>
 
       <div className="mt-10 grid gap-10 md:grid-cols-2">
@@ -61,7 +61,7 @@ export default function Contact() {
           >
             Send via WhatsApp
           </button>
-          <p className="text-xs text-soft">Opens WhatsApp with your message pre-filled — nothing is stored on this site.</p>
+          <p className="text-xs text-soft">Opens WhatsApp with your message pre-filled. Nothing is stored on this site.</p>
         </form>
 
         <div className="space-y-5">

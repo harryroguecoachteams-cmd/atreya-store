@@ -14,7 +14,11 @@ import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => window.scrollTo(0, 0), [pathname])
+  // Block body: scrollTo returns a Promise in newer Chrome, and React would
+  // treat a returned Promise as an effect cleanup function and crash.
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   return null
 }
 

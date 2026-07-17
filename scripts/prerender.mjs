@@ -49,7 +49,11 @@ try {
   const page = await browser.newPage();
   for (const [route, out] of ROUTES) {
     await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
-    const html = await page.content();
+    let html = await page.content();
+    if (out === '404.html') {
+      // The probe URL is meaningless as a canonical; a 404 should not carry one.
+      html = html.replace(/<link rel="canonical"[^>]*>/, '').replace(/<meta property="og:url"[^>]*>/, '');
+    }
     const file = join(DIST, out);
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, html);

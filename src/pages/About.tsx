@@ -4,7 +4,7 @@ import { PRODUCTS } from '../data/products'
 
 export default function About() {
   usePageMeta(
-    'Our Story — Atreya',
+    'Our Story | Atreya',
     'Atreya is an Indian handmade décor brand: crochet keepsakes, festive torans and bells, artificial flowers and statement pieces, crafted with care.',
   )
   const collage = ['B0GG5BVR7R', 'B0GDY7RSXY', 'B0CMDJR8QM', 'B09Y2B4XHL']
@@ -18,16 +18,16 @@ export default function About() {
         <p>
           <strong className="text-ink">Atreya</strong> started as a small home-grown venture with one
           belief: décor doesn't need to be mass-produced to be beautiful. The best pieces are the ones
-          that carry a human touch — a stitch, a knot, a detail someone lingered over.
+          that carry a human touch: a stitch, a knot, a detail someone lingered over.
         </p>
         <p>
-          Today our little workshop makes hand-crocheted keepsakes — hearts, keychains, scrunchies and
-          gajras — alongside festive essentials like jasmine torans and hanging bells, everlasting
+          Today our little workshop makes hand-crocheted keepsakes like hearts, keychains, scrunchies
+          and gajras, alongside festive essentials like jasmine torans and hanging bells, everlasting
           artificial flowers, and statement décor like our brass-worked wooden vases.
         </p>
         <p>
           Every order is fulfilled through <strong className="text-ink">Amazon.in</strong>, so you get
-          fast delivery, easy returns and buyer protection, while we focus on what we do best — making
+          fast delivery, easy returns and buyer protection, while we focus on what we do best: making
           things by hand.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function About() {
         <div className="mt-5 grid gap-5 text-sm sm:grid-cols-3">
           <div>
             <p className="font-semibold text-terra">Handmade first</p>
-            <p className="mt-1 text-soft">Crochet pieces are made one at a time — no two are identical.</p>
+            <p className="mt-1 text-soft">Crochet pieces are made one at a time, so no two are identical.</p>
           </div>
           <div>
             <p className="font-semibold text-terra">Honest materials</p>

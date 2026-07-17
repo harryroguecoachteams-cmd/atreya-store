@@ -13,7 +13,7 @@ const TRUST = [
 export default function Footer() {
   const [email, setEmail] = useState('')
 
-  // No mailing backend yet — route signups to WhatsApp so no lead is lost.
+  // No mailing backend yet, so signups route to WhatsApp and no lead is lost.
   const joinCircle = (e: React.FormEvent) => {
     e.preventDefault()
     const msg = email.trim()
@@ -42,7 +42,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-xl font-semibold text-terra">Atreya</p>
           <p className="mt-2 text-sm leading-relaxed text-soft">
-            Handmade crochet keepsakes, festive décor and everlasting flowers — designed and crafted in India with love.
+            Handmade crochet keepsakes, festive décor and everlasting flowers, designed and crafted in India with love.
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="text-ink hover:text-terra">Our story</Link></li>
@@ -105,7 +105,7 @@ export default function Footer() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-soft">Join the Atreya circle</p>
           <p className="mt-3 text-sm leading-relaxed text-soft">
-            Be first to see new pieces and festive collections. We'll reach you on WhatsApp — no spam, ever.
+            Be first to see new pieces and festive collections. We'll reach you on WhatsApp. No spam, ever.
           </p>
           <form onSubmit={joinCircle} className="mt-4 flex gap-2">
             <input

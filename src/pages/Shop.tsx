@@ -6,8 +6,8 @@ import ProductCard from '../components/ProductCard'
 
 const PRICE_RANGES = [
   { key: 'under-200', label: 'Under ₹200', min: 0, max: 199 },
-  { key: '200-500', label: '₹200 – ₹500', min: 200, max: 500 },
-  { key: '500-1000', label: '₹500 – ₹1,000', min: 500, max: 1000 },
+  { key: '200-500', label: '₹200 to ₹500', min: 200, max: 500 },
+  { key: '500-1000', label: '₹500 to ₹1,000', min: 500, max: 1000 },
   { key: '1000-plus', label: '₹1,000+', min: 1000, max: Infinity },
 ]
 
@@ -20,7 +20,7 @@ const SORTS = [
 
 export default function Shop() {
   usePageMeta(
-    'Shop — Atreya',
+    'Shop | Atreya',
     'Browse Atreya handmade crochet keepsakes, festive décor, artificial flowers and craft supplies. Every product ships via Amazon.in.',
   )
   const [params, setParams] = useSearchParams()
@@ -61,7 +61,7 @@ export default function Shop() {
     <section className="mx-auto max-w-7xl px-4 py-10">
       <h1 className="font-display text-3xl font-semibold sm:text-4xl">The collection</h1>
       <p className="mt-2 text-soft">
-        Every piece is fulfilled through Amazon.in — tap “Amazon” for delivery, reviews and secure checkout.
+        Every piece is fulfilled through Amazon.in. Tap “Amazon” for delivery, reviews and secure checkout.
       </p>
 
       <div className="mt-8 gap-10 lg:flex">

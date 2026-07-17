@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atreya — Handmade Décor & Crochet Keepsakes</title>
+    <title>Atreya | Handmade Décor & Crochet Keepsakes</title>
     <meta
       name="description"
       content="Atreya crafts handmade crochet keepsakes, festive torans and bells, artificial flowers and home décor in India. Shop the collection on Amazon.in."
@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://atreya.store/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Atreya" />
-    <meta property="og:title" content="Atreya — Handmade Décor & Crochet Keepsakes" />
+    <meta property="og:title" content="Atreya | Handmade Décor & Crochet Keepsakes" />
     <meta
       property="og:description"
       content="Handmade crochet keepsakes, festive décor and artificial flowers, crafted in India. Shop on Amazon.in."
@@ -47,6 +47,20 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Self-heal: if a build asset fails to load (stale cached page after a
+      // redeploy), refresh once to pick up the current HTML and assets.
+      (function () {
+        addEventListener('error', function (e) {
+          var t = e.target;
+          if (!t || (t.tagName !== 'SCRIPT' && t.tagName !== 'LINK')) return;
+          var last = +sessionStorage.getItem('assetReload') || 0;
+          if (Date.now() - last < 10000) return;
+          sessionStorage.setItem('assetReload', String(Date.now()));
+          location.reload();
+        }, true);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

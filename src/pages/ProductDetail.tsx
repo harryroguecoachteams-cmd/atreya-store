@@ -16,7 +16,7 @@ export default function ProductDetail() {
   useEffect(() => setImgIndex(0), [asin])
 
   usePageMeta(
-    product ? `${product.name} — Atreya` : 'Product not found — Atreya',
+    product ? `${product.name} | Atreya` : 'Product not found | Atreya',
     product
       ? `${product.name}: handmade by Atreya. ${product.description.slice(0, 140)}`
       : 'This product could not be found.',

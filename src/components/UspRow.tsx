@@ -28,7 +28,7 @@ const USPS = [
   },
   {
     title: 'Bulk & corporate orders',
-    sub: 'Weddings, events & gifting — on WhatsApp',
+    sub: 'Weddings, events & gifting on WhatsApp',
     icon: (
       <>
         <path d="M3 20l1.2-3.6A8.5 8.5 0 1 1 7.6 19L3 20Z" />

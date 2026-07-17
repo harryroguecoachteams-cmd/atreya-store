@@ -1,16 +1,26 @@
-# Atreya — SPA routing + caching + hardening for Apache/LiteSpeed shared hosting
+# Atreya: SPA routing + caching + hardening for Apache/LiteSpeed shared hosting
 RewriteEngine On
 RewriteBase /
 
-# Canonical host: www → apex (301)
+# Keep LiteSpeed's server-side page cache away from responses; browsers
+# already get correct Cache-Control headers below.
+<IfModule LiteSpeed>
+  RewriteRule .* - [E=Cache-Control:no-cache]
+</IfModule>
+
+# Canonical host: force https and apex domain in one 301
+RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.atreya\.store$ [NC]
 RewriteRule ^(.*)$ https://atreya.store/$1 [R=301,L]
+
+# No directory listings for the asset folders
+RewriteRule ^(assets|products)/?$ - [R=404,L]
 
 # Never rewrite build assets or product images: a missing asset must 404,
 # not silently return index.html (poisons browsers after a redeploy).
 RewriteRule ^(assets|products)/ - [L]
 
-# Bare /product is a snapshot directory, not a page — send to the SPA shell
+# Bare /product is a snapshot directory, not a page; send to the SPA shell
 RewriteRule ^product/?$ /index.html [L]
 
 # Serve prerendered snapshots: /shop → /shop.html, /product/X → /product/X.html

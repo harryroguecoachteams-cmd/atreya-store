@@ -2,7 +2,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import { CONTACT_EMAIL } from '../config'
 
 export default function Privacy() {
-  usePageMeta('Privacy Policy — Atreya', 'How atreya.store handles your data: no accounts, no tracking cookies, purchases handled entirely by Amazon.in.')
+  usePageMeta('Privacy Policy | Atreya', 'How atreya.store handles your data: no accounts, no tracking cookies, purchases handled entirely by Amazon.in.')
 
   return (
     <section className="mx-auto max-w-3xl px-4 py-14">
