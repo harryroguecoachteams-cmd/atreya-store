@@ -6,13 +6,28 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const REPORT = 'E:/atreya/Active+Listings+Report_07-10-2026.txt';
+// Merchant listings report, the source of price and MRP. Regenerate before any
+// catalogue refresh: `node list-listings.js` in E:/atreya/listing/atreya-aplus
+// writes all_listings.tsv in this exact schema, then copy it here with the new
+// date. The old July report predated the entire gajra, garland and pooja aasan
+// range, so every new product was invisible to this script.
+const REPORT = 'E:/atreya/Active+Listings+Report_08-05-2026.txt';
 const IMG_DIR = join(ROOT, 'public', 'products');
 const OUT = join(ROOT, 'src', 'data', 'products.ts');
 
-// Curated catalog: display name + category per ASIN. Everything else
-// (price, MRP, description) comes from the listings report.
-// Dead qty-0 listings (B09MNTPWCL, B09TZ32SND, B09MNSR7RT) are omitted.
+// Curated catalog: display name + category per ASIN. Price and MRP come from
+// the listings report; copy, specs and images come from catalog-raw.json.
+//
+// Only BUYABLE listings belong here. A listing that is DISCOVERABLE but not
+// BUYABLE still renders a detail page, so linking to it sends a shopper to a
+// page with no buy box. Check with:
+//   node live-listing-state.js --all   (in E:/atreya/listing/atreya-aplus)
+//
+// Held out as not buyable on 2026-08-05:
+//   B09QJV7VXZ  Golden Jingle Bells (24)  offer paused after cancelled orders
+//   B09Y3J9PSQ  Sunflower Heads (20)      no sellable stock set
+// Both return to the site automatically once reactivated in Seller Central.
+// Older dead listings: B09MNTPWCL, B09TZ32SND, B09MNSR7RT.
 const CATALOG = [
   // specOverrides: correct known-wrong attributes in the Amazon listing backend.
   { asin: 'B0GG5BVR7R', shortName: 'Crochet Evil Eye Hanging Charm', category: 'Crochet', specOverrides: { Colour: 'Blue' } },
@@ -26,25 +41,62 @@ const CATALOG = [
   { asin: 'B0B8XR4XNW', shortName: 'Silver Hanging Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
   { asin: 'B0B8XRDHPW', shortName: 'Silver Hanging Bells 2.5" (Pack of 12)', category: 'Festive Décor' },
   { asin: 'B09QJVDNFW', shortName: 'Golden Jingle Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
-  { asin: 'B09QJV7VXZ', shortName: 'Golden Jingle Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
   { asin: 'B09Y2B4XHL', shortName: 'Jasmine Door Toran (Set of 4)', category: 'Festive Décor' },
+  // Garlands and ladis hang like the toran and bells, so they share that shelf.
+  { asin: 'B0HC4FD2F4', shortName: 'White Flower Ladi 5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HCCGJKQ4', shortName: 'Red and White Mogra Garland 2.5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HCPKG6HW', shortName: 'Multicolor Pom Pom Garland 5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0B8XR4W5P', shortName: 'Silver Hanging Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
+
+  // Worn on the body, so none of the old shelves fitted. "Gajras" is the word
+  // an Indian shopper actually types.
+  { asin: 'B0HC48P47S', shortName: 'Artificial Jasmine Bun Gajra (Pack of 3)', category: 'Gajras' },
+  { asin: 'B0HC479QXR', shortName: 'Yellow Rose and Jasmine Hand Gajra (Pack of 2)', category: 'Gajras' },
+  { asin: 'B0HC49L3MP', shortName: 'Red Rose and Pearl Hand Gajra (Single)', category: 'Gajras' },
+  { asin: 'B0HC4DHXNK', shortName: 'Red Rose and Pearl Hand Gajra (Pack of 5)', category: 'Gajras' },
+
+  // A devotional seat for an idol or kalash, not decor. Shoppers filtering for
+  // puja articles would look under neither Festive nor Home.
+  { asin: 'B0HB16BLTK', shortName: 'Lotus Pooja Aasan 24.5 cm (Cream)', category: 'Pooja Essentials' },
+  { asin: 'B0HB4N2JSH', shortName: 'Lotus Pooja Aasan 24.5 cm (Rani Pink)', category: 'Pooja Essentials' },
+
   { asin: 'B0CMDJR8QM', shortName: 'Eternal Love Rose Bouquet (Red)', category: 'Artificial Flowers' },
   { asin: 'B0CMDK5J4T', shortName: 'Eternal Love Rose Bouquet (Pink)', category: 'Artificial Flowers' },
   { asin: 'B0CMDJBYZ4', shortName: 'Eternal Love Rose Bouquet (Yellow)', category: 'Artificial Flowers' },
-  { asin: 'B09Y3J9PSQ', shortName: 'Sunflower Heads (Pack of 20)', category: 'Artificial Flowers' },
+  // "Artificial" is load bearing in this name: the listing sells loose mogra
+  // buds for gajra making and the word must never be dropped from the tile.
+  { asin: 'B0HC44WKBT', shortName: 'White Artificial Mogra Flowers (50 g Pack)', category: 'Artificial Flowers' },
   { asin: 'B0GDY75WHT', shortName: 'Wooden Floor Vase with Brass Work', category: 'Home Décor' },
   { asin: 'B09Y29QS4V', shortName: 'White Pearl Beads 6mm (1000 pcs)', category: 'Craft Supplies' },
 ];
 
+// Product copy, specs and gallery, fetched from SP-API by
+// scripts/fetch-catalog-spapi.mjs. Run that first whenever the catalogue changes.
+const RAW_PATH = join(ROOT, 'src', 'data', 'catalog-raw.json');
+if (!existsSync(RAW_PATH)) {
+  console.error('src/data/catalog-raw.json is missing. Run:\n  node scripts/fetch-catalog-spapi.mjs <ASIN>...');
+  process.exit(1);
+}
+const CATALOG_RAW = JSON.parse(readFileSync(RAW_PATH, 'utf8'));
+
 const rows = readFileSync(REPORT, 'utf8').split('\n').filter(Boolean);
 const header = rows[0].split('\t');
 const col = (name) => header.indexOf(name);
+// An ASIN can carry more than one SKU (B09QJVDNFW has an Active one at 529 and
+// an Inactive duplicate at 699). Take the ACTIVE row, otherwise the displayed
+// price depends on the row order in the report, which is not a guarantee.
 const byAsin = new Map();
+const iStatus = col('status');
 for (const line of rows.slice(1)) {
   const f = line.split('\t');
   const asin = f[col('asin1')];
-  if (asin && !byAsin.has(asin)) byAsin.set(asin, f);
+  if (!asin) continue;
+  const active = iStatus >= 0 && (f[iStatus] || '').trim().toLowerCase() === 'active';
+  const held = byAsin.get(asin);
+  if (!held) byAsin.set(asin, { row: f, active });
+  else if (active && !held.active) byAsin.set(asin, { row: f, active });
 }
+for (const [asin, v] of byAsin) byAsin.set(asin, v.row);
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -145,44 +197,34 @@ for (const item of CATALOG) {
   const mrp = Math.round(parseFloat(f[col('maximum-retail-price')])) || null;
   const desc = stripDashes(f[col('item-description')] || '').replace(/\s+/g, ' ').trim();
 
-  let specs = [];
-  let bullets = [];
-  const images = [];
-  try {
-    const listing = await scrapeListing(item.asin);
-    specs = listing.specs;
-    bullets = listing.bullets;
-    for (const [label, value] of Object.entries(item.specOverrides ?? {})) {
-      const row = specs.find((s) => s.label === label);
-      if (row) row.value = value;
-      else specs.push({ label, value });
-    }
-    for (let i = 0; i < listing.gallery.length; i++) {
-      const file = i === 0 ? `${item.asin}.jpg` : `${item.asin}_${i + 1}.jpg`;
-      const imgPath = join(IMG_DIR, file);
-      if (!existsSync(imgPath)) {
-        try {
-          await downloadImage(listing.gallery[i], imgPath);
-        } catch (e) {
-          console.error(`img FAIL ${item.asin} #${i + 1}: ${e.message}`);
-          continue;
-        }
-      }
-      images.push(`/products/${file}`);
-    }
-    console.log(`OK  ${item.asin} ${item.shortName} — ${images.length} imgs, ${specs.length} specs, ${bullets.length} bullets`);
-    await sleep(1500);
-  } catch (e) {
-    console.error(`PAGE FAIL ${item.asin}: ${e.message}`);
-    const mainPath = join(IMG_DIR, `${item.asin}.jpg`);
-    if (existsSync(mainPath)) images.push(`/products/${item.asin}.jpg`);
+  // Specs, bullets, gallery and the long description now come from SP-API via
+  // scripts/fetch-catalog-spapi.mjs, not from scraping amazon.in. Amazon serves
+  // a bot interstitial after a modest number of detail-page requests, and the
+  // scraper degraded silently to zero specs and zero images when it hit one.
+  const raw = CATALOG_RAW[item.asin];
+  if (!raw) {
+    console.error(`MISSING in catalog-raw.json: ${item.asin}. Run fetch-catalog-spapi.mjs first.`);
+    continue;
   }
+  const specs = raw.specs.map((s) => ({ ...s }));
+  const bullets = raw.bullets;
+  const images = raw.images.filter((rel) => existsSync(join(ROOT, 'public', rel.replace(/^\//, ''))));
+
+  for (const [label, value] of Object.entries(item.specOverrides ?? {})) {
+    const row = specs.find((s) => s.label === label);
+    if (row) row.value = value;
+    else specs.push({ label, value });
+  }
+  if (images.length !== raw.images.length) {
+    console.error(`  ${item.asin}: ${raw.images.length - images.length} image file(s) missing on disk`);
+  }
+  console.log(`OK  ${item.asin} ${item.shortName} | ${images.length} imgs, ${specs.length} specs, ${bullets.length} bullets`);
 
   products.push({
     asin: item.asin,
     name: item.shortName,
-    fullName: stripDashes(f[col('item-name')] || '').replace(/\s+/g, ' ').trim(),
-    description: desc,
+    fullName: raw.fullName || stripDashes(f[col('item-name')] || '').replace(/\s+/g, ' ').trim(),
+    description: raw.description || desc,
     category: item.category,
     price,
     mrp: mrp && mrp > price ? mrp : null,
@@ -218,3 +260,23 @@ mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, ts);
 console.log(`\nWrote ${products.length} products → src/data/products.ts`);
 console.log(`Images: ${products.filter((p) => p.image).length}/${products.length}`);
+
+// The sitemap used to be hand maintained in public/, so it silently fell out of
+// step with the catalogue: it still listed two delisted products and none of the
+// eleven new ones. Generate it here instead, from the same array the site renders.
+const SITE = 'https://atreya.store';
+const urls = [
+  { loc: '/', changefreq: 'weekly', priority: '1.0' },
+  { loc: '/shop', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/about', changefreq: 'monthly', priority: '0.6' },
+  { loc: '/contact', changefreq: 'monthly', priority: '0.6' },
+  { loc: '/privacy', changefreq: 'yearly', priority: '0.3' },
+  ...products.map((p) => ({ loc: `/product/${p.asin}`, changefreq: 'weekly', priority: '0.8' })),
+];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url><loc>${SITE}${u.loc}</loc><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`).join('\n')}
+</urlset>
+`;
+writeFileSync(join(ROOT, 'public', 'sitemap.xml'), sitemap);
+console.log(`Sitemap: ${urls.length} URLs → public/sitemap.xml`);

@@ -21,10 +21,10 @@ const SLIDES: Slide[] = [
         India&rsquo;s new home for <span className="text-terra">handmade</span> décor &amp; keepsakes
       </>
     ),
-    sub: 'Crochet keepsakes, festive torans, everlasting flowers and statement décor, each piece crafted with care, one at a time.',
+    sub: 'Pooja aasans, gajras, festive garlands, crochet keepsakes and everlasting flowers, each piece crafted with care, one at a time.',
     cta: { label: 'Shop the collection', to: '/shop' },
     ctaSecondary: { label: 'Visit our Amazon store', href: AMAZON_STOREFRONT },
-    asins: ['B0GDV4HTRJ', 'B0GDY75WHT', 'B0G95YC1T9'],
+    asins: ['B0HB4N2JSH', 'B0HC479QXR', 'B0G95YC1T9'],
     bg: 'bg-cream',
   },
   {
@@ -34,10 +34,10 @@ const SLIDES: Slide[] = [
         Décor that <span className="text-terra">welcomes</span> every guest at the door
       </>
     ),
-    sub: 'Jasmine torans, golden jingle bells and silver hanging bells. Handmade festive touches for every celebration.',
+    sub: 'Flower ladis, mogra garlands, jasmine torans and hanging bells. Handmade festive touches for every celebration.',
     cta: { label: 'Shop Festive Décor', to: '/shop?category=Festive%20D%C3%A9cor' },
     ctaSecondary: { label: 'See all products', to: '/shop' },
-    asins: ['B09Y2B4XHL', 'B09QJVDNFW', 'B0B8XR4XNW'],
+    asins: ['B0HCPKG6HW', 'B0HC4FD2F4', 'B09QJVDNFW'],
     bg: 'bg-sand',
   },
   {

@@ -10,14 +10,17 @@ import { TAGLINE, whatsappLink } from '../config'
 const CATEGORY_TILE_ASINS: Record<string, string> = {
   'Crochet': 'B0G95YC1T9',
   'Festive Décor': 'B09QJVDNFW',
+  'Gajras': 'B0HC479QXR',
+  'Pooja Essentials': 'B0HB4N2JSH',
   'Artificial Flowers': 'B0CMDJR8QM',
   'Home Décor': 'B0GDY75WHT',
   'Craft Supplies': 'B09Y29QS4V',
 }
 
+// Weighted to the newest range, which is what a returning visitor has not seen.
 const TRENDING_ASINS = [
-  'B0GDXXM3PR', 'B0GDV4HTRJ', 'B0GDY75WHT', 'B0G95YC1T9',
-  'B0CMDJR8QM', 'B09Y2B4XHL', 'B0GG5BVR7R', 'B09QJVDNFW',
+  'B0HB4N2JSH', 'B0HC479QXR', 'B0HCPKG6HW', 'B0HC48P47S',
+  'B0HB16BLTK', 'B0HCCGJKQ4', 'B0GDXXM3PR', 'B0G95YC1T9',
 ]
 
 const CURATED = [
@@ -57,7 +60,9 @@ export default function Home() {
       <section className="py-12">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">Shop by category</h2>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {/* 7 categories now, so 4 across on desktop leaves a balanced 4 + 3
+              rather than the ragged 5 + 2 the old five-column grid produced. */}
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {CATEGORIES.map((c) => {
               const p = PRODUCTS.find((q) => q.asin === CATEGORY_TILE_ASINS[c]) ?? PRODUCTS.find((q) => q.category === c)
               const count = PRODUCTS.filter((q) => q.category === c).length
