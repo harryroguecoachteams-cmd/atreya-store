@@ -22,10 +22,23 @@ export default function ProductDetail() {
   // here is competing with a far stronger page for its own words.
   const story = product ? (PRODUCT_COPY[product.asin] ?? product.description) : ''
 
+  // A raw slice(0, 140) cut every product description mid-word, so the shipped
+  // meta read "...the one that keeps selling through the year for anniversari".
+  // og:description carries the same string and WhatsApp renders it verbatim, so
+  // every shared product link previewed with a broken sentence. Trim back to a
+  // word boundary, and to a sentence end when there is one in range.
+  const blurb = (text: string, limit: number) => {
+    if (text.length <= limit) return text
+    const window = text.slice(0, limit + 1)
+    const sentence = Math.max(window.lastIndexOf('. '), window.lastIndexOf('? '), window.lastIndexOf('! '))
+    if (sentence >= limit * 0.6) return window.slice(0, sentence + 1)
+    return `${window.slice(0, window.lastIndexOf(' ')).replace(/[,;:]$/, '')}...`
+  }
+
   usePageMeta(
     product ? `${product.name} | Atreya` : 'Product not found | Atreya',
     product
-      ? `${product.name}: ${isHandmade(product.category) ? 'handmade' : 'handpicked'} by Atreya. ${story.slice(0, 140)}`
+      ? `${product.name}: ${isHandmade(product.category) ? 'handmade' : 'handpicked'} by Atreya. ${blurb(story, 90)}`
       : 'This product could not be found.',
     {
       image: product?.image ? `${SITE_URL}${product.image}` : undefined,

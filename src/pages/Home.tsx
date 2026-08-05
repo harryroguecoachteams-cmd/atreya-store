@@ -5,7 +5,7 @@ import { categoryPath } from '../data/collections'
 import ProductCard from '../components/ProductCard'
 import HeroCarousel from '../components/HeroCarousel'
 import UspRow from '../components/UspRow'
-import { TAGLINE, whatsappLink } from '../config'
+import { whatsappLink } from '../config'
 
 // Representative image per category for the tile grid.
 const CATEGORY_TILE_ASINS: Record<string, string> = {
@@ -51,7 +51,12 @@ const CURATED = [
 ]
 
 export default function Home() {
-  usePageMeta('Atreya | Handmade Décor & Crochet Keepsakes', `${TAGLINE}. Shop the collection on Amazon.in.`)
+  // Was 96 characters, the thinnest on the site, which wastes the one snippet a
+  // brand search lands on. Kept near 155 so Google shows all of it.
+  usePageMeta(
+    'Atreya | Handmade Décor & Crochet Keepsakes',
+    'Handmade crochet keepsakes and lotus pooja aasans from our own workshop, plus gajras, festive garlands and bells we handpick across India. Shop on Amazon.in.',
+  )
 
   const trending = TRENDING_ASINS.map((a) => PRODUCTS.find((p) => p.asin === a)!).filter(Boolean)
 

@@ -117,6 +117,38 @@ async function fetchRetry(url, opts = {}, tries = 5) {
 // House style: no em/en dashes anywhere in site copy.
 const stripDashes = (s) => s.replace(/\s*[—–]\s*/g, ' - ');
 
+// The product hero renders at ~604 CSS px square on desktop and ~968 px at
+// tablet width, so a frame much under this is visibly soft. Two of the 104
+// catalogue photos were 268x188 and 352x257 and upscaled 3.2x and 2.4x on the
+// detail page; the 268x188 one was also the hover-swap on the shop grid, so it
+// was blurring without anyone clicking through. SP-API already hands back the
+// largest render Amazon holds, so there is nothing better to fetch: the only
+// fix is to stop showing them. Everything else in the catalogue is 398 px or
+// more on the short side, so this drops exactly those two.
+//
+// Replace the photo on the Amazon listing with a bigger one and it returns here
+// automatically on the next catalogue refresh. No allow-list to maintain.
+const MIN_SHORT_SIDE = 380;
+
+/** JPEG dimensions straight from the SOF marker. No dependency needed. */
+function jpegSize(path) {
+  const buf = readFileSync(path);
+  if (buf.readUInt16BE(0) !== 0xffd8) return null;
+  let i = 2;
+  while (i < buf.length - 9) {
+    if (buf[i] !== 0xff) { i++; continue; }
+    const marker = buf[i + 1];
+    if (marker === 0xd8 || marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) { i += 2; continue; }
+    const len = buf.readUInt16BE(i + 2);
+    // SOF0/1/2/3/5/6/7/9/10/11/13/14/15, excluding DHT/JPGn/DAC
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+      return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+    }
+    i += 2 + len;
+  }
+  return null;
+}
+
 const decode = (s) =>
   stripDashes(
     s
@@ -208,15 +240,27 @@ for (const item of CATALOG) {
   }
   const specs = raw.specs.map((s) => ({ ...s }));
   const bullets = raw.bullets;
-  const images = raw.images.filter((rel) => existsSync(join(ROOT, 'public', rel.replace(/^\//, ''))));
+  const onDisk = raw.images.filter((rel) => existsSync(join(ROOT, 'public', rel.replace(/^\//, ''))));
+  if (onDisk.length !== raw.images.length) {
+    console.error(`  ${item.asin}: ${raw.images.length - onDisk.length} image file(s) missing on disk`);
+  }
+  const images = onDisk.filter((rel) => {
+    const size = jpegSize(join(ROOT, 'public', rel.replace(/^\//, '')));
+    if (!size) return true;                       // unreadable header, do not drop
+    if (Math.min(size.w, size.h) >= MIN_SHORT_SIDE) return true;
+    console.error(`  ${item.asin}: DROPPED ${rel} at ${size.w}x${size.h}, `
+                  + `under the ${MIN_SHORT_SIDE}px floor and would upscale on the detail page`);
+    return false;
+  });
 
   for (const [label, value] of Object.entries(item.specOverrides ?? {})) {
     const row = specs.find((s) => s.label === label);
     if (row) row.value = value;
     else specs.push({ label, value });
   }
-  if (images.length !== raw.images.length) {
-    console.error(`  ${item.asin}: ${raw.images.length - images.length} image file(s) missing on disk`);
+  if (!images.length) {
+    console.error(`  ${item.asin}: NO usable images left, skipping the product entirely`);
+    continue;
   }
   console.log(`OK  ${item.asin} ${item.shortName} | ${images.length} imgs, ${specs.length} specs, ${bullets.length} bullets`);
 

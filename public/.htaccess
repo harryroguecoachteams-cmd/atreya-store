@@ -52,6 +52,11 @@ RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.html [L]
 
 ErrorDocument 404 /404.html
+# Without a 410 line the [G] rule above falls through to LiteSpeed's stock
+# 824-byte error page: a white screen with a giant "410" and no way back into
+# the store. Anyone arriving on a delisted product from an old Google result
+# lands there, so serve the branded page while keeping the 410 status.
+ErrorDocument 410 /404.html
 
 # Cache policy: HTML always revalidates; hashed build assets cache forever
 <IfModule mod_headers.c>

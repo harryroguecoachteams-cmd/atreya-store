@@ -381,7 +381,6 @@ export const PRODUCTS: Product[] = [
     "image": "/products/B0GDV4HTRJ.jpg",
     "images": [
       "/products/B0GDV4HTRJ.jpg",
-      "/products/B0GDV4HTRJ_2.jpg",
       "/products/B0GDV4HTRJ_3.jpg"
     ],
     "specs": [
@@ -1499,8 +1498,7 @@ export const PRODUCTS: Product[] = [
     "image": "/products/B09Y29QS4V.jpg",
     "images": [
       "/products/B09Y29QS4V.jpg",
-      "/products/B09Y29QS4V_2.jpg",
-      "/products/B09Y29QS4V_3.jpg"
+      "/products/B09Y29QS4V_2.jpg"
     ],
     "specs": [
       {
