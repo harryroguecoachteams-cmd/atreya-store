@@ -41,7 +41,7 @@ export default function About() {
 
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {collage.map((p) => (
-          <img key={p.asin} src={p.image!} alt={p.name} className="aspect-square w-full rounded-2xl border border-blush object-cover" loading="lazy" />
+          <img key={p.asin} src={p.image!} alt={`${p.name} by Atreya`} className="aspect-square w-full rounded-2xl border border-blush object-cover" loading="lazy" />
         ))}
       </div>
 

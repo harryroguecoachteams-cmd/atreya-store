@@ -79,7 +79,7 @@ export default function Home() {
                     {p?.image && (
                       <img
                         src={p.image}
-                        alt={c}
+                        alt={`${p.name}, from the Atreya ${c} collection`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
@@ -128,7 +128,7 @@ export default function Home() {
                     {p?.image && (
                       <img
                         src={p.image}
-                        alt={c.title}
+                        alt={`${p.name}, part of the Atreya ${c.title} edit`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />

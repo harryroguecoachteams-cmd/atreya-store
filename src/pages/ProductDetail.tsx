@@ -114,7 +114,11 @@ export default function ProductDetail() {
             <div className="overflow-hidden rounded-2xl border border-blush bg-sand">
               <img
                 src={product.images[imgIndex] ?? product.image ?? ''}
-                alt={product.name}
+                alt={
+                  imgIndex === 0
+                    ? `${product.name} by Atreya`
+                    : `${product.name}, view ${imgIndex + 1} of ${product.images.length}`
+                }
                 className="aspect-square w-full object-cover"
               />
             </div>

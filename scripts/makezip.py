@@ -44,6 +44,13 @@ assert ".htaccess" in names, ".htaccess missing from the archive"
 assert "sitemap.xml" in names, "sitemap.xml missing from the archive"
 assert "index.html" in names, "index.html missing from the archive"
 
+# The sitemap in public/ has no lastmod: those dates are stamped by
+# scripts/sitemap.mjs after prerender. If they are missing, that step was
+# skipped and this build would ship a sitemap with no freshness signal.
+with open(os.path.join(DIST, "sitemap.xml"), encoding="utf-8") as fh:
+    sitemap = fh.read()
+assert "<lastmod>" in sitemap, "sitemap has no lastmod: run node scripts/sitemap.mjs after prerender"
+
 size_mb = os.path.getsize(OUT) / (1024 * 1024)
 html = sum(1 for n in names if n.endswith(".html"))
 print(f"{OUT}\n{len(names)} files, {html} html, {size_mb:.1f} MB, 0 backslash entries")

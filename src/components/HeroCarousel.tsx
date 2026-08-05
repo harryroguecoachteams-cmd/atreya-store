@@ -117,7 +117,7 @@ export default function HeroCarousel() {
                     <Link key={p.asin} to={`/product/${p.asin}`} tabIndex={si === index ? 0 : -1}>
                       <img
                         src={p.image!}
-                        alt={p.name}
+                        alt={`${p.name} by Atreya`}
                         loading={si === 0 ? 'eager' : 'lazy'}
                         className={`w-full rounded-2xl border border-blush object-cover shadow-sm transition-transform hover:scale-[1.02] ${
                           i === 1 ? 'mt-8' : i === 2 ? 'mt-16' : ''

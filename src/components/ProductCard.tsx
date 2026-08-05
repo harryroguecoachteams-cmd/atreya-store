@@ -13,7 +13,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {product.image && (
           <img
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} by Atreya`}
             loading="lazy"
             className={`h-full w-full object-cover transition-all duration-300 ${
               hoverImage ? 'group-hover:opacity-0' : 'group-hover:scale-105'
