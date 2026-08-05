@@ -18,14 +18,20 @@ type MetaOptions = {
   noindex?: boolean
   /** og:type override; defaults to website. Product pages pass "product". */
   ogType?: string
+  /**
+   * Canonical path when it is not this URL. Shop's category filter points at
+   * the matching /collections/<slug> page, so the two do not compete.
+   */
+  canonicalPath?: string
 }
 
 /** Sets document title, description, canonical and OG/Twitter tags for the page. */
 export function usePageMeta(title: string, description: string, options: MetaOptions = {}) {
-  const { image, noindex = false, ogType = 'website' } = options
+  const { image, noindex = false, ogType = 'website', canonicalPath } = options
   const { pathname } = useLocation()
   useEffect(() => {
-    const url = `${SITE_URL}${pathname === '/' ? '/' : pathname}`
+    const path = canonicalPath ?? pathname
+    const url = `${SITE_URL}${path === '/' ? '/' : path}`
     document.title = title
     upsertMeta('name', 'description', description)
     upsertMeta('property', 'og:title', title)
@@ -56,5 +62,5 @@ export function usePageMeta(title: string, description: string, options: MetaOpt
       link.href = url
       document.head.appendChild(link)
     }
-  }, [title, description, image, pathname, noindex, ogType])
+  }, [title, description, image, pathname, noindex, ogType, canonicalPath])
 }

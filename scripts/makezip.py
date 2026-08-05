@@ -33,6 +33,11 @@ with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
 backslashed = [n for n in names if "\\" in n]
 assert not backslashed, f"backslash entries would break Linux unzip: {backslashed[:5]}"
 
+# A stray archive inside dist/ (someone zipping a subfolder to upload it
+# separately) doubles the payload and ships junk to the docroot.
+nested = [n for n in names if n.endswith((".zip", ".tar", ".gz", ".rar"))]
+assert not nested, f"archive files inside dist/, delete them first: {nested}"
+
 # .htaccess drives SPA routing, the 404 status and the cache headers. A zip
 # without it deploys a site that soft-404s everything and never busts cache.
 assert ".htaccess" in names, ".htaccess missing from the archive"

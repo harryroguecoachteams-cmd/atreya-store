@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { PRODUCTS, CATEGORIES } from '../data/products'
+import { categoryPath } from '../data/collections'
 import ProductCard from '../components/ProductCard'
 import HeroCarousel from '../components/HeroCarousel'
 import UspRow from '../components/UspRow'
@@ -12,7 +13,9 @@ const CATEGORY_TILE_ASINS: Record<string, string> = {
   'Festive Décor': 'B09QJVDNFW',
   'Gajras': 'B0HC479QXR',
   'Pooja Essentials': 'B0HB4N2JSH',
-  'Artificial Flowers': 'B0CMDJR8QM',
+  // The rose bouquets photograph badly (hand over astroturf), so the loose
+  // mogra represents the category until they are reshot.
+  'Artificial Flowers': 'B0HC44WKBT',
   'Home Décor': 'B0GDY75WHT',
   'Craft Supplies': 'B09Y29QS4V',
 }
@@ -69,7 +72,7 @@ export default function Home() {
               return (
                 <Link
                   key={c}
-                  to={`/shop?category=${encodeURIComponent(c)}`}
+                  to={categoryPath(c)}
                   className="group overflow-hidden rounded-2xl border border-blush bg-white shadow-sm transition-shadow hover:shadow-md"
                 >
                   <div className="aspect-square overflow-hidden bg-sand">

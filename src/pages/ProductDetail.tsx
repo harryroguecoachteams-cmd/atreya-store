@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { PRODUCTS } from '../data/products'
+import { PRODUCT_COPY } from '../data/product-copy'
+import { categoryPath } from '../data/collections'
 import ProductCard from '../components/ProductCard'
 import NotFound from './NotFound'
 import { SITE_URL, isHandmade, whatsappLink } from '../config'
@@ -15,10 +17,15 @@ export default function ProductDetail() {
 
   useEffect(() => setImgIndex(0), [asin])
 
+  // Site-original copy where we have written it, the Amazon description only as
+  // a fallback. The Amazon text also lives on amazon.in, so anything using it
+  // here is competing with a far stronger page for its own words.
+  const story = product ? (PRODUCT_COPY[product.asin] ?? product.description) : ''
+
   usePageMeta(
     product ? `${product.name} | Atreya` : 'Product not found | Atreya',
     product
-      ? `${product.name}: ${isHandmade(product.category) ? 'handmade' : 'handpicked'} by Atreya. ${product.description.slice(0, 140)}`
+      ? `${product.name}: ${isHandmade(product.category) ? 'handmade' : 'handpicked'} by Atreya. ${story.slice(0, 140)}`
       : 'This product could not be found.',
     {
       image: product?.image ? `${SITE_URL}${product.image}` : undefined,
@@ -49,7 +56,7 @@ export default function ProductDetail() {
       '@type': 'Product',
       name: product.name,
       image: product.images.map((i) => `${SITE_URL}${i}`),
-      description: product.description,
+      description: story,
       sku: product.asin,
       productID: product.asin,
       category: product.category,
@@ -71,12 +78,7 @@ export default function ProductDetail() {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
         { '@type': 'ListItem', position: 2, name: 'Shop', item: `${SITE_URL}/shop` },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: product.category,
-          item: `${SITE_URL}/shop?category=${encodeURIComponent(product.category)}`,
-        },
+        { '@type': 'ListItem', position: 3, name: product.category, item: `${SITE_URL}${categoryPath(product.category)}` },
         { '@type': 'ListItem', position: 4, name: product.name, item: `${SITE_URL}/product/${product.asin}` },
       ],
     })
@@ -84,7 +86,7 @@ export default function ProductDetail() {
       productEl?.remove()
       crumbEl?.remove()
     }
-  }, [product])
+  }, [product, story])
 
   if (!product) return <NotFound />
 
@@ -101,7 +103,7 @@ export default function ProductDetail() {
           <span className="mx-1.5">/</span>
           <Link to="/shop" className="hover:text-terra">Shop</Link>
           <span className="mx-1.5">/</span>
-          <Link to={`/shop?category=${encodeURIComponent(product.category)}`} className="hover:text-terra">
+          <Link to={categoryPath(product.category)} className="hover:text-terra">
             {product.category}
           </Link>
         </nav>
@@ -233,10 +235,10 @@ export default function ProductDetail() {
         </div>
 
         {/* Description */}
-        {product.description && (
+        {story && (
           <div className="mt-12 max-w-3xl">
             <h2 className="font-display text-xl font-semibold">About this piece</h2>
-            <p className="mt-3 leading-relaxed text-soft">{product.description}</p>
+            <p className="mt-3 leading-relaxed text-soft">{story}</p>
           </div>
         )}
       </section>
@@ -248,7 +250,7 @@ export default function ProductDetail() {
             <div className="flex items-end justify-between">
               <h2 className="font-display text-2xl font-semibold">You may also like</h2>
               <Link
-                to={`/shop?category=${encodeURIComponent(product.category)}`}
+                to={categoryPath(product.category)}
                 className="text-sm font-semibold text-terra hover:text-terra-dark"
               >
                 More {product.category} →

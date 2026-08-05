@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { PRODUCTS, CATEGORIES } from '../data/products'
+import { COLLECTIONS, collectionByCategory } from '../data/collections'
 import ProductCard from '../components/ProductCard'
 
 const PRICE_RANGES = [
@@ -19,12 +20,18 @@ const SORTS = [
 ]
 
 export default function Shop() {
+  const [params, setParams] = useSearchParams()
+  const category = params.get('category')
+  // A filtered view is the same content as its collection page, so point the
+  // canonical there instead of at bare /shop. Without this the two compete and
+  // neither ranks.
+  const collection = category ? collectionByCategory(category) : undefined
+
   usePageMeta(
     'Shop | Atreya',
     'Browse Atreya crochet keepsakes, gajras, lotus pooja aasans, festive garlands and bells, artificial flowers and craft supplies. Handmade or handpicked, every product ships via Amazon.in.',
+    { canonicalPath: collection ? `/collections/${collection.slug}` : '/shop' },
   )
-  const [params, setParams] = useSearchParams()
-  const category = params.get('category')
   const price = params.get('price')
   const sort = params.get('sort') ?? 'featured'
   const q = (params.get('q') ?? '').trim().toLowerCase()
@@ -63,6 +70,27 @@ export default function Shop() {
       <p className="mt-2 text-soft">
         Every piece is fulfilled through Amazon.in. Tap “Amazon” for delivery, reviews and secure checkout.
       </p>
+
+      {/* Real links to the collection pages. The sidebar chips are a filter and
+          render no href, so without these a crawler never reaches them. */}
+      <nav aria-label="Collections" className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+        <span className="text-soft">Collections:</span>
+        {COLLECTIONS.map((c) => (
+          <Link key={c.slug} to={`/collections/${c.slug}`} className="font-medium text-terra hover:text-terra-dark">
+            {c.category}
+          </Link>
+        ))}
+      </nav>
+
+      {collection && (
+        <p className="mt-4 rounded-xl border border-blush bg-white px-4 py-3 text-sm text-soft">
+          Not sure which one you need?{' '}
+          <Link to={`/collections/${collection.slug}`} className="font-semibold text-terra hover:text-terra-dark">
+            Read the {collection.category.toLowerCase()} buying guide
+          </Link>
+          .
+        </p>
+      )}
 
       <div className="mt-8 gap-10 lg:flex">
         {/* Filters (Floreal-style sidebar on desktop) */}

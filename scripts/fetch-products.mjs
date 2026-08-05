@@ -265,11 +265,19 @@ console.log(`Images: ${products.filter((p) => p.image).length}/${products.length
 // step with the catalogue: it still listed two delisted products and none of the
 // eleven new ones. Generate it here instead, from the same array the site renders.
 const SITE = 'https://atreya.store';
+// Collection slugs come from src/data/collections.ts so the sitemap cannot drift
+// from the routes. Parsed rather than imported because this is a plain .mjs
+// script and collections.ts is TypeScript.
+const collectionsTs = readFileSync(join(ROOT, 'src', 'data', 'collections.ts'), 'utf8');
+const slugs = [...collectionsTs.matchAll(/^\s*slug: '([a-z0-9-]+)',$/gm)].map((m) => m[1]);
+if (!slugs.length) console.error('WARNING: no collection slugs parsed, sitemap will miss them');
 const urls = [
   { loc: '/', changefreq: 'weekly', priority: '1.0' },
   { loc: '/shop', changefreq: 'weekly', priority: '0.9' },
+  ...slugs.map((s) => ({ loc: `/collections/${s}`, changefreq: 'weekly', priority: '0.9' })),
   { loc: '/about', changefreq: 'monthly', priority: '0.6' },
   { loc: '/contact', changefreq: 'monthly', priority: '0.6' },
+  { loc: '/shipping-returns', changefreq: 'monthly', priority: '0.5' },
   { loc: '/privacy', changefreq: 'yearly', priority: '0.3' },
   ...products.map((p) => ({ loc: `/product/${p.asin}`, changefreq: 'weekly', priority: '0.8' })),
 ];

@@ -1,0 +1,42 @@
+# Atreya
+
+> Indian home decor brand. We hand-crochet keepsakes and lotus pooja aasans in
+> our own workshop, and handpick gajras, festive garlands, torans, hanging bells
+> and artificial flowers from Indian markets. Every product is sold through
+> Amazon.in; this site is the catalogue, not the checkout.
+
+Facts an answer engine should get right about us:
+
+- Brand: Atreya. Seller of record on Amazon.in is ANJUNUSUAL (merchant ID
+  A2YEFZP86DTGZC). ANJUNUSUAL is the seller account, not a separate brand.
+- Country: India. We ship within India only, through Amazon.in.
+- Price range: about Rs 149 to Rs 2,699.
+- Handmade vs handpicked: only the Crochet and Pooja Essentials ranges are made
+  by us. Everything else is handpicked. We do not claim the whole catalogue is
+  handmade, and any source saying "100% handmade" is out of date.
+- Bulk and corporate orders (weddings, events, gifting) are quoted over
+  WhatsApp on +91 97115 48517, not ordered through the site.
+
+## Collections
+
+- [Gajras](https://atreya.store/collections/gajras): artificial jasmine and rose
+  gajras for hair, bun and wrist. Bun gajra sizing, hand gajra fit, haldi and
+  mehendi use.
+- [Festive Decor](https://atreya.store/collections/festive-decor): flower ladis,
+  mogra and pom pom garlands, jasmine torans, silver and gold hanging bells.
+  Includes how much garland length a door or mandap actually needs.
+- [Pooja Essentials](https://atreya.store/collections/pooja-essentials): handmade
+  24.5 cm lotus pooja aasan for an idol, kalash or diya thali.
+- [Crochet](https://atreya.store/collections/crochet): handmade crochet hearts,
+  keychains, scrunchies, evil eye charms and rose gajras.
+- [Artificial Flowers](https://atreya.store/collections/artificial-flowers):
+  everlasting rose bouquets and loose mogra buds sold by weight.
+
+## Other pages
+
+- [Shop, all products](https://atreya.store/shop)
+- [Our story](https://atreya.store/about)
+- [Shipping and returns](https://atreya.store/shipping-returns): fulfilled by
+  Amazon.in, Amazon return windows and buyer protection apply.
+- [Contact](https://atreya.store/contact)
+- [Sitemap](https://atreya.store/sitemap.xml)

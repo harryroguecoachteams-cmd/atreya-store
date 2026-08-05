@@ -6,9 +6,11 @@ import Footer from './components/Footer'
 import WhatsAppFab from './components/WhatsAppFab'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
+import Collection from './pages/Collection'
 import ProductDetail from './pages/ProductDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Shipping from './pages/Shipping'
 import Privacy from './pages/Privacy'
 import NotFound from './pages/NotFound'
 
@@ -32,9 +34,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/collections/:slug" element={<Collection />} />
           <Route path="/product/:asin" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/shipping-returns" element={<Shipping />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

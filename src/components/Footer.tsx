@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AMAZON_STOREFRONT, CONTACT_EMAIL, whatsappLink } from '../config'
 import { CATEGORIES } from '../data/products'
+import { categoryPath } from '../data/collections'
 
 const TRUST = [
   { title: 'Handmade & handpicked', sub: 'Made by us or chosen by us' },
@@ -47,6 +48,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="text-ink hover:text-terra">Our story</Link></li>
             <li><Link to="/contact" className="text-ink hover:text-terra">Contact us</Link></li>
+            <li><Link to="/shipping-returns" className="text-ink hover:text-terra">Shipping &amp; returns</Link></li>
             <li><Link to="/privacy" className="text-ink hover:text-terra">Privacy policy</Link></li>
           </ul>
         </div>
@@ -57,7 +59,7 @@ export default function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             {CATEGORIES.map((c) => (
               <li key={c}>
-                <Link to={`/shop?category=${encodeURIComponent(c)}`} className="text-ink hover:text-terra">
+                <Link to={categoryPath(c)} className="text-ink hover:text-terra">
                   {c}
                 </Link>
               </li>

@@ -15,11 +15,16 @@ const CHROME = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 // Route → output file (relative to dist/). '/' overwrites the SPA shell.
 const productsTs = readFileSync(join(ROOT, 'src', 'data', 'products.ts'), 'utf8');
 const asins = [...productsTs.matchAll(/"asin": "([A-Z0-9]{10})"/g)].map((m) => m[1]);
+const collectionsTs = readFileSync(join(ROOT, 'src', 'data', 'collections.ts'), 'utf8');
+const slugs = [...collectionsTs.matchAll(/^\s*slug: '([a-z0-9-]+)',$/gm)].map((m) => m[1]);
+if (!slugs.length) throw new Error('no collection slugs parsed from collections.ts');
 const ROUTES = [
   ['/', 'index.html'],
   ['/shop', 'shop.html'],
+  ...slugs.map((s) => [`/collections/${s}`, `collections/${s}.html`]),
   ['/about', 'about.html'],
   ['/contact', 'contact.html'],
+  ['/shipping-returns', 'shipping-returns.html'],
   ['/privacy', 'privacy.html'],
   ['/this-page-does-not-exist', '404.html'],
   ...asins.map((a) => [`/product/${a}`, `product/${a}.html`]),
