@@ -15,13 +15,13 @@ interface Slide {
 
 const SLIDES: Slide[] = [
   {
-    kicker: 'Handmade in India',
+    kicker: 'Handmade & handpicked in India',
     title: (
       <>
-        India&rsquo;s new home for <span className="text-terra">handmade</span> décor &amp; keepsakes
+        India&rsquo;s new home for <span className="text-terra">handmade</span> décor &amp; handpicked keepsakes
       </>
     ),
-    sub: 'Pooja aasans, gajras, festive garlands, crochet keepsakes and everlasting flowers, each piece crafted with care, one at a time.',
+    sub: 'Pooja aasans, gajras, festive garlands, crochet keepsakes and everlasting flowers. Made in our workshop or handpicked from Indian markets, and checked one at a time.',
     cta: { label: 'Shop the collection', to: '/shop' },
     ctaSecondary: { label: 'Visit our Amazon store', href: AMAZON_STOREFRONT },
     asins: ['B0HB4N2JSH', 'B0HC479QXR', 'B0G95YC1T9'],
@@ -34,7 +34,7 @@ const SLIDES: Slide[] = [
         Décor that <span className="text-terra">welcomes</span> every guest at the door
       </>
     ),
-    sub: 'Flower ladis, mogra garlands, jasmine torans and hanging bells. Handmade festive touches for every celebration.',
+    sub: 'Flower ladis, mogra garlands, jasmine torans and hanging bells. Festive touches, handpicked for every celebration.',
     cta: { label: 'Shop Festive Décor', to: '/shop?category=Festive%20D%C3%A9cor' },
     ctaSecondary: { label: 'See all products', to: '/shop' },
     asins: ['B0HCPKG6HW', 'B0HC4FD2F4', 'B09QJVDNFW'],

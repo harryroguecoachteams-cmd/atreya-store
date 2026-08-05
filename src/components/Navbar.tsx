@@ -24,7 +24,7 @@ export default function Navbar() {
         <Link to="/" className="shrink-0 font-display text-2xl font-semibold tracking-tight text-terra">
           Atreya
           <span className="ml-2 hidden align-middle text-[11px] font-body font-medium uppercase tracking-[0.2em] text-gold xl:inline">
-            Handmade
+            Home Décor
           </span>
         </Link>
 

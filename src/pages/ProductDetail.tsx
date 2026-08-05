@@ -4,7 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import { PRODUCTS } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import NotFound from './NotFound'
-import { SITE_URL, whatsappLink } from '../config'
+import { SITE_URL, isHandmade, whatsappLink } from '../config'
 
 const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
 
@@ -18,39 +18,72 @@ export default function ProductDetail() {
   usePageMeta(
     product ? `${product.name} | Atreya` : 'Product not found | Atreya',
     product
-      ? `${product.name}: handmade by Atreya. ${product.description.slice(0, 140)}`
+      ? `${product.name}: ${isHandmade(product.category) ? 'handmade' : 'handpicked'} by Atreya. ${product.description.slice(0, 140)}`
       : 'This product could not be found.',
-    product?.image ? `${SITE_URL}${product.image}` : undefined,
+    {
+      image: product?.image ? `${SITE_URL}${product.image}` : undefined,
+      noindex: !product,
+      ogType: 'product',
+    },
   )
 
-  // Product JSON-LD for search engines. Upsert by id so prerendered HTML
-  // and client hydration never leave duplicate schema blocks.
+  // Product + BreadcrumbList JSON-LD for search engines. Upsert by id so
+  // prerendered HTML and client hydration never leave duplicate schema blocks.
   useEffect(() => {
     if (!product) return
-    let el = document.getElementById('product-jsonld') as HTMLScriptElement | null
-    if (!el) {
-      el = document.createElement('script')
-      el.id = 'product-jsonld'
-      el.type = 'application/ld+json'
-      document.head.appendChild(el)
+    const upsert = (id: string, data: unknown) => {
+      let el = document.getElementById(id) as HTMLScriptElement | null
+      if (!el) {
+        el = document.createElement('script')
+        el.id = id
+        el.type = 'application/ld+json'
+        document.head.appendChild(el)
+      }
+      el.textContent = JSON.stringify(data)
+      return el
     }
-    el.textContent = JSON.stringify({
+    // Amazon reprices; a year out is the honest ceiling on how long this holds.
+    const validUntil = new Date(Date.now() + 365 * 864e5).toISOString().slice(0, 10)
+    const productEl = upsert('product-jsonld', {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: product.name,
       image: product.images.map((i) => `${SITE_URL}${i}`),
       description: product.description,
       sku: product.asin,
+      productID: product.asin,
+      category: product.category,
       brand: { '@type': 'Brand', name: 'Atreya' },
       offers: {
         '@type': 'Offer',
         url: product.amazonUrl,
         priceCurrency: 'INR',
         price: product.price,
+        priceValidUntil: validUntil,
+        itemCondition: 'https://schema.org/NewCondition',
         availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: 'Atreya' },
       },
     })
-    return () => el?.remove()
+    const crumbEl = upsert('breadcrumb-jsonld', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Shop', item: `${SITE_URL}/shop` },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: product.category,
+          item: `${SITE_URL}/shop?category=${encodeURIComponent(product.category)}`,
+        },
+        { '@type': 'ListItem', position: 4, name: product.name, item: `${SITE_URL}/product/${product.asin}` },
+      ],
+    })
+    return () => {
+      productEl?.remove()
+      crumbEl?.remove()
+    }
   }, [product])
 
   if (!product) return <NotFound />
@@ -148,8 +181,17 @@ export default function ProductDetail() {
 
             {/* Trust mini-row */}
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-soft">
-              <span>✓ 100% handmade</span>
-              <span>✓ Crafted in India</span>
+              {isHandmade(product.category) ? (
+                <>
+                  <span>✓ Handmade in our workshop</span>
+                  <span>✓ Made in India</span>
+                </>
+              ) : (
+                <>
+                  <span>✓ Handpicked by us</span>
+                  <span>✓ Checked before it ships</span>
+                </>
+              )}
               <span>✓ Secure checkout via Amazon.in</span>
             </div>
 

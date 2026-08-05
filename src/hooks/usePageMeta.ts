@@ -12,8 +12,17 @@ function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
   el.setAttribute('content', content)
 }
 
+type MetaOptions = {
+  image?: string
+  /** Page has no indexable content (404). Emits noindex and drops the canonical. */
+  noindex?: boolean
+  /** og:type override; defaults to website. Product pages pass "product". */
+  ogType?: string
+}
+
 /** Sets document title, description, canonical and OG/Twitter tags for the page. */
-export function usePageMeta(title: string, description: string, image?: string) {
+export function usePageMeta(title: string, description: string, options: MetaOptions = {}) {
+  const { image, noindex = false, ogType = 'website' } = options
   const { pathname } = useLocation()
   useEffect(() => {
     const url = `${SITE_URL}${pathname === '/' ? '/' : pathname}`
@@ -21,17 +30,31 @@ export function usePageMeta(title: string, description: string, image?: string) 
     upsertMeta('name', 'description', description)
     upsertMeta('property', 'og:title', title)
     upsertMeta('property', 'og:description', description)
-    upsertMeta('property', 'og:url', url)
+    upsertMeta('property', 'og:type', ogType)
+    upsertMeta('property', 'og:locale', 'en_IN')
     upsertMeta('property', 'og:image', image ?? `${SITE_URL}/og-image.jpg`)
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', title)
     upsertMeta('name', 'twitter:description', description)
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
+    // A 404 that self-canonicalises tells Google the URL is a real page, which
+    // is how delisted products stay in the index. Say noindex and say nothing
+    // about a canonical or an og:url.
+    upsertMeta('name', 'robots', noindex ? 'noindex, follow' : 'index, follow')
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]')
+    if (noindex) {
+      canonical?.remove()
+      ogUrl?.remove()
+      return
     }
-    canonical.href = url
-  }, [title, description, image, pathname])
+    upsertMeta('property', 'og:url', url)
+    if (canonical) {
+      canonical.href = url
+    } else {
+      const link = document.createElement('link')
+      link.rel = 'canonical'
+      link.href = url
+      document.head.appendChild(link)
+    }
+  }, [title, description, image, pathname, noindex, ogType])
 }

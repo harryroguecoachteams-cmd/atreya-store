@@ -4,8 +4,8 @@ import { AMAZON_STOREFRONT, CONTACT_EMAIL, whatsappLink } from '../config'
 import { CATEGORIES } from '../data/products'
 
 const TRUST = [
-  { title: '100% Handmade', sub: 'Crafted piece by piece' },
-  { title: 'Made in India', sub: 'By Indian hands, with love' },
+  { title: 'Handmade & handpicked', sub: 'Made by us or chosen by us' },
+  { title: 'Sourced in India', sub: 'Indian makers and Indian markets' },
   { title: 'Secure payments', sub: 'Checkout safely on Amazon.in' },
   { title: 'Bulk orders welcome', sub: 'Weddings, events & corporate' },
 ]
@@ -42,7 +42,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-xl font-semibold text-terra">Atreya</p>
           <p className="mt-2 text-sm leading-relaxed text-soft">
-            Handmade crochet keepsakes, festive décor and everlasting flowers, designed and crafted in India with love.
+            Crochet keepsakes and lotus pooja aasans from our own workshop, plus gajras, festive garlands and everlasting flowers handpicked across India.
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="text-ink hover:text-terra">Our story</Link></li>
@@ -165,7 +165,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-blush py-4 text-center text-xs text-soft">
-        © {new Date().getFullYear()} Atreya · Handmade in India. All rights reserved.
+        © {new Date().getFullYear()} Atreya · Handmade &amp; handpicked in India. All rights reserved.
       </div>
     </footer>
   )

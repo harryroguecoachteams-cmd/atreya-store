@@ -21,7 +21,7 @@ const SORTS = [
 export default function Shop() {
   usePageMeta(
     'Shop | Atreya',
-    'Browse Atreya handmade crochet keepsakes, festive décor, artificial flowers and craft supplies. Every product ships via Amazon.in.',
+    'Browse Atreya crochet keepsakes, gajras, lotus pooja aasans, festive garlands and bells, artificial flowers and craft supplies. Handmade or handpicked, every product ships via Amazon.in.',
   )
   const [params, setParams] = useSearchParams()
   const category = params.get('category')

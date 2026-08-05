@@ -157,11 +157,12 @@ export default function Home() {
       {/* Story band */}
       <section className="bg-blush/60 py-16">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-2xl font-semibold sm:text-3xl">Made by hand, meant to last</h2>
+          <h2 className="font-display text-2xl font-semibold sm:text-3xl">Made by us, or chosen by us</h2>
           <p className="mt-4 leading-relaxed text-soft">
             Atreya began with a simple idea: the little things in a home should carry warmth.
-            From hand-crocheted hearts to festive torans that welcome guests at the door, every piece
-            is crafted, checked and packed with the same care we'd want in our own homes.
+            The crochet and the pooja aasans we make ourselves. The rest we go and find, comparing
+            the market until something is good enough to carry our name. Either way it is checked and
+            packed with the same care we'd want in our own homes.
           </p>
           <Link
             to="/about"

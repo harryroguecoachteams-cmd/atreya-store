@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function NotFound() {
-  usePageMeta('Page not found | Atreya', 'The page you were looking for does not exist.')
+  usePageMeta('Page not found | Atreya', 'The page you were looking for does not exist.', {
+    noindex: true,
+  })
 
   return (
     <section className="mx-auto flex max-w-3xl flex-col items-center px-4 py-24 text-center">

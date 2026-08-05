@@ -23,6 +23,13 @@ RewriteRule ^(assets|products)/ - [L]
 # Bare /product is a snapshot directory, not a page; send to the SPA shell
 RewriteRule ^product/?$ /index.html [L]
 
+# A /product/<ASIN> with no prerendered snapshot is a product we no longer sell.
+# Serving the SPA shell with a 200 makes it look live to Google (soft 404), which
+# is how delisted items linger in the index. Return a real 404 so it drops out.
+# ErrorDocument below supplies the page body.
+RewriteCond %{DOCUMENT_ROOT}/product/$1.html !-f
+RewriteRule ^product/([^/]+)/?$ - [R=404,L]
+
 # Serve prerendered snapshots: /shop → /shop.html, /product/X → /product/X.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

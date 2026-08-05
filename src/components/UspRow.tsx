@@ -1,14 +1,14 @@
 const USPS = [
   {
-    title: 'Handmade with love',
-    sub: 'Every piece crafted one at a time',
+    title: 'Handmade & handpicked',
+    sub: 'Crocheted by us, the rest chosen by us',
     icon: (
       <path d="M12 21s-7-4.5-9.5-9C.9 8.6 2.7 5 6 5c2 0 3.2 1 4 2.2C10.8 6 12 5 14 5c3.3 0 5.1 3.6 3.5 7-2.5 4.5-9.5 9-9.5 9h4z" />
     ),
   },
   {
-    title: 'Crafted in India',
-    sub: 'Designed & made by Indian hands',
+    title: 'Sourced in India',
+    sub: 'Indian makers and Indian markets',
     icon: (
       <>
         <circle cx="12" cy="12" r="9" />

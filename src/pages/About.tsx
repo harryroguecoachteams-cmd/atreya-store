@@ -5,7 +5,7 @@ import { PRODUCTS } from '../data/products'
 export default function About() {
   usePageMeta(
     'Our Story | Atreya',
-    'Atreya is an Indian handmade décor brand: crochet keepsakes, festive torans and bells, artificial flowers and statement pieces, crafted with care.',
+    'Atreya is an Indian home décor brand. We crochet our own keepsakes and lotus pooja aasans, and handpick festive garlands, gajras, bells and flowers from Indian markets.',
   )
   const collage = ['B0GG5BVR7R', 'B0GDY7RSXY', 'B0CMDJR8QM', 'B09Y2B4XHL']
     .map((a) => PRODUCTS.find((p) => p.asin === a)!)
@@ -21,14 +21,21 @@ export default function About() {
           that carry a human touch: a stitch, a knot, a detail someone lingered over.
         </p>
         <p>
-          Today our little workshop makes hand-crocheted keepsakes like hearts, keychains, scrunchies
-          and gajras, alongside festive essentials like jasmine torans and hanging bells, everlasting
-          artificial flowers, and statement décor like our brass-worked wooden vases.
+          Two things sit behind everything on this site. Some of it we make: our little workshop
+          hand-crochets the hearts, keychains, scrunchies and rose gajras, and stitches the lotus
+          pooja aasans petal by petal. The rest we handpick, going through the market ourselves and
+          comparing what is out there until something is good enough to carry our name: the mogra
+          and pom pom garlands, the jasmine torans, the hanging bells, the everlasting flowers and
+          the brass-worked wooden vases.
+        </p>
+        <p>
+          We would rather list twelve things we would keep in our own home than a hundred we would
+          not, which is why the catalogue grows slowly and why nothing goes up untested.
         </p>
         <p>
           Every order is fulfilled through <strong className="text-ink">Amazon.in</strong>, so you get
           fast delivery, easy returns and buyer protection, while we focus on what we do best: making
-          things by hand.
+          and choosing beautiful things.
         </p>
       </div>
 
@@ -46,8 +53,8 @@ export default function About() {
             <p className="mt-1 text-soft">Crochet pieces are made one at a time, so no two are identical.</p>
           </div>
           <div>
-            <p className="font-semibold text-terra">Honest materials</p>
-            <p className="mt-1 text-soft">Soft, durable yarns and quality components that hold up to daily life.</p>
+            <p className="font-semibold text-terra">Handpicked, not just listed</p>
+            <p className="mt-1 text-soft">What we don't make, we go and find, and reject far more than we keep.</p>
           </div>
           <div>
             <p className="font-semibold text-terra">Rooted in tradition</p>
