@@ -1,0 +1,81 @@
+# Atreya: SPA routing + caching + hardening for Apache/LiteSpeed shared hosting
+RewriteEngine On
+RewriteBase /
+
+# Keep LiteSpeed's server-side page cache away from responses; browsers
+# already get correct Cache-Control headers below.
+<IfModule LiteSpeed>
+  RewriteRule .* - [E=Cache-Control:no-cache]
+</IfModule>
+
+# Canonical host: force https and apex domain in one 301
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.atreya\.store$ [NC]
+RewriteRule ^(.*)$ https://atreya.store/$1 [R=301,L]
+
+# No directory listings for the asset folders
+RewriteRule ^(assets|products)/?$ - [R=404,L]
+
+# Never rewrite build assets or product images: a missing asset must 404,
+# not silently return index.html (poisons browsers after a redeploy).
+RewriteRule ^(assets|products)/ - [L]
+
+# /product and /collections are snapshot directories, not pages. Without this
+# Apache would try to serve the directory itself. Send shoppers to the shop.
+RewriteRule ^(product|collections)/?$ /shop [R=301,L]
+
+# Products we deliberately stopped selling. 410 Gone is the correct status and
+# drops them from the index faster than a 404. ErrorDocument supplies the body.
+#
+# 🔴 This is an EXPLICIT LIST on purpose. It used to be a filesystem probe
+# (RewriteCond %{DOCUMENT_ROOT}/product/$1.html !-f) and on 2026-08-05 that
+# probe 404'd the ENTIRE catalogue live: %{DOCUMENT_ROOT} does not resolve to
+# this addon domain's docroot, so the condition was always true and every
+# product and collection URL returned 404. Never reintroduce a DOCUMENT_ROOT
+# test here without verifying it on the live host first. Any URL not on this
+# list still self-reports noindex from the React 404 route.
+#
+# Add an ASIN here when you remove it from CATALOG in fetch-products.mjs.
+RewriteRule ^product/(B09QJV7VXZ|B09Y3J9PSQ)(\.html)?/?$ - [G,L]
+
+# Serve prerendered snapshots: /shop → /shop.html, /product/X → /product/X.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*?)/?$ /$1.html [L]
+
+# Everything else falls through to the SPA shell
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+
+ErrorDocument 404 /404.html
+# Without a 410 line the [G] rule above falls through to LiteSpeed's stock
+# 824-byte error page: a white screen with a giant "410" and no way back into
+# the store. Anyone arriving on a delisted product from an old Google result
+# lands there, so serve the branded page while keeping the 410 status.
+ErrorDocument 410 /404.html
+
+# Cache policy: HTML always revalidates; hashed build assets cache forever
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(js|mjs|css|woff|woff2|ttf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml
+</IfModule>

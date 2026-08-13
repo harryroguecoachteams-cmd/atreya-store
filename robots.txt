@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Filter permutations are the same products as the collection pages they
+# canonicalise to. Let crawlers spend their budget on the real pages.
+Disallow: /shop?sort=
+Disallow: /shop?price=
+
+Sitemap: https://atreya.store/sitemap.xml
