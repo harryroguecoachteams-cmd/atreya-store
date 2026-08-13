@@ -60,7 +60,7 @@ export const PRODUCT_COPY: Record<string, string> = {
 
   // Pooja Essentials
   B0HB16BLTK:
-    'A lotus pooja aasan in cream and terracotta, 24.5 cm across when open, for seating an idol, a kalash or a diya thali in a home mandir. Cream is the quieter of our two: it settles into a wooden or marble mandir and leaves the idol as the thing you look at. Each petal is cut and shaped in our workshop and the gold beaded border is stitched by hand around the edge, so no two open exactly alike. Folds flat for cleaning and storage, and arrives in a gift box with a woven label.',
+    'A lotus pooja aasan in bright yellow and gold, 24.5 cm across when open, for seating an idol, a kalash or a diya thali in a home mandir. Yellow is the festive one: it lifts a pooja shelf for Diwali, haldi, Griha Pravesh and everyday aarti without needing fresh flowers each time. Each petal is cut and shaped in our workshop and the gold beaded border is stitched by hand around the edge, so no two open exactly alike. Folds flat for cleaning and storage.',
   B0HB4N2JSH:
     'A lotus pooja aasan in rani pink and gold, 24.5 cm across when open, carrying a printed Om, swastik and kalash motif on the center panel. This is the festival one: it gets bought for Diwali, Navratri and Griha Pravesh, where the mandir itself is meant to look dressed. Handmade petal by petal with a hand stitched gold beaded border. It folds flat between festivals and arrives gift boxed, which is why it is given away as often as it is kept.',
 

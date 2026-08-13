@@ -1118,11 +1118,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     "asin": "B0HB16BLTK",
-    "name": "Lotus Pooja Aasan 24.5 cm (Cream)",
-    "fullName": "Atreya Handcrafted Lotus Pooja Aasan 24.5 cm | Satin Petal & Brocade Mat for Home Temple, Idol, Kalash & Diya Thali | Cream & Terracotta with Gold Beaded Border | Gift Box",
-    "description": "There is a certain warmth that only handmade things carry, and the seat your idol rests on should carry it too. The Atreya Lotus Pooja Aasan is shaped like the flower it is named for. Eight soft satin petals, each padded by hand, open around a terracotta and gold brocade centre ringed with fine gold beadwork. A machine prints a flower flat onto cloth. Ours is built petal by petal, so it stands full and catches the light of the diya. At about 24.5 cm across it sits generously under an idol, kalash or diya thali, and gives an everyday mandir a quiet sense of occasion. It arrives in a cream and terracotta gift box, ready to give or to keep. Made by hand. Meant to last.",
+    "name": "Lotus Pooja Aasan 24.5 cm (Yellow)",
+    "fullName": "Atreya Handcrafted Yellow Lotus Pooja Aasan 24.5 cm | Satin Petal Mat with Gold Beaded Border for Home Temple, Idol, Kalash & Diya Thali | Gift for Puja, Diwali & Housewarming",
+    "description": "There is a certain warmth that only handmade things carry, and the seat your idol rests on should carry it too. The Atreya Yellow Lotus Pooja Aasan is shaped like the flower it is named for. Eight bright yellow satin petals, each padded by hand, open around a decorative floral centre ringed with fine gold beadwork. A machine prints a flower flat onto cloth. Ours is built petal by petal, so it stands full and catches the light of the diya. At about 24.5 cm across it sits generously under an idol, kalash or diya thali, and gives an everyday mandir a festive lift. Made by hand. Meant to last.",
     "category": "Pooja Essentials",
-    "price": 249,
+    "price": 199,
     "mrp": 999,
     "image": "/products/B0HB16BLTK.jpg",
     "images": [
@@ -1139,7 +1139,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "label": "Colour",
-        "value": "Cream"
+        "value": "Yellow"
       },
       {
         "label": "Item Weight",
@@ -1164,10 +1164,10 @@ export const PRODUCTS: Product[] = [
     ],
     "bullets": [
       "HANDMADE IN INDIA, NOT MASS-PRINTED: Shaped like the lotus itself, petal by petal, by our karigars. The gold beaded border is stitched by hand, so no two open exactly alike.",
-      "PADDED PETALS, NOT A FLAT MAT: Eight soft satin petals rise around a terracotta and gold brocade centre, giving your idol a raised seat of honour instead of a thin printed cloth.",
-      "MADE IN ATREYA COLOURS: Warm cream, terracotta and gold, with a delicate gold beaded ring. A calm, elegant piece that suits any mandir.",
+      "PADDED PETALS, NOT A FLAT MAT: Eight soft yellow satin petals rise around the centre, giving your idol a raised seat of honour instead of a thin printed cloth.",
+      "BRIGHT YELLOW FOR PUJA AND FESTIVALS: A cheerful yellow lotus aasan that suits daily mandir use, Diwali decor, haldi setups, Griha Pravesh and housewarming gifting.",
       "THE RIGHT SIZE FOR DAILY PUJA: About 24.5 cm across, a generous base for an idol, kalash, shaligram or diya thali during aarti and everyday worship.",
-      "ARRIVES GIFT READY: Packed in a cream and terracotta Atreya gift box with a woven label. A handmade blessing for a housewarming, wedding, Griha Pravesh or Diwali."
+      "GOLD BEADED FINISH: The floral centre and delicate gold border catch diya light beautifully while keeping the aasan lightweight and easy to store."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0HB16BLTK"
   },
