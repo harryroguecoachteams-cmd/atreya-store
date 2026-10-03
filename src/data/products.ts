@@ -14,188 +14,128 @@ export interface Product {
   amazonUrl: string;
 }
 
-export const CATEGORIES = ["Crochet","Festive Décor","Gajras","Pooja Essentials","Artificial Flowers","Home Décor","Craft Supplies"] as const;
+export const CATEGORIES = ["Gajras","Hair Accessories","Festive Décor","Door Hangings","Pooja Essentials","Crochet","Artificial Flowers","Kids","Travel Essentials","Craft Supplies"] as const;
 
 export const PRODUCTS: Product[] = [
   {
-    "asin": "B0GG5BVR7R",
-    "name": "Crochet Evil Eye Hanging Charm",
-    "fullName": "Atreya Handmade Crochet Evil Eye Hanging Charm with Tassel & Pearl Beads, Blue, Boho Wall Decor",
-    "description": "Add a calm, classy boho accent to your space with this Atreya Handmade Crochet Evil Eye Hanging Charm (Blue). Crafted with detailed crochet work, a scalloped edge, pearl-style beads, and a soft tassel, it’s an easy way to upgrade your door/handle decor or car mirror with something handmade and unique. Traditionally, the evil eye motif is associated with protection and good vibes. This piece is best enjoyed as a beautiful decor accessory for home, car, or gifting.",
-    "category": "Crochet",
-    "price": 189,
-    "mrp": 499,
-    "image": "/products/B0GG5BVR7R.jpg",
+    "asin": "B0HC48P47S",
+    "name": "Artificial Jasmine Bun Gajra (Pack of 3)",
+    "fullName": "Atreya Artificial Gajra for Hair Bun, Juda Gajra for Women, Pack of 3",
+    "description": "Fresh mogra is lovely for about four hours. Then it browns, it closes, and it starts to smell like yesterday, which is a problem when the function runs from morning haldi to a late reception. This is a pack of three artificial bun gajras made to read as the real thing at conversational distance and to keep reading that way at eleven at night. Each sits on an elasticated loop that stretches over the bun and grips without a single pin, so it goes on in a second and comes off without taking hair with it. Three in a pack because on the morning of a wedding everybody in the house is getting ready at the same time and one is never enough. About 20 cm of strand per piece. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 199,
+    "mrp": 399,
+    "image": "/products/B0HC48P47S.jpg",
     "images": [
-      "/products/B0GG5BVR7R.jpg",
-      "/products/B0GG5BVR7R_2.jpg",
-      "/products/B0GG5BVR7R_3.jpg",
-      "/products/B0GG5BVR7R_4.jpg"
+      "/products/B0HC48P47S.jpg",
+      "/products/B0HC48P47S_2.jpg",
+      "/products/B0HC48P47S_3.jpg",
+      "/products/B0HC48P47S_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "White"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "33 x 3 x 2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "100 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "3"
+      },
+      {
+        "label": "Style",
+        "value": "Floral"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 3, SO YOU ARE NOT RATIONING THEM: Three bun gajras in one order. Wear one, keep one in the bag, hand one to your sister on the morning everybody is getting ready at once.",
+      "IT WILL NOT WILT BY LUNCH: Fresh mogra starts closing and browning within a few hours in the heat. These look the same at the end of the evening as they did when you pinned them in.",
+      "FOR THE FUNCTION AND FOR TUESDAY: Dressy enough for a wedding or a pooja, plain enough for office, a classical dance class or a temple visit. Not a once a year purchase.",
+      "GOES ROUND ANY BUN: An elasticated loop that stretches over a bun and grips without pins. Works on a small tight juda and on a loose low bun alike, and comes off without pulling hair.",
+      "HAND CHECKED AND HAND PACKED: Each one inspected before packing. Approximately 20 cm of flower strand per piece, white mogra style buds. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HC48P47S"
+  },
+  {
+    "asin": "B0HGFMB8JJ",
+    "name": "White Jasmine Bun Gajra Wreath (Pack of 2)",
+    "fullName": "Atreya White Jasmine Gajra for Hair Bun, Juda Gajra Women, Pack of 2",
+    "description": "White jasmine is the one that goes with everything, which is exactly why the fresh kind is so annoying. You buy it in the morning, it is perfect for four hours, and by the time the evening function starts it has closed up and gone the colour of weak tea. This is a pair of white bun gajras in a full wreath shape, dense enough to read as real at the distance people actually stand from you, and unbothered by heat, lights or a long day. The elasticated wreath stretches over the bun and holds without a single pin. Two in a pack, matched from one batch, so if a sister or a friend is wearing the other one the white matches. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 149,
+    "mrp": 399,
+    "image": "/products/B0HGFMB8JJ.jpg",
+    "images": [
+      "/products/B0HGFMB8JJ.jpg",
+      "/products/B0HGFMB8JJ_2.jpg",
+      "/products/B0HGFMB8JJ_3.jpg",
+      "/products/B0HGFMB8JJ_4.jpg",
+      "/products/B0HGFMB8JJ_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Cotton"
+        "value": "Fabric"
       },
       {
         "label": "Colour",
-        "value": "Blue"
+        "value": "White"
       },
       {
         "label": "Product Dimensions",
-        "value": "15 x 6 x 3 cm"
+        "value": "12 x 12 x 4 cm"
       },
       {
         "label": "Item Weight",
-        "value": "500 g"
+        "value": "180 g"
       },
       {
         "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "crochet"
+        "value": "2"
       },
       {
         "label": "Style",
-        "value": "Boho"
+        "value": "Traditional"
       },
       {
-        "label": "Theme",
-        "value": "Love"
-      },
-      {
-        "label": "Occasion",
-        "value": "Valentine's Day"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "Handmade Crochet Evil Eye: Neatly hand-crocheted evil eye motif with a scalloped border for a premium, clean finish.",
-      "Elegant Blue Palette: Deep blue + sky blue + white design that looks classy on doors, car mirrors, wardrobes, and wall hooks.",
-      "Pearl Bead Detail: Finished with pearl-style beads for a minimal, aesthetic look (adds a subtle premium touch).",
-      "Soft Tassel Finish: Long yarn tassel gives a traditional “latkan” feel, perfect for home decor and gifting.",
-      "Multi-Use Hanging Charm: Use as door hanging, car rear-view charm, bag charm, nursery decor, or key holder accent."
+      "PACK OF 2, MATCHED FROM ONE BATCH: Two white bun gajras cut from the same run, so the white is the same on both. Useful when two people are standing in the same photograph.",
+      "IT WILL NOT WILT BY LUNCH: Fresh jasmine closes and browns within hours in the heat. These hold their shape and their white from the morning through to the end of the night.",
+      "THE ONE THAT SUITS EVERYTHING: White goes with every outfit colour in the wardrobe, which is why it is the shade to own if you are only buying one. Temple, office, wedding, dance.",
+      "GOES ROUND ANY BUN: An elasticated wreath that stretches over the bun and grips without pins. Works on a tight juda and on a loose low bun, and comes off without pulling hair.",
+      "HAND CHECKED AND HAND PACKED: Each piece inspected before packing. Full wreath style, dense white mogra buds. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GG5BVR7R"
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFMB8JJ"
   },
   {
-    "asin": "B0GDXXM3PR",
-    "name": "Mini Crochet Hearts (Set of 12)",
-    "fullName": "Atreya Mini Crochet Hearts Set of 12 | Handmade Yarn Heart Bowl Fillers for Home Decor | Tiered Tray & Bookshelf Decor | Craft Embellishments | Gift Filler",
-    "description": "Add instant charm to your home with Atreya Mini Crochet Hearts (Set of 12). These tiny handmade yarn hearts are perfect as bowl fillers, tiered tray décor, and bookshelf styling accents. Whether you’re decorating your living room, creating a festive setup, styling gift hampers, or working on DIY crafts, these crochet hearts add a warm, cozy, handmade feel. Each heart is handcrafted with soft yarn for a textured look that photographs beautifully and elevates everyday décor. Ideal for Valentine’s décor, wedding décor, party favors, gift basket fillers, and creative projects.",
-    "category": "Crochet",
-    "price": 1299,
-    "mrp": 1699,
-    "image": "/products/B0GDXXM3PR.jpg",
+    "asin": "B0HF9ZT32L",
+    "name": "Red Rose and Jasmine Hair Gajra (Pack of 2)",
+    "fullName": "Atreya Red Rose and Jasmine Hair Gajra for Bun, Veni, Pack of 2",
+    "description": "An all white gajra is beautiful and it also disappears, which nobody mentions until they see the photographs. Against a cream or gold outfit, in warm indoor light, white on white simply stops registering. This is a pair of hair gajras built around a deep red fabric rose set into white jasmine, which is the combination that still reads at the back of a hall and in a picture taken from across a room. The elasticated loop stretches over a bun and holds without pins, and unlike the fresh version it will not brown, close or wilt between the morning ceremony and a late reception. Two in a pack, matched from one batch. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 179,
+    "mrp": 499,
+    "image": "/products/B0HF9ZT32L.jpg",
     "images": [
-      "/products/B0GDXXM3PR.jpg",
-      "/products/B0GDXXM3PR_2.jpg",
-      "/products/B0GDXXM3PR_3.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "Mix"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "5 x 2 x 2 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "500 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "12"
-      },
-      {
-        "label": "Included Components",
-        "value": "Gajra"
-      },
-      {
-        "label": "Theme",
-        "value": "Love"
-      },
-      {
-        "label": "Occasion",
-        "value": "Valentine's Day"
-      }
-    ],
-    "bullets": [
-      "HANDMADE MINI HEARTS (SET OF 12): Atreya crochet hearts are carefully handcrafted to add a cozy, premium handmade touch to your décor and gifting.",
-      "PERFECT FOR BOWL FILLERS & TRAYS: Tiny hearts (approx. 1.25 inch) are ideal for bowls, tiered trays, jars, coffee tables, bedside décor, and festive styling.",
-      "MULTI-USE CRAFT DECOR: Use for DIY crafts, garlands, scrapbooking, gift wrapping, party favors, wedding décor, table scatter, and hamper styling.",
-      "HANDMADE DISCLAIMER + SAFETY: Slight variations in size/shape/color are natural in handmade items. Not a toy. Keep away from children under 4 and pets (small parts).",
-      "🎁 Ideal for Gifting & Festive Styling"
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDXXM3PR"
-  },
-  {
-    "asin": "B0GC6KJCSC",
-    "name": "Mini Crochet Hearts (Set of 6, Multicolor)",
-    "fullName": "Atreya Mini Crochet Hearts Set of 6 (Multicolor) | Handmade Bowl Filler & Vase Filler | Tiered Tray Decor",
-    "description": "Add a small touch of love to your decor with Atreya Mini Crochet Hearts. This set of 6 handcrafted hearts is designed to be styled effortlessly. Scatter them in a decorative bowl, add them to a vase arrangement, place them on a tiered tray, or use them as gift hamper fillers. Each piece is handmade, making every set slightly unique.",
-    "category": "Crochet",
-    "price": 699,
-    "mrp": 999,
-    "image": "/products/B0GC6KJCSC.jpg",
-    "images": [
-      "/products/B0GC6KJCSC.jpg",
-      "/products/B0GC6KJCSC_2.jpg",
-      "/products/B0GC6KJCSC_3.jpg",
-      "/products/B0GC6KJCSC_4.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "Red"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "1.25 x 1 x 1 inches"
-      },
-      {
-        "label": "Item Weight",
-        "value": "500 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "12"
-      },
-      {
-        "label": "Theme",
-        "value": "Love"
-      },
-      {
-        "label": "Occasion",
-        "value": "Valentine's Day"
-      }
-    ],
-    "bullets": [
-      "Handmade, artisan-crafted: Each mini heart is individually crocheted for a charming, handmade finish.",
-      "Curated multicolor set: A balanced mix of colors that adds a cozy, romantic accent to any space.",
-      "Easy home styling: Use as bowl filler, vase filler, tiered tray decor, shelf styling, hamper filler, or craft embellishments.",
-      "Size & pack details: Set of 6 mini crochet hearts. Each heart is approx. 1.25 inches (handmade sizing may vary slightly)."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GC6KJCSC"
-  },
-  {
-    "asin": "B0G95YC1T9",
-    "name": "Crochet Heart Ornaments (Set of 12, Red)",
-    "fullName": "Atreya Crochet Heart Ornaments Set of 12 | Hanging Yarn Hearts (Red) | Valentine & Wedding Decor | Bowl/Vase Fillers",
-    "description": "Bring a cozy, handmade touch to your décor with Atreya Crochet Heart Ornaments. This set includes 12 adorable yarn hearts in red, easy to hang and easy to style, and perfect for creating a warm “love” atmosphere at home. Use them as hanging ornaments for windows, décor trees, wall garlands, mirror corners, gift wrapping accents, or photo backdrops. They also look beautiful as bowl/vase fillers or in gift hampers. Whether you’re decorating for Valentine’s Day, an anniversary dinner, a wedding function, or an engagement party, these hearts add a soft, thoughtful charm that feels personal.",
-    "category": "Crochet",
-    "price": 1299,
-    "mrp": 1699,
-    "image": "/products/B0G95YC1T9.jpg",
-    "images": [
-      "/products/B0G95YC1T9.jpg",
-      "/products/B0G95YC1T9_2.jpg",
-      "/products/B0G95YC1T9_3.jpg",
-      "/products/B0G95YC1T9_4.jpg",
-      "/products/B0G95YC1T9_5.jpg"
+      "/products/B0HF9ZT32L.jpg",
+      "/products/B0HF9ZT32L_2.jpg",
+      "/products/B0HF9ZT32L_3.jpg",
+      "/products/B0HF9ZT32L_4.jpg"
     ],
     "specs": [
       {
@@ -208,185 +148,54 @@ export const PRODUCTS: Product[] = [
       },
       {
         "label": "Product Dimensions",
-        "value": "2.56 x 2.17 x 1 inches"
+        "value": "9 x 6 x 4.5 cm"
       },
       {
         "label": "Item Weight",
-        "value": "500 g"
+        "value": "100 g"
       },
       {
         "label": "Number of Items",
-        "value": "12"
-      },
-      {
-        "label": "Included Components",
-        "value": "Hearts"
+        "value": "2"
       },
       {
         "label": "Style",
-        "value": "Casual"
+        "value": "Traditional"
       },
       {
-        "label": "Theme",
-        "value": "Love"
-      },
-      {
-        "label": "Occasion",
-        "value": "Valentine's Day"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "1. Value Pack for Instant Decor Set of 12 crochet heart ornaments in a charming red, pink & white mix, perfect for quick festive styling and craft projects.",
-      "2. Perfect Mini Size (Looks Cute Everywhere) Each heart is approx 6.5 × 5.5 cm (2.56 × 2.17 in) | ideal for small corners, centrepieces, hampers, jars, baskets, and hanging décor",
-      "3. Ready to Hang + Easy to Style Comes with rope/loop for hanging, so decorate trees, windows, mirrors, gift wraps, garlands, photo walls, or use as table accents",
-      "4. Handcrafted Look, Soft & Lightweight Finely crocheted with a neat, dense texture and a soft feel, with lightweight pieces that add warmth and a handmade vibe to your space",
-      "5. Made for Love-Themed Moments Great for Valentine’s Day, anniversaries, engagements, weddings, party décor, return gifts, and romantic room styling."
+      "PACK OF 2, MATCHED FROM ONE BATCH: Two hair gajras cut from the same run, so the red is identical on both. Wear one and keep one, or wear both on a bigger bun.",
+      "THE RED THAT PHOTOGRAPHS: A deep red rose against white jasmine is the combination that reads clearly in pictures, where an all white gajra can disappear against a light outfit.",
+      "FOR THE WEDDING AND AFTER IT: Made for the wedding day and the reception, and worn again at a temple, a pooja or a dance performance without looking out of place.",
+      "GOES ROUND ANY BUN: An elasticated loop that stretches over the bun and grips without pins. Comes off at the end of the night without pulling at your hair.",
+      "HAND CHECKED AND HAND PACKED: Each piece inspected before packing. Red fabric rose set against dense white mogra buds. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0G95YC1T9"
+    "amazonUrl": "https://www.amazon.in/dp/B0HF9ZT32L"
   },
   {
-    "asin": "B0GDY7RSXY",
-    "name": "Crochet Cherry Keychain",
-    "fullName": "Atreya Handmade Crochet Cherry Keychain",
-    "description": "Add a touch of charm to your everyday essentials with the ATREYA Handmade Crochet Cherry Keychain. Beautifully hand-crocheted using soft, durable yarn, this cute cherry design makes a perfect accessory for keys, handbags, backpacks, or pouches. Designed with care and creativity, this keychain reflects ATREYA’s love for handmade craftsmanship and aesthetic details. Each piece is unique, making it a thoughtful gift for yourself or your loved ones. 🎁 Perfect For Keys, handbags, backpacks & pouches Handmade gift lovers Birthday gifts & hampers Return gifts & party favors Cute aesthetic accessories",
-    "category": "Crochet",
+    "asin": "B0HFBKJ8Q6",
+    "name": "Long White Jasmine Gajra for Braid (Pack of 2)",
+    "fullName": "Atreya Long White Jasmine Gajra for Hair Braid, Veni, Pack of 2",
+    "description": "Anyone who has tried to dress a full braid with one short gajra knows the problem. It covers the top third, it stops, and the rest of the plait is bare. This is a pair of long white gajras cut to run the length of an actual braid, which is why they are sold in twos rather than singly. They tie in as you plait or pin along a finished braid, and unlike fresh jasmine they will not close up, brown or start to smell through a long function or a full day of dance. Dense white buds along the whole strand. Wear them for a wedding, a temple visit, a Bharatanatyam performance or a South Indian ceremony, and then again the following month. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
     "price": 199,
     "mrp": 499,
-    "image": "/products/B0GDY7RSXY.jpg",
+    "image": "/products/B0HFBKJ8Q6.jpg",
     "images": [
-      "/products/B0GDY7RSXY.jpg",
-      "/products/B0GDY7RSXY_2.jpg",
-      "/products/B0GDY7RSXY_3.jpg",
-      "/products/B0GDY7RSXY_4.jpg"
+      "/products/B0HFBKJ8Q6.jpg",
+      "/products/B0HFBKJ8Q6_2.jpg",
+      "/products/B0HFBKJ8Q6_3.jpg",
+      "/products/B0HFBKJ8Q6_4.jpg",
+      "/products/B0HFBKJ8Q6_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Cotton Yarn, Metal"
-      },
-      {
-        "label": "Colour",
-        "value": "Red, Green"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "10 x 3 x 10 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "15 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "1 Keychain With Heart Charm And Flower Decoration, 1 Metal Key Ring, 1 Chain Connector"
-      },
-      {
-        "label": "Style",
-        "value": "Handmade Crochet, Cute, Decorative, Floral Accent"
-      },
-      {
-        "label": "Pattern",
-        "value": "Fruit"
-      },
-      {
-        "label": "Theme",
-        "value": "Heart, Flower, Love, Valentine, Romantic, Handmade, Cute, Kawaii"
-      }
-    ],
-    "bullets": [
-      "🧶 Handcrafted by skilled artisans",
-      "🍒 Cute cherry design with leaf detailing",
-      "🔑 Strong & durable metal key ring",
-      "🎒 Lightweight and easy to carry",
-      "♻️ Eco-friendly & reusable yarn craft",
-      "🎁 Ideal for gifting & return gifts"
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDY7RSXY"
-  },
-  {
-    "asin": "B0GDY4D9FN",
-    "name": "Crochet Heart Keychain with Flower",
-    "fullName": "Atreya Handmade Crochet Heart Keychain with Flower, Red, Decorative Charm Accessory",
-    "description": "This charming handmade crochet keychain from Atreya brings a delightful touch of handcrafted artistry to your everyday essentials. Featuring a vibrant red heart paired with a delicate white flower with a cheerful yellow centre, this adorable accessory adds personality and warmth to your keys, bags, or backpack. Each piece is carefully crocheted by hand, making every keychain unique with its own character and charm. The soft yet durable yarn construction ensures this keychain can withstand daily use whilst maintaining its eye-catching appeal. The sturdy metal keyring attachment provides secure fastening to keep your keys safe. Perfect as a thoughtful gift for loved ones or as a sweet treat for yourself, this crochet heart keychain combines functionality with whimsical design. Its compact size makes it easy to carry without adding bulk, whilst the bright red colour ensures you can spot your keys quickly. Whether you're looking to add a handmade touch to your accessories or searching for a heartfelt gift, this crochet keychain delivers both style and practicality in one adorable package.",
-    "category": "Crochet",
-    "price": 299,
-    "mrp": 499,
-    "image": "/products/B0GDY4D9FN.jpg",
-    "images": [
-      "/products/B0GDY4D9FN.jpg",
-      "/products/B0GDY4D9FN_2.jpg",
-      "/products/B0GDY4D9FN_3.jpg",
-      "/products/B0GDY4D9FN_4.jpg",
-      "/products/B0GDY4D9FN_5.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Cotton Yarn, Metal"
-      },
-      {
-        "label": "Colour",
-        "value": "Red, White, Yellow"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "8 x 4 x 7 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "15 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "1 Keychain With Heart Charm And Flower Decoration, 1 Metal Key Ring, 1 Chain Connector"
-      },
-      {
-        "label": "Style",
-        "value": "Handmade Crochet, Cute, Decorative, Floral Accent"
-      },
-      {
-        "label": "Pattern",
-        "value": "Crochet Textured Heart With Daisy Flower"
-      },
-      {
-        "label": "Theme",
-        "value": "Heart, Flower, Love, Valentine, Romantic, Handmade, Cute, Kawaii"
-      }
-    ],
-    "bullets": [
-      "HANDMADE CRAFTSMANSHIP: Adorable crochet keychain featuring a bright red heart design with a delicate white daisy flower accent, meticulously handcrafted with attention to detail",
-      "CHARMING DESIGN: Eye-catching combination of a plush red heart and white flower with yellow centre creates a cheerful and romantic accessory perfect for personalising bags, keys, or backpacks",
-      "SOFT AND DURABLE: Made with high-quality yarn using crochet technique, providing a soft texture whilst maintaining durability for everyday use as a keychain or bag charm",
-      "COMPACT SIZE: Lightweight and portable design fits comfortably in your hand and easily attaches to keys, handbags, purses, or rucksacks without adding bulk",
-      "VERSATILE ACCESSORY: Perfect as a thoughtful gift for loved ones, Valentine's Day present, or personal accessory to add a touch of handmade charm to your belongings"
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDY4D9FN"
-  },
-  {
-    "asin": "B0GDV4HTRJ",
-    "name": "Crochet Rose Gajra / Hair Parandi (Pair)",
-    "fullName": "Handmade Crochet Rose Gajra/Hair Parandi | Soft Floral Traditional Accessory (Pair)",
-    "description": "Add a touch of timeless elegance to your traditional look with this handcrafted crochet rose gajra. Made with love and care, this floral accessory features soft white crochet loops paired with vibrant red rose flowers, giving the charm of real flowers with the durability of handmade yarn. Perfect for braids, buns, or parandi-style hairstyles, this reusable gajra stays fresh forever and is gentle on hair and skin. Whether you’re dressing up for a wedding, festival, pooja, or classical dance, this crochet gajra adds grace and tradition to your look.",
-    "category": "Crochet",
-    "price": 399,
-    "mrp": 999,
-    "image": "/products/B0GDV4HTRJ.jpg",
-    "images": [
-      "/products/B0GDV4HTRJ.jpg",
-      "/products/B0GDV4HTRJ_3.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Yarn"
+        "value": "Fabric"
       },
       {
         "label": "Colour",
@@ -394,257 +203,712 @@ export const PRODUCTS: Product[] = [
       },
       {
         "label": "Product Dimensions",
-        "value": "15 x 1 x 1 cm"
+        "value": "45 x 4 x 3 cm"
       },
       {
         "label": "Item Weight",
-        "value": "500 g"
+        "value": "80 g"
       },
       {
         "label": "Number of Items",
-        "value": "12"
-      },
-      {
-        "label": "Included Components",
-        "value": "Gajra"
+        "value": "2"
       },
       {
         "label": "Style",
-        "value": "Romantic/Traditional"
+        "value": "Traditional"
       },
       {
-        "label": "Theme",
-        "value": "Love"
-      },
-      {
-        "label": "Occasion",
-        "value": "Valentine's Day"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "🌹 100% Handmade Crochet Work",
-      "🌼 Soft & Skin-Friendly Yarn",
-      "♻️ Reusable | No Wilting, No Mess",
-      "💃 Lightweight & Comfortable to Wea",
-      "🎁 Ideal for Gifting & Festive Styling"
+      "PACK OF 2 LONG STRANDS: Two long gajras in one order, which is what a full braid actually takes. One strand rarely covers a plait from top to bottom.",
+      "LONG ENOUGH FOR A REAL BRAID: Cut long on purpose, so it runs the length of a plait instead of stopping halfway down like the short ones do.",
+      "FOR DANCE AND FOR CEREMONY: The length classical dance actually needs, and equally at home on a wedding braid, a temple visit or a South Indian function.",
+      "TIES IN, STAYS PUT: Ties into the braid as you plait it or pins along a finished one. No clip to dig in, no weight pulling at the roots through a long evening.",
+      "HAND CHECKED AND HAND PACKED: Each strand inspected before packing. Dense white mogra style buds along the full length. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDV4HTRJ"
+    "amazonUrl": "https://www.amazon.in/dp/B0HFBKJ8Q6"
   },
   {
-    "asin": "B0GDY833NN",
-    "name": "Crochet Popcorn-Stitch Scrunchie",
-    "fullName": "Atreya Handmade Crochet Scrunchie, Teal and Pink Popcorn Stitch Hair Tie, Soft Cottagecore Hair Accessory, Gift for Her",
-    "description": "This charming handmade crochet scrunchie from Atreya brings a delightful pop of colour to your everyday style. Featuring a playful popcorn stitch design in soft pastel teal and pink, this hair tie combines cottagecore aesthetics with practical functionality. The textured bobble detailing creates a dimensional flower-like appearance that adds personality to any hairstyle, whether you're styling a messy bun, ponytail, or half-up look. Crafted with care using gentle yarn, this scrunchie is soft on your hair and helps prevent breakage and creasing compared to traditional elastic bands. The comfortable stretch ensures a secure hold without pulling or tugging, making it suitable for all hair types and thicknesses. This cute hair accessory works beautifully for casual outings, work, or special occasions. It also makes a thoughtful gift for friends, sisters, or anyone who appreciates handcrafted accessories with a vintage-inspired charm. Add this sweet teal and pink scrunchie to your collection and embrace the whimsical beauty of handmade fashion accessories.",
-    "category": "Crochet",
+    "asin": "B0HC479QXR",
+    "name": "Yellow Rose and Jasmine Hand Gajra (Pack of 2)",
+    "fullName": "Atreya Artificial Yellow Hand Gajra for Haldi, Flower Jewellery, Pack of 2",
+    "description": "By the time the haldi is over, real flowers look like they have been through it. That is the honest problem with fresh jasmine on the wrist. It bruises, it browns, and it does it fastest in exactly the photographs you will keep. These are two bright yellow hand gajras, made to look like the real thing and behave better. Elasticated, so they go on in a second and stay on through the ceremony, the food and the dancing. A pair, because a hand gajra reads better on both wrists than on one, and because the second one is there for your sister or whoever ends up asking. Wear them again for mehndi and the sangeet. They will look the same. The band opens from about 5 cm to 10 cm across and the rose is roughly 4 cm. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
     "price": 199,
-    "mrp": null,
-    "image": "/products/B0GDY833NN.jpg",
+    "mrp": 899,
+    "image": "/products/B0HC479QXR.jpg",
     "images": [
-      "/products/B0GDY833NN.jpg",
-      "/products/B0GDY833NN_2.jpg",
-      "/products/B0GDY833NN_3.jpg",
-      "/products/B0GDY833NN_4.jpg"
+      "/products/B0HC479QXR.jpg",
+      "/products/B0HC479QXR_2.jpg",
+      "/products/B0HC479QXR_3.jpg",
+      "/products/B0HC479QXR_4.jpg",
+      "/products/B0HC479QXR_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Cotton Yarn"
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Yellow"
       },
       {
         "label": "Product Dimensions",
-        "value": "8 x 5 x 1.5 cm"
+        "value": "10 x 10 x 4 cm"
       },
       {
         "label": "Item Weight",
-        "value": "5 g"
+        "value": "100 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "2 yellow floral hand corsage bracelets"
+      },
+      {
+        "label": "Style",
+        "value": "Floral"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, ONE FOR EACH WRIST: Two matching bright yellow hand gajras in a single order, so both hands are done, or the second goes to whoever is standing next to you.",
+      "IT WILL NOT BROWN: Real jasmine bruises within hours under function lights. These hold their colour from the morning through to the end of the evening.",
+      "HALDI: Made for the haldi, and worn again for mehndi, the reception and the family photographs afterwards. Nothing about it is single use.",
+      "SLIPS ON, STAYS ON: An elasticated band that opens from about 5 cm to about 10 cm across. No clasp, no knot, no tying, and it fits a slim wrist and a wider one alike.",
+      "HAND CHECKED AND HAND PACKED: Assembled and inspected one at a time before packing. Rose diameter approximately 4 cm. Colour bright yellow. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HC479QXR"
+  },
+  {
+    "asin": "B0HFB5PHDK",
+    "name": "Red Rose Hand Gajra (Pack of 2)",
+    "fullName": "Atreya Artificial Red Rose Hand Gajra for Wedding, Flower Jewellery, Pack 2",
+    "description": "By the time the wedding day is over, real flowers look like they have been through it. That is the honest problem with fresh jasmine on the wrist. It bruises, it browns, and it does it fastest in exactly the photographs you will keep. These are two red hand gajras, made to look like the real thing and behave better. Elasticated, so they go on in a second and stay on through the ceremony, the food and the dancing. A pair, because a hand gajra reads better on both wrists than on one, and because the second one is there for your sister or whoever ends up asking. Wear them again for mehndi and the sangeet. They will look the same. The band opens from about 5 cm to 10 cm across and the rose is roughly 4 cm. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 199,
+    "mrp": 599,
+    "image": "/products/B0HFB5PHDK.jpg",
+    "images": [
+      "/products/B0HFB5PHDK.jpg",
+      "/products/B0HFB5PHDK_2.jpg",
+      "/products/B0HFB5PHDK_3.jpg",
+      "/products/B0HFB5PHDK_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "4 x 10 x 10 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "170 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "2 red rose and white flower hand gajras"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, ONE FOR EACH WRIST: Two matching red hand gajras in a single order, so both hands are done, or the second goes to whoever is standing next to you.",
+      "IT WILL NOT BROWN: Real jasmine bruises within hours under function lights. These hold their colour from the morning through to the end of the evening.",
+      "WEDDING DAY: Made for the wedding day, and worn again for mehndi, the reception and the family photographs afterwards. Nothing about it is single use.",
+      "SLIPS ON, STAYS ON: An elasticated band that opens from about 5 cm to about 10 cm across. No clasp, no knot, no tying, and it fits a slim wrist and a wider one alike.",
+      "HAND CHECKED AND HAND PACKED: Assembled and inspected one at a time before packing. Rose diameter approximately 4 cm. Colour red. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFB5PHDK"
+  },
+  {
+    "asin": "B0HFBN6VKM",
+    "name": "Rani Pink Rose Hand Gajra (Pack of 2)",
+    "fullName": "Atreya Artificial Rani Pink Hand Gajra for Mehndi, Flower Jewellery, Pack 2",
+    "description": "By the time the mehndi is over, real flowers look like they have been through it. That is the honest problem with fresh jasmine on the wrist. It bruises, it browns, and it does it fastest in exactly the photographs you will keep. These are two rani pink hand gajras, made to look like the real thing and behave better. Elasticated, so they go on in a second and stay on through the ceremony, the food and the dancing. A pair, because a hand gajra reads better on both wrists than on one, and because the second one is there for your sister or whoever ends up asking. Wear them again for mehndi and the sangeet. They will look the same. The band opens from about 5 cm to 10 cm across and the rose is roughly 4 cm. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 199,
+    "mrp": 599,
+    "image": "/products/B0HFBN6VKM.jpg",
+    "images": [
+      "/products/B0HFBN6VKM.jpg",
+      "/products/B0HFBN6VKM_2.jpg",
+      "/products/B0HFBN6VKM_3.jpg",
+      "/products/B0HFBN6VKM_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Rani Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "4 x 10 x 10 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "170 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "2 rani pink rose and white flower hand gajras"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, ONE FOR EACH WRIST: Two matching rani pink hand gajras in a single order, so both hands are done, or the second goes to whoever is standing next to you.",
+      "IT WILL NOT BROWN: Real jasmine bruises within hours under function lights. These hold their colour from the morning through to the end of the evening.",
+      "MEHNDI: Made for the mehndi, and worn again for mehndi, the reception and the family photographs afterwards. Nothing about it is single use.",
+      "SLIPS ON, STAYS ON: An elasticated band that opens from about 5 cm to about 10 cm across. No clasp, no knot, no tying, and it fits a slim wrist and a wider one alike.",
+      "HAND CHECKED AND HAND PACKED: Assembled and inspected one at a time before packing. Rose diameter approximately 4 cm. Colour rani pink. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFBN6VKM"
+  },
+  {
+    "asin": "B0HC49L3MP",
+    "name": "Red Rose and Pearl Hand Gajra (Single)",
+    "fullName": "Atreya Rose and Pearl Hand Gajra for Bride, Flower Jewellery Set, Single",
+    "description": "Fresh flowers on the wrist have one problem and everybody who has worn them knows it. They bruise. By the middle of the function the jasmine has browned and the photographs are already taken. This is a single hand gajra built around one fabric rose with fine pearl sprays worked around it, which is what makes it read as jewellery rather than as decoration in a picture. Elasticated, so it goes on in a second and stays put through the ceremony and the eating and the dancing. Wear it for haldi, then again for mehndi, then again at the reception, and it will look the same each time. The band opens from about 5 cm to 10 cm across and the rose is roughly 4 cm. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 149,
+    "mrp": 299,
+    "image": "/products/B0HC49L3MP.jpg",
+    "images": [
+      "/products/B0HC49L3MP.jpg",
+      "/products/B0HC49L3MP_2.jpg",
+      "/products/B0HC49L3MP_3.jpg",
+      "/products/B0HC49L3MP_4.jpg",
+      "/products/B0HC49L3MP_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "10 x 10 x 4 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "50 g"
       },
       {
         "label": "Number of Items",
         "value": "1"
-      }
-    ],
-    "bullets": [
-      "HANDMADE CROCHET DESIGN: Atreya scrunchie features charming popcorn stitch bobbles in a delightful teal and pink colour combination, handcrafted with care for a unique cottagecore aesthetic",
-      "SOFT AND GENTLE: Made with soft yarn material that is gentle on hair, preventing breakage and damage while providing a secure yet comfortable hold for all hair types",
-      "VERSATILE HAIR ACCESSORY: Perfect for ponytails, buns, and half-up hairstyles, this pastel scrunchie adds a cute and playful touch to everyday looks or special occasions",
-      "THOUGHTFUL GIFT IDEA: Makes a lovely gift for her, whether for birthdays, celebrations, or just because - a sweet handmade accessory that shows care and attention to detail",
-      "DURABLE CONSTRUCTION: Carefully crocheted with quality yarn to ensure long-lasting wear, maintaining its shape and vibrant colours through regular use"
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDY833NN"
-  },
-  {
-    "asin": "B0B8XR4XNW",
-    "name": "Silver Hanging Bells 2.5\" (Pack of 48)",
-    "fullName": "Atreya- Decorative Silver Bells Ornament for Home Decor Party/Event/Wedding Decoration | Hanging Bells- (2.5 Inch) (48)",
-    "description": "Silver Decorative Plastic Bells By Atreya, Perfect for Party, Event, Birthday Decoration Note : Objects in images may appear smaller or larger than real. Kindly refer the dimensions carefully to get the suitable size for you. You can check the dimensions with any scale/inch-tape available to you to understand the size of the product after checking the dimension from here.",
-    "category": "Festive Décor",
-    "price": 549,
-    "mrp": 699,
-    "image": "/products/B0B8XR4XNW.jpg",
-    "images": [
-      "/products/B0B8XR4XNW.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Plastic"
-      },
-      {
-        "label": "Colour",
-        "value": "silver"
-      },
-      {
-        "label": "Item Weight",
-        "value": "0.15 pounds"
-      },
-      {
-        "label": "Number of Items",
-        "value": "48"
       },
       {
         "label": "Included Components",
-        "value": "Bells"
+        "value": "1 rose and pearl floral bracelet"
       },
       {
         "label": "Style",
-        "value": "Modern"
+        "value": "Floral"
       },
       {
-        "label": "Theme",
-        "value": "Religious"
-      },
-      {
-        "label": "Occasion",
-        "value": "Christmas"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "Silver Colored Plastic Bells for Crafts/Decoration/Festive Decor",
-      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
-      "The embossed designs may vary.",
-      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+      "ONE HAND GAJRA, WORN ON EITHER WRIST: A single piece for the bride or for anyone who wants one wrist done rather than two. Add a second if you want the pair.",
+      "PEARL SPRAYS, NOT JUST FLOWERS: Fine pearl sprays set around the rose catch the light in photographs in a way plain fabric flowers do not. This is the dressier piece in the range.",
+      "FOR THE BRIDE AND THE FAMILY: Made for the bride at haldi and mehndi, and worn just as well by a sister at the sangeet or the reception.",
+      "SLIPS ON, STAYS ON: An elasticated band that opens from about 5 cm to about 10 cm across. No clasp and no tying, so it fits a slim wrist and a wider one alike.",
+      "HAND CHECKED AND HAND PACKED: Assembled and inspected one at a time. Rose diameter approximately 4 cm with pearl sprays around it. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0B8XR4XNW"
+    "amazonUrl": "https://www.amazon.in/dp/B0HC49L3MP"
   },
   {
-    "asin": "B0B8XRDHPW",
-    "name": "Silver Hanging Bells 2.5\" (Pack of 12)",
-    "fullName": "Atreya- Decorative Silver Bells Ornament for Home Decor Party/Event/Wedding Decoration | Hanging Bells- (2.5 Inch) (12)",
-    "description": "Silver Decorative Plastic Bells By Atreya, Perfect for Party, Event, Birthday Decoration Note : Objects in images may appear smaller or larger than real. Kindly refer the dimensions carefully to get the suitable size for you. You can check the dimensions with any scale/inch-tape available to you to understand the size of the product after checking the dimension from here.",
-    "category": "Festive Décor",
-    "price": 189,
-    "mrp": 699,
-    "image": "/products/B0B8XRDHPW.jpg",
+    "asin": "B0HC4DHXNK",
+    "name": "Red Rose and Pearl Hand Gajra (Pack of 5)",
+    "fullName": "Atreya Rose and Pearl Hand Gajra for Bride, Flower Jewellery, Pack of 5",
+    "description": "The problem with buying flowers for a group is that they never match. Different shops, different days, five slightly different shades of the same colour, and it shows in every photograph where the group stands together. This is a set of five hand gajras cut from one batch, so the colour is the same across all of them. Each one is built around a fabric rose with fine pearl sprays worked around it and sits on an elasticated band that opens from about 5 cm to 10 cm across, which means nobody has to send you a wrist measurement first. Wear them at haldi, then mehndi, then the sangeet. The rose is roughly 4 cm. Atreya. Chosen and checked by hand.",
+    "category": "Gajras",
+    "price": 499,
+    "mrp": 999,
+    "image": "/products/B0HC4DHXNK.jpg",
     "images": [
-      "/products/B0B8XRDHPW.jpg",
-      "/products/B0B8XRDHPW_2.jpg",
-      "/products/B0B8XRDHPW_3.jpg"
+      "/products/B0HC4DHXNK.jpg",
+      "/products/B0HC4DHXNK_2.jpg",
+      "/products/B0HC4DHXNK_3.jpg",
+      "/products/B0HC4DHXNK_4.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Plastic"
+        "value": "Fabric"
       },
       {
         "label": "Colour",
-        "value": "Silver"
+        "value": "Red"
       },
       {
         "label": "Product Dimensions",
-        "value": "2.5 x 5 x 2.5 inches"
+        "value": "10 x 10 x 4 cm"
       },
       {
         "label": "Item Weight",
-        "value": "500 g"
+        "value": "250 g"
       },
       {
         "label": "Number of Items",
-        "value": "12"
+        "value": "5"
       },
       {
         "label": "Included Components",
-        "value": "Bells"
+        "value": "5 rose and pearl floral bracelets"
       },
       {
         "label": "Style",
-        "value": "Modern"
+        "value": "Floral"
       },
       {
-        "label": "Theme",
-        "value": "Religious"
-      },
-      {
-        "label": "Occasion",
-        "value": "Christmas"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "Silver Colored Plastic Bells for Crafts/Decoration/Festive Decor",
-      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
-      "The embossed designs may vary.",
-      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+      "PACK OF 5, FOR THE WHOLE GROUP: Five matching hand gajras in one order, so the bride and four of her people are wearing the same thing in the same photographs.",
+      "PEARL SPRAYS, NOT JUST FLOWERS: Fine pearl sprays set around each rose catch the light in a way plain fabric flowers do not. This is the dressier piece in the range.",
+      "CHEAPER THAN BUYING FIVE SINGLES: Bought as a set of five it works out well under the single price, which is the point of the pack.",
+      "ONE SIZE, NO GUESSING: Every band is elasticated and opens from about 5 cm to about 10 cm across, so you do not need anyone's wrist measurement before ordering.",
+      "HAND CHECKED AND HAND PACKED: All five come from the same batch so the colour matches across the group. Rose diameter approximately 4 cm. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0B8XRDHPW"
+    "amazonUrl": "https://www.amazon.in/dp/B0HC4DHXNK"
   },
   {
-    "asin": "B09QJVDNFW",
-    "name": "Golden Jingle Bells 2.5\" (Pack of 48)",
-    "fullName": "Atreya-Plastic Light Golden Jingle Bells Ornament for Home Decor Party/Event/Wedding Decoration | Hanging Bells (2.5 inch) (48)",
-    "description": "Light Golden Decorative Plastic Bells By Atreya, Perfect for Party, Event, Birthday Decoration Note : Objects in images may appear smaller or larger than real. Kindly refer the dimensions carefully to get the suitable size for you. You can check the dimensions with any scale/inch-tape available to you to understand the size of the product after checking the dimension from here.",
-    "category": "Festive Décor",
-    "price": 529,
-    "mrp": 1299,
-    "image": "/products/B09QJVDNFW.jpg",
+    "asin": "B0HD2V6K1M",
+    "name": "Yellow Rose Hair Pins (Pack of 2)",
+    "fullName": "Atreya Yellow Rose Hair Pins for Haldi, Juda Pin for Women, Pack of 2",
+    "description": "One rose pin in a bun looks like an accident. Two, placed either side, looks like somebody meant it, which is why these are sold in pairs and not singly. They are straight push pins rather than clips, so they go into a finished bun in a second without a mirror behind you and without anything digging into your scalp by the third hour of a function. The roses are fabric, in bright yellow, cut from one batch so both match, and small enough to sit in the hair rather than perch on top of it. That size is also why they work on a child as well as on an adult. Wear them for the haldi, then the next mehndi, then a pooja, then next year. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 149,
+    "mrp": 499,
+    "image": "/products/B0HD2V6K1M.jpg",
     "images": [
-      "/products/B09QJVDNFW.jpg"
+      "/products/B0HD2V6K1M.jpg",
+      "/products/B0HD2V6K1M_2.jpg",
+      "/products/B0HD2V6K1M_3.jpg",
+      "/products/B0HD2V6K1M_4.jpg",
+      "/products/B0HD2V6K1M_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Plastic"
+        "value": "Foam, Metal"
       },
       {
         "label": "Colour",
-        "value": "gold"
+        "value": "Yellow"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "8 x 5 x 5 cm"
       },
       {
         "label": "Item Weight",
-        "value": "0.15 pounds"
+        "value": "20 g"
       },
       {
         "label": "Number of Items",
-        "value": "48"
-      },
-      {
-        "label": "Included Components",
-        "value": "Plastic Bells"
+        "value": "2"
       },
       {
         "label": "Style",
-        "value": "Modern"
+        "value": "Floral"
       },
       {
-        "label": "Theme",
-        "value": "Religious"
-      },
-      {
-        "label": "Occasion",
-        "value": "Christmas"
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "Golden Colored Plastic Bells for Crafts/Decoration/Festive Decor",
-      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
-      "The embossed designs may vary.",
-      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+      "PACK OF 2, WHICH IS HOW THEY ARE WORN: Two bright yellow rose pins in one order. A single pin looks like it was dropped there. Two, placed either side of the bun, looks deliberate.",
+      "PUSH IN, DONE: A straight pin that pushes into a bun and holds. No clip to dig in, no elastic to stretch out, and nothing that needs a second person or a mirror behind you.",
+      "HALDI AND EVERY FUNCTION AFTER: Worn for the haldi, then again at the next mehndi, the next pooja, the next family wedding. It does not wear out between them.",
+      "SMALL ENOUGH TO BE SUBTLE: Sized to sit in the hair rather than sit on top of it, so it works on a small tight juda as well as on a loose bun, and on a child as well as an adult.",
+      "HAND CHECKED AND HAND PACKED: Both pins inspected and cut from one batch so the colour matches. Yellow fabric roses on straight pins. Please note there is no fragrance."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B09QJVDNFW"
+    "amazonUrl": "https://www.amazon.in/dp/B0HD2V6K1M"
+  },
+  {
+    "asin": "B0HD2H3LF4",
+    "name": "Rani Pink Rose Hair Pins (Pack of 2)",
+    "fullName": "Atreya Rani Pink Rose Hair Pins for Sangeet, Juda Pin for Women, Pack of 2",
+    "description": "One rose pin in a bun looks like an accident. Two, placed either side, looks like somebody meant it, which is why these are sold in pairs and not singly. They are straight push pins rather than clips, so they go into a finished bun in a second without a mirror behind you and without anything digging into your scalp by the third hour of a function. The roses are fabric, in rani pink, cut from one batch so both match, and small enough to sit in the hair rather than perch on top of it. That size is also why they work on a child as well as on an adult. Wear them for the sangeet, then the next mehndi, then a pooja, then next year. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 149,
+    "mrp": 499,
+    "image": "/products/B0HD2H3LF4.jpg",
+    "images": [
+      "/products/B0HD2H3LF4.jpg",
+      "/products/B0HD2H3LF4_2.jpg",
+      "/products/B0HD2H3LF4_3.jpg",
+      "/products/B0HD2H3LF4_4.jpg",
+      "/products/B0HD2H3LF4_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Foam, Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Rani Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "8 x 5 x 5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "20 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Floral"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, WHICH IS HOW THEY ARE WORN: Two rani pink rose pins in one order. A single pin looks like it was dropped there. Two, placed either side of the bun, looks deliberate.",
+      "PUSH IN, DONE: A straight pin that pushes into a bun and holds. No clip to dig in, no elastic to stretch out, and nothing that needs a second person or a mirror behind you.",
+      "SANGEET AND EVERY FUNCTION AFTER: Worn for the sangeet, then again at the next mehndi, the next pooja, the next family wedding. It does not wear out between them.",
+      "SMALL ENOUGH TO BE SUBTLE: Sized to sit in the hair rather than sit on top of it, so it works on a small tight juda as well as on a loose bun, and on a child as well as an adult.",
+      "HAND CHECKED AND HAND PACKED: Both pins inspected and cut from one batch so the colour matches. Rani Pink fabric roses on straight pins. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HD2H3LF4"
+  },
+  {
+    "asin": "B0HGFHN4BR",
+    "name": "Baby Pink Rose Hair Pins (Pack of 2)",
+    "fullName": "Atreya Baby Pink Rose Hair Pins for Engagement, Juda Pins for Women, Pack 2",
+    "description": "One rose pin in a bun looks like an accident. Two, placed either side, looks like somebody meant it, which is why these are sold in pairs and not singly. They are straight push pins rather than clips, so they go into a finished bun in a second without a mirror behind you and without anything digging into your scalp by the third hour of a function. The roses are fabric, in soft baby pink, cut from one batch so both match, and small enough to sit in the hair rather than perch on top of it. That size is also why they work on a child as well as on an adult. Wear them for the engagement, then the next mehndi, then a pooja, then next year. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 149,
+    "mrp": 499,
+    "image": "/products/B0HGFHN4BR.jpg",
+    "images": [
+      "/products/B0HGFHN4BR.jpg",
+      "/products/B0HGFHN4BR_2.jpg",
+      "/products/B0HGFHN4BR_3.jpg",
+      "/products/B0HGFHN4BR_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Foam, Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Baby Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "8 x 5 x 5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "20 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Floral"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, WHICH IS HOW THEY ARE WORN: Two soft baby pink rose pins in one order. A single pin looks like it was dropped there. Two, placed either side of the bun, looks deliberate.",
+      "PUSH IN, DONE: A straight pin that pushes into a bun and holds. No clip to dig in, no elastic to stretch out, and nothing that needs a second person or a mirror behind you.",
+      "ENGAGEMENT AND EVERY FUNCTION AFTER: Worn for the engagement, then again at the next mehndi, the next pooja, the next family wedding. It does not wear out between them.",
+      "SMALL ENOUGH TO BE SUBTLE: Sized to sit in the hair rather than sit on top of it, so it works on a small tight juda as well as on a loose bun, and on a child as well as an adult.",
+      "HAND CHECKED AND HAND PACKED: Both pins inspected and cut from one batch so the colour matches. Baby Pink fabric roses on straight pins. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFHN4BR"
+  },
+  {
+    "asin": "B0HGFKDXZD",
+    "name": "Red Rose Hair Pins (Pack of 2)",
+    "fullName": "Atreya Red Rose Hair Pins for Wedding, Juda Pin for Women, Pack of 2",
+    "description": "One rose pin in a bun looks like an accident. Two, placed either side, looks like somebody meant it, which is why these are sold in pairs and not singly. They are straight push pins rather than clips, so they go into a finished bun in a second without a mirror behind you and without anything digging into your scalp by the third hour of a function. The roses are fabric, in deep red, cut from one batch so both match, and small enough to sit in the hair rather than perch on top of it. That size is also why they work on a child as well as on an adult. Wear them for the wedding, then the next mehndi, then a pooja, then next year. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 139,
+    "mrp": 299,
+    "image": "/products/B0HGFKDXZD.jpg",
+    "images": [
+      "/products/B0HGFKDXZD.jpg",
+      "/products/B0HGFKDXZD_2.jpg",
+      "/products/B0HGFKDXZD_3.jpg",
+      "/products/B0HGFKDXZD_4.jpg",
+      "/products/B0HGFKDXZD_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Foam, Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "9.5 x 8 x 8 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "60 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Classic"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, WHICH IS HOW THEY ARE WORN: Two deep red rose pins in one order. A single pin looks like it was dropped there. Two, placed either side of the bun, looks deliberate.",
+      "PUSH IN, DONE: A straight pin that pushes into a bun and holds. No clip to dig in, no elastic to stretch out, and nothing that needs a second person or a mirror behind you.",
+      "WEDDING AND EVERY FUNCTION AFTER: Worn for the wedding, then again at the next mehndi, the next pooja, the next family wedding. It does not wear out between them.",
+      "SMALL ENOUGH TO BE SUBTLE: Sized to sit in the hair rather than sit on top of it, so it works on a small tight juda as well as on a loose bun, and on a child as well as an adult.",
+      "HAND CHECKED AND HAND PACKED: Both pins inspected and cut from one batch so the colour matches. Red fabric roses on straight pins. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFKDXZD"
+  },
+  {
+    "asin": "B0HGFJ5DD1",
+    "name": "Red Rose Hair Clips with Pearls (Pack of 2)",
+    "fullName": "Atreya Red Rose Flower Hair Clips for Women and Girls, Pack of 2",
+    "description": "A pale hair flower looks lovely in the hand and then vanishes in every photograph taken indoors. Against dark hair, in warm light, it simply stops registering. Red does not have that problem, which is the whole reason to own this pair. Two sprung clips, cut from one batch so the red matches, with fine pearl and gold detail worked around each rose so they hold up as ornaments rather than reading as fabric flowers. They go into open hair, a half tie or a bun with one hand, grip fine and thick hair equally, and come out without dragging. Wear one on each side, both on one side for something fuller, or give one to your daughter and keep one. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 149,
+    "mrp": 399,
+    "image": "/products/B0HGFJ5DD1.jpg",
+    "images": [
+      "/products/B0HGFJ5DD1.jpg",
+      "/products/B0HGFJ5DD1_2.jpg",
+      "/products/B0HGFJ5DD1_3.jpg",
+      "/products/B0HGFJ5DD1_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric, Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "8 x 6.5 x 4 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "90 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Classic"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2, WEAR THEM TOGETHER: Two clips in one order. Wear one on each side, use both on one side for a fuller look, or split the pair between a mother and a daughter.",
+      "PEARL AND GOLD DETAIL: Fine pearl and small gold accents worked around each rose, so they read as hair ornaments in a photograph rather than as plain fabric flowers.",
+      "THE COLOUR THAT SHOWS UP: Red holds against dark hair and against a light outfit, which is where a white or pastel clip quietly disappears in photographs.",
+      "GRIPS WITHOUT PULLING: Properly sprung clips that hold fine hair and thick hair alike and release without dragging. Light enough not to be felt after ten minutes.",
+      "HAND CHECKED AND HAND PACKED: Both inspected before packing and cut from one batch so the red matches. Red fabric roses with pearl and gold detail. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFJ5DD1"
+  },
+  {
+    "asin": "B0HGFJRY4C",
+    "name": "Pink Rose Hair Clip with Pearls",
+    "fullName": "Atreya Pink Rose Flower Hair Clip for Women and Girls, with Pearls",
+    "description": "Most flower hair accessories assume a bun, a mirror and ten minutes. A clip assumes none of them. This one goes into open hair, a half tie or a finished bun with one hand, which is the difference between wearing it and leaving it in the drawer, and it is also why it works on a child who has no intention of sitting still. The rose is a soft pink with fine pearl and gold detail worked around it, so it holds up in a photograph rather than reading as a plain fabric flower. The clip is properly sprung, so it grips fine hair and thick hair equally and releases without dragging. Small enough for a girl, dressy enough for her mother, which is the point. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 149,
+    "mrp": 399,
+    "image": "/products/B0HGFJRY4C.jpg",
+    "images": [
+      "/products/B0HGFJRY4C.jpg",
+      "/products/B0HGFJRY4C_2.jpg",
+      "/products/B0HGFJRY4C_3.jpg",
+      "/products/B0HGFJRY4C_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric, Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "8 x 6.5 x 4 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "45 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Style",
+        "value": "Classic"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "ONE CLIP, TAKES A SECOND: Clips into open hair, a half tie or a bun with one hand. No pins, no elastic, nothing to learn, which is why it also works on a child who will not sit still.",
+      "PEARL AND GOLD DETAIL: Fine pearl and small gold accents worked around the rose, so it reads as a hair ornament in a photograph rather than as a plain fabric flower.",
+      "WOMEN AND GIRLS BOTH: Small enough for a child and dressy enough for an adult, which makes it the easy answer when a mother and daughter want to match at a function.",
+      "GRIPS WITHOUT PULLING: A proper sprung clip that holds fine hair and thick hair alike, and releases without dragging. Light enough that it is not felt after ten minutes.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Pink fabric rose with pearl and gold detail on a sprung clip base. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFJRY4C"
+  },
+  {
+    "asin": "B0HGFLGL4V",
+    "name": "Rani Pink Rose Juda Comb with Pearls",
+    "fullName": "Atreya Rani Pink Flower Hair Comb for Women, Juda Comb with Pearls",
+    "description": "The trouble with pins is that you need someone else, or two mirrors, or ten minutes you do not have. A comb solves that. This one slides into a finished bun in a single movement and grips with proper metal teeth, so it holds through a full evening of dancing instead of working loose by the second hour. What lifts it above a flower glued to a comb is the detail worked around the rose: fine pearl sprays and small gold accents that catch light and read as jewellery in a photograph. Rani pink, which sits well against most outfit colours without matching any of them exactly. Wear it for a sangeet, a reception, an engagement or any function where you want your hair done in one move. Atreya. Chosen and checked by hand.",
+    "category": "Hair Accessories",
+    "price": 199,
+    "mrp": 499,
+    "image": "/products/B0HGFLGL4V.jpg",
+    "images": [
+      "/products/B0HGFLGL4V.jpg",
+      "/products/B0HGFLGL4V_2.jpg",
+      "/products/B0HGFLGL4V_3.jpg",
+      "/products/B0HGFLGL4V_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric, Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Rani Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "10 x 7.5 x 2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "50 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "ONE COMB, ONE MOVEMENT: Slides into a finished bun and holds. No pins to place one at a time and nothing to tie, so you can put it in yourself without a mirror behind you.",
+      "PEARL SPRAYS AND GOLD DETAIL: Fine pearl sprays and small gold accents worked around the rose, which is what makes it read as a hair ornament rather than as a flower stuck on a comb.",
+      "FOR SANGEET AND RECEPTION: Dressy enough for the sangeet, the reception and an engagement, and restrained enough for a family function where you are not the bride.",
+      "GRIPS WITHOUT SLIPPING: A metal comb with proper teeth that bites into the bun rather than sitting on top of it. It stays through dancing and comes out cleanly at the end.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Rani pink fabric rose with pearl sprays and gold detail on a metal comb base. Please note there is no fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFLGL4V"
   },
   {
     "asin": "B09Y2B4XHL",
     "name": "Jasmine Door Toran (Set of 4)",
-    "fullName": "Atreya- Set of 4 Door Hanging Toran/Garland - Ideal for Diwali, Wedding, Mehendi/Haldi Party Decoration, Traditional Events, Home Decor",
-    "description": "Beautiful Handmade Jasmine Floral Petals Torans for Used for Home Decor, Wedding Decoration, Mehendi/Haldi Party, Venue Decoration, Special Event Decoration, Perfect for Diwali Gift.",
+    "fullName": "Atreya Door Toran Set of 4, Bandarwar Hanging for Diwali and Wedding",
+    "description": "Every festival runs into the same arithmetic. You buy one toran, you dress the main door, and then you notice the pooja room, the bedroom door and the balcony are all bare. This is a set of four, which is roughly what an actual house needs, bought in one order rather than in three trips. Being artificial they go up the night before without wilting and they come down afterwards into a bag rather than the bin, so the same four do Diwali, then Navratri, then a griha pravesh, then next year. They arrive ready to hang with nothing else to buy. Atreya. Chosen and checked by hand.",
     "category": "Festive Décor",
     "price": 399,
     "mrp": 1499,
@@ -674,19 +938,19 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "Set of 4 Faux Jasmine Floral Petals with Plastic Bell",
-      "Length - 39 inches/100 cm drop of Hanging Garland with bell",
-      "Used for Home Decor, Wedding Decoration, Mehendi/Haldi Party, Venue Decoration, Special Event Decoration, Perfect for Diwali Gift.",
-      "Material : Faux Plastic Jasmine Petals. Gold Painted Bell, White Artificial Jasmine, Mild Jasmine Fragrance",
-      "Note : Please be advised that colours may vary in the photos advertised."
+      "FOUR TORANS IN ONE ORDER: Enough for a main door, a pooja room, a bedroom door and a balcony, which is what a festival actually needs rather than one doorway done.",
+      "PUT THEM UP AND LEAVE THEM UP: Fresh flower torans are finished by morning. These come down after the function into a bag and go back up for the next one.",
+      "FOR EVERY FESTIVAL, NOT ONE: Diwali, Navratri, Ganpati, a griha pravesh, a mehndi or a wedding. Nothing about them is tied to a single occasion.",
+      "READY TO HANG: All four arrive ready to go onto doors or hooks without wire, fittings or a trip out for hardware.",
+      "HAND CHECKED AND HAND PACKED: All four inspected before packing. Set of four artificial flower door torans. Please note there is no fragrance."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09Y2B4XHL"
   },
   {
     "asin": "B0HC4FD2F4",
     "name": "White Flower Ladi 5 ft (Pack of 4)",
-    "fullName": "Atreya White Flower Ladi for Decoration, Pack of 4 Strings of 5 Feet Each, Total 20 Feet, Handmade Toran Garland for Pooja Room Mandap Wedding and Festive Decor",
-    "description": "Fresh flowers for a function are a purchase you make again for the next function. Four white strings, 5 feet each, 20 feet in total. Enough to frame a main door properly and still have length left over for the pooja room or the balcony. The flowers are spaced and secured along the string, so it hangs in a straight line instead of sliding down and bunching at the bottom by the second day. That is usually the difference between decoration that looks intentional and decoration that looks tired. White is the reason to pick this one. It sits against any wall colour, any mandap fabric, warm lighting or cool, without the clash you get from a strong colour. And if you are photographing the backdrop, which at a wedding you always are, white is the one that never fights the outfits in front of it. Then you take it down, put it back in the box, and it is ready for the next occasion. Use it on doorways, on a mandap or stage backdrop, along a balcony railing, up a staircase, behind a photo wall, or on the car for a wedding. Length 5 ft per string, 4 strings, 20 ft total. White. Atreya. Handmade and handpicked.",
+    "fullName": "Atreya White Flower Ladi for Decoration, 4 Strings of 5 Feet, 20 Ft",
+    "description": "The usual problem with buying flower ladi is arithmetic. One pack does a single doorway, you buy one, and then you are standing in the middle of a half decorated room the night before the function. This is twenty feet in total, split into four separate five foot strings, which means you can dress four different places or join them into one long run down a stair rail or across a backdrop. Because they are artificial they go up the night before without wilting, and they come down afterwards, go into a bag and come out again for the next function instead of going in the bin. Used for haldi and mehndi decoration, mandir dressing, Diwali and wedding backdrops. Atreya. Chosen and checked by hand.",
     "category": "Festive Décor",
     "price": 899,
     "mrp": 1499,
@@ -724,19 +988,64 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "FOUR STRINGS, TWENTY FEET TOTAL: Each ladi runs a full 5 feet and you get four, which is enough to frame a standard doorway and still have length spare.",
-      "HANGS STRAIGHT, DOES NOT BUNCH: Flowers spaced and secured along the string so it falls in an even line rather than clumping at the bottom once hung.",
-      "CLEAN WHITE, GOES WITH EVERYTHING: White sits against any wall colour, any mandap fabric and any lighting, which is what makes it the safe choice for a backdrop you have to photograph.",
-      "PACK AWAY AND REUSE: Comes out for the function, goes back in the box, comes out for the next one. Fresh flowers are a new purchase every single time.",
-      "ATREYA HANDMADE AND HANDPICKED: Strung and checked by hand. Length 5 ft per string, 4 strings, 20 ft total."
+      "20 FEET IN TOTAL, IN 4 STRINGS: Four separate five foot strings rather than one long one, so you can dress four doorways, or join them for a single twenty foot run.",
+      "ENOUGH TO ACTUALLY FINISH A ROOM: Most garland packs cover one doorway and stop. Twenty feet does a main door, a mandir, a stair rail and a backdrop without a second order.",
+      "PUT IT UP AND LEAVE IT UP: Fresh flowers are dead by the next morning. These come down after the function, go in a bag, and come out again for the next one.",
+      "FOR HALDI, MANDIR AND EVERY FUNCTION: Used for haldi and mehndi decoration, wedding backdrops, home mandir dressing, Diwali, Navratri and photo frames.",
+      "HAND CHECKED AND HAND PACKED: Every string inspected before packing. Four strings, approximately 5 feet each, white flowers. Please note there is no fragrance."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0HC4FD2F4"
   },
   {
+    "asin": "B09MD5M6YP",
+    "name": "Mogra Garland with Golden Bells 5 ft (Pack of 4)",
+    "fullName": "Atreya Mogra Flower Garland String with Golden Bells, 5 Ft, Pack of 4",
+    "description": "Fresh mogra strings look wonderful for one evening and are finished by the next morning, which is a lot of effort for a single night. These are the artificial version, in five foot lengths, four strings to a pack, so there is enough to dress a mandir and a doorway rather than only one of them. Each string is finished with small golden bells, which matters more than it sounds: a silent flower string stops registering by the second day, and one that sounds when a curtain or a door moves keeps drawing the eye. They go up the night before a function without wilting and come down afterwards into a bag rather than the bin. About 20 feet of garland in total. Atreya. Chosen and checked by hand.",
+    "category": "Festive Décor",
+    "price": 399,
+    "mrp": 999,
+    "image": "/products/B09MD5M6YP.jpg",
+    "images": [
+      "/products/B09MD5M6YP.jpg",
+      "/products/B09MD5M6YP_2.jpg",
+      "/products/B09MD5M6YP_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "152 x 5 x 152 cm"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "Artificial Garland"
+      }
+    ],
+    "bullets": [
+      "FOUR STRINGS, 20 FEET IN TOTAL: Five foot strings sold in a pack, so you can dress several places at once or join them into one long run.",
+      "THE BELLS ARE THE DIFFERENCE: A silent flower string stops being noticed by the second day. One that sounds when a door or a curtain moves keeps announcing itself.",
+      "PUT IT UP AND LEAVE IT UP: Fresh mogra is finished by the next morning. These come down after the function into a bag and go back up for the next one.",
+      "FOR MANDIR, DOORS AND IDOLS: Used on a home temple, around an idol, along a doorway, on a stair rail and for Diwali, Navratri, Ganpati and a wedding.",
+      "HAND CHECKED AND HAND PACKED: Every string inspected before packing. Four strings, approximately 5 feet each, off white flowers with golden bells. No fragrance."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09MD5M6YP"
+  },
+  {
     "asin": "B0HCCGJKQ4",
     "name": "Red and White Mogra Garland 2.5 ft (Pack of 4)",
-    "fullName": "Atreya Mogra Jasmine Flower Garland 2.5 ft, Pack of 4 | Artificial Red & White Toran with Golden Bell for Door, Pooja Room, Mandir, Wedding & Festival Decoration",
-    "description": "Add a graceful traditional touch to your celebrations with this 2.5 ft Mogra Jasmine Flower Garland. Designed with dense white mogra-style flowers, deep red floral accents and an elegant golden bell at the bottom, this decorative hanging brings a festive and welcoming look to any space. Ideal for Indian weddings, pooja rooms, mandir decoration, housewarming ceremonies, festivals, mehendi functions, haldi ceremonies, stage backdrops and entrance decor. Hang multiple garlands together to create a beautiful floral curtain, or use them individually on doors, walls, balconies and photo backdrops. Made for repeated use, this artificial flower garland offers the beauty of traditional jasmine decoration without wilting or requiring daily maintenance. Slight variations in color, flower arrangement and measurements may occur due to lighting, photography and handcrafted assembly.",
+    "fullName": "Atreya Mogra Jasmine Flower Toran for Door, 4 Strings with Bells",
+    "description": "A flower toran on the main door stops being noticed by about the second day. One with bells on it does not, because it announces itself every time somebody comes through. This is a set of four 2.5 foot strings in red and white, each finished with small golden bells, which is enough for a main door and a pooja room doorway, or for four separate spots around a house at a festival. Being artificial they go up the night before without wilting, and they come down after the function into a bag rather than into the bin, which is the whole economics of it. Used as a bandarwar, over a mandir, and for Diwali, Navratri, Ganpati and a griha pravesh. Atreya. Chosen and checked by hand.",
     "category": "Festive Décor",
     "price": 299,
     "mrp": 799,
@@ -779,19 +1088,19 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "DENSE MOGRA-STYLE FLOWERS, NOT SPARSE STRINGS: Each 2.5 ft garland is packed with white mogra jasmine blooms along its full length, finished with a band of deep red flowers and a decorative golden bell at the bottom.",
-      "PACK OF 4, ENOUGH TO DRESS A DOORWAY: Hang them side by side to make a floral curtain across a door or backdrop, or use them singly on walls, balconies, mandir sides and photo corners.",
-      "LOOKS FRESH EVERY TIME, WITHOUT THE WILTING: Artificial mogra gives you the look of a real jasmine ladi with no daily stringing, no drooping and nothing to clear up afterwards.",
-      "MADE FOR FESTIVALS AND FUNCTIONS: Diwali, Navratri, Ganpati and Janmashtami, weddings, mehendi and haldi, housewarming and Griha Pravesh, mandap and stage backdrops.",
-      "LIGHT AND EASY TO PUT UP: Each string is light enough to hang from a hook, thread or tape, and folds away neatly so you can reuse it next season."
+      "4 STRINGS WITH GOLDEN BELLS: Four separate 2.5 foot strings, each finished with small golden bells, so a doorway gets both the flowers and the sound.",
+      "THE BELLS ARE THE DIFFERENCE: A plain flower toran is decoration you stop noticing by the second day. One that sounds when the door moves keeps announcing itself.",
+      "PUT IT UP AND LEAVE IT UP: Fresh mogra is finished by the next morning. This goes up before the function, comes down after, and goes back up for the next one.",
+      "FOR THE MAIN DOOR AND THE MANDIR: Used as a bandarwar on the main door, over a pooja room doorway, on a mandir, and for Diwali, Navratri, Ganpati and housewarming.",
+      "HAND CHECKED AND HAND PACKED: Every string inspected before packing. Four strings, approximately 2.5 feet each, red and white flowers with golden bells."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0HCCGJKQ4"
   },
   {
     "asin": "B0HCPKG6HW",
     "name": "Multicolor Pom Pom Garland 5 ft (Pack of 4)",
-    "fullName": "Atreya Multicolor Pom Pom Garland with Golden Bells, 5 ft, Pack of 4 | Beaded Wall Hanging Toran for Door, Pooja Room, Mandir, Wedding Backdrop and Festival Decoration",
-    "description": "Bring color, warmth and a festive lift to any space with these multicolor pom pom garlands. Bright pom poms, shiny bead detailing and elegant golden-tone bells combine into a hanging that reads as celebration the moment it goes up, whether that is a wedding backdrop, a pooja setup or a Sunday afternoon of redecorating. Each garland measures approximately five feet, which suits walls, doors, entrances, mandirs, balconies, stages and event backdrops. The combination of red, green, yellow, pink and blue sits comfortably against traditional decor and holds its own in a colorful party theme. This pack contains four garlands. Use them together for a fuller arrangement, or place them separately across different corners of the house. Material: pom poms, decorative beads and golden-tone bells. Length: approximately 5 feet per garland. Care: keep away from moisture and clean gently with a dry cloth. Slight variations in color, bead placement and measurements may occur due to lighting, photography and handcrafted assembly.",
+    "fullName": "Atreya Pom Pom Toran for Door, 4 Strings of 5 Feet with Golden Bells",
+    "description": "Most festive decoration is locked to one festival, which is why it spends eleven months in a box. Multicolour pom poms are not: the same four strings work at Diwali, at a mehndi, at a child's birthday and on a nursery wall, which is a lot more days of use for the same money. Twenty feet in total, split into four five foot strings so you can dress several places rather than one, each finished with small golden bells that sound whenever the door moves. They go up the night before, come down afterwards into a bag, and go back up for the next thing. Atreya. Chosen and checked by hand.",
     "category": "Festive Décor",
     "price": 299,
     "mrp": 799,
@@ -834,19 +1143,235 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "BRIGHT MULTICOLOR POM POMS: Five feet of soft pom poms in red, green, yellow, pink and blue, threaded between shiny golden beads. The color mix works with traditional decor and with brighter party themes, so one set covers both.",
-      "GOLDEN BELL AT EVERY STRAND: Each garland finishes in a decorative golden-tone bell with a cut lattice pattern. It gives the strand weight so it hangs straight, and catches the light the way a temple bell does.",
-      "FIVE FEET LONG, PACK OF FOUR: Four garlands, each about five feet. Hang them side by side for a full backdrop, or spread them across four doorways. Enough length for a standard door frame without any trimming.",
-      "FOR EVERY OCCASION IN THE HOUSE: Weddings and mandaps, Diwali and Navratri, pooja room and mandir, housewarmings, birthdays, festive backdrops and everyday wall decor. Works on doors, windows, walls, balconies, stages and photo corners.",
-      "UP IN MINUTES, PACKED AWAY IN MINUTES: Light enough to hang from a hook, a nail or a length of thread, with no drilling and no frame. Roll them up after the function and they come out ready for the next one."
+      "20 FEET IN TOTAL, IN 4 STRINGS: Four separate five foot strings with golden bells, enough for a main door, a mandir and two more places without a second order.",
+      "COLOUR THAT WORKS ALL YEAR: Multicolour pom poms are not tied to one festival, so the same set works at Diwali, at a birthday, at a mehndi and in a child's room.",
+      "THE BELLS ARE THE DIFFERENCE: A silent toran stops being noticed by the second day. One that sounds when the door moves keeps announcing itself.",
+      "PUT IT UP AND LEAVE IT UP: Comes down after the function, goes in a bag, comes out for the next one. This is not a single use decoration.",
+      "HAND CHECKED AND HAND PACKED: Every string inspected before packing. Four strings, approximately 5 feet each, multicolour pom poms with golden bells and beads."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0HCPKG6HW"
   },
   {
+    "asin": "B0HFQDY4K3",
+    "name": "Golden Jingle Bells 2.5\" (Pack of 12)",
+    "fullName": "Atreya Golden Jingle Bells for Decoration, Hanging Bells, 2.5 Inch, 12 Pcs",
+    "description": "A hanging bell earns its place by sound, not by looks. If it clunks instead of ringing it becomes a thing on a door that nobody notices, which is what happens with most decorative bells sold cheaply online. These are made to ring properly when the door moves, which is the whole reason to hang one. They arrive with the cord attached so they go up straight away, and they work on a main door, over a home mandir, along a balcony rail or on a tree at Christmas. Hung for Diwali, Navratri, a griha pravesh or simply left up all year. Plainly stated: these are lightweight plastic bells, not solid brass temple bells, and they are priced accordingly. 12 bells, approximately 2.5 inches each, with hanging cord. Atreya. Chosen and checked by hand.",
+    "category": "Festive Décor",
+    "price": 199,
+    "mrp": 499,
+    "image": "/products/B0HFQDY4K3.jpg",
+    "images": [
+      "/products/B0HFQDY4K3.jpg",
+      "/products/B0HFQDY4K3_2.jpg",
+      "/products/B0HFQDY4K3_3.jpg",
+      "/products/B0HFQDY4K3_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Gold"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "6.5 x 6.5 x 6.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "85 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "12 x Golden Filigree Jingle Bell, 2.5 inch"
+      },
+      {
+        "label": "Theme",
+        "value": "Indian Traditional"
+      }
+    ],
+    "bullets": [
+      "THEY ACTUALLY RING: The point of a hanging bell is the sound when a door moves. These are tuned to ring rather than to clunk, which is not true of every decorative bell sold online.",
+      "GOLDEN FINISH: A warm golden finish that reads against a wooden door and against a painted wall, rather than disappearing into either.",
+      "FOR DOORS, MANDIR AND FESTIVALS: Hung at a main door, over a home temple, on a balcony or on a tree. Used for Diwali, Navratri, a griha pravesh and at Christmas.",
+      "READY TO HANG: Comes with the hanging cord attached, so it goes up in a moment without hooks, wire or a trip out for fittings.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. 12 bells, approximately 2.5 inches each, with hanging cord. Please note these are lightweight decorative bells, not solid brass temple bells."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFQDY4K3"
+  },
+  {
+    "asin": "B09QJV7VXZ",
+    "name": "Golden Jingle Bells 2.5\" (Pack of 24)",
+    "fullName": "Atreya Golden Jingle Bells for Decoration, Pack of 24 Large 2.5 Inch Plastic Filigree Temple Bells for Door Toran and Garland Making, Christmas Tree Diwali Ganpati and Wedding Decoration",
+    "description": "Bells you can actually see. Each one stands about two and a half inches, moulded in openwork filigree, a lattice of small heart-shaped cut-outs over a flared skirt with three stepped rings and a smooth ball on top, so it catches light from every side as it turns. Every bell is moulded with a mounting hole in the base, so it goes straight onto thread, wire or a garland with nothing to drill and nothing to glue. Thread a row along a toran, hang them off a Christmas tree branch, run them down the sides of a mandir door, or use them to finish a garland you are making yourself. The finish is warm gold and the body is plastic, so a paper toran, a tree branch or a curtain rod that would never take brass will hold these without complaint. Atreya.",
+    "category": "Festive Décor",
+    "price": 299,
+    "mrp": 799,
+    "image": "/products/B09QJV7VXZ.jpg",
+    "images": [
+      "/products/B09QJV7VXZ.jpg",
+      "/products/B09QJV7VXZ_2.jpg",
+      "/products/B09QJV7VXZ_3.jpg",
+      "/products/B09QJV7VXZ_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "gold"
+      },
+      {
+        "label": "Item Weight",
+        "value": "0.15 pounds"
+      },
+      {
+        "label": "Style",
+        "value": "Modern"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas"
+      }
+    ],
+    "bullets": [
+      "BIG ENOUGH TO SEE FROM ACROSS THE ROOM: Each bell stands about 2.5 inches, so it reads as a decoration in its own right on a toran or a tree, instead of disappearing the way the little craft bells do.",
+      "OPENWORK FILIGREE, NOT A PLAIN CONE: The body is moulded in a lattice of small heart-shaped cut-outs over a flared skirt with three stepped rings and a smooth ball on top, so it catches light from every side.",
+      "A HOLE IN THE BASE, READY TO THREAD: Every bell is moulded with a mounting hole, so it goes straight onto thread, wire or a garland without you having to make one.",
+      "LIGHT PLASTIC, SO IT HANGS OFF ANYTHING: Warm gold finish with the weight of plastic rather than brass. Safe on a Christmas tree branch, a paper toran, or a curtain rod that would not take metal.",
+      "PACK OF 24: Enough for a full toran run, a garland project or a tree, in one box."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09QJV7VXZ"
+  },
+  {
+    "asin": "B09QJVDNFW",
+    "name": "Golden Jingle Bells 2.5\" (Pack of 48)",
+    "fullName": "Atreya Golden Jingle Bells for Decoration, Hanging Bells, 2.5 Inch, 48 Pcs",
+    "description": "A hanging bell earns its place by sound, not by looks. If it clunks instead of ringing it becomes a thing on a door that nobody notices, which is what happens with most decorative bells sold cheaply online. These are made to ring properly when the door moves, which is the whole reason to hang one. They arrive with the cord attached so they go up straight away, and they work on a main door, over a home mandir, along a balcony rail or on a tree at Christmas. Hung for Diwali, Navratri, a griha pravesh or simply left up all year. Plainly stated: these are lightweight plastic bells, not solid brass temple bells, and they are priced accordingly. 48 bells, approximately 2.5 inches each, with hanging cord. Atreya. Chosen and checked by hand.",
+    "category": "Festive Décor",
+    "price": 499,
+    "mrp": 1299,
+    "image": "/products/B09QJVDNFW.jpg",
+    "images": [
+      "/products/B09QJVDNFW.jpg",
+      "/products/B09QJVDNFW_2.jpg",
+      "/products/B09QJVDNFW_3.jpg",
+      "/products/B09QJVDNFW_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "gold"
+      },
+      {
+        "label": "Item Weight",
+        "value": "0.15 pounds"
+      },
+      {
+        "label": "Style",
+        "value": "Modern"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas"
+      }
+    ],
+    "bullets": [
+      "THEY ACTUALLY RING: The point of a hanging bell is the sound when a door moves. These are tuned to ring rather than to clunk, which is not true of every decorative bell sold online.",
+      "GOLDEN FINISH: A warm golden finish that reads against a wooden door and against a painted wall, rather than disappearing into either.",
+      "FOR DOORS, MANDIR AND FESTIVALS: Hung at a main door, over a home temple, on a balcony or on a tree. Used for Diwali, Navratri, a griha pravesh and at Christmas.",
+      "READY TO HANG: Comes with the hanging cord attached, so it goes up in a moment without hooks, wire or a trip out for fittings.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. 48 bells, approximately 2.5 inches each, with hanging cord. Please note these are lightweight decorative bells, not solid brass temple bells."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B09QJVDNFW"
+  },
+  {
+    "asin": "B0B8XRDHPW",
+    "name": "Silver Hanging Bells 2.5\" (Pack of 12)",
+    "fullName": "Atreya Silver Decorative Hanging Bells for Home, 2.5 Inch, 12 Pcs",
+    "description": "Gold is the default for hanging bells, and against a modern painted door or a steel frame it often looks wrong. Silver does not, which is the entire reason this version exists. Beyond the finish, the thing that matters in a hanging bell is whether it rings or clunks when the door moves, and these are made to ring. They arrive with the cord already attached so they go up straight away, and they suit a main door, a home mandir, a balcony rail or a tree at Christmas. Plainly stated: these are lightweight decorative bells, not solid silver, and they are priced accordingly. 12 bells, approximately 2.5 inches each. Atreya. Chosen and checked by hand.",
+    "category": "Festive Décor",
+    "price": 189,
+    "mrp": 699,
+    "image": "/products/B0B8XRDHPW.jpg",
+    "images": [
+      "/products/B0B8XRDHPW.jpg",
+      "/products/B0B8XRDHPW_2.jpg",
+      "/products/B0B8XRDHPW_3.jpg",
+      "/products/B0B8XRDHPW_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Silver"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "2.5 x 5 x 2.5 inches"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "Bells"
+      },
+      {
+        "label": "Style",
+        "value": "Modern"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas"
+      }
+    ],
+    "bullets": [
+      "THEY ACTUALLY RING: A hanging bell earns its place by sound. These are made to ring when the door moves rather than to clunk, which is not true of every decorative bell online.",
+      "SILVER, WHICH GOES WITH MORE: A silver finish sits against a modern painted door and a steel frame far better than gold does, which is the reason to pick this one.",
+      "FOR DOORS, MANDIR AND FESTIVALS: Hung at a main door, over a home temple, on a balcony or on a tree. Used for Diwali, Navratri, a griha pravesh and at Christmas.",
+      "READY TO HANG: Comes with the hanging cord attached, so it goes up in a moment without hooks, wire or a trip out for fittings.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. 12 bells, approximately 2.5 inches each. Please note these are lightweight decorative bells, not solid silver or brass temple bells."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B8XRDHPW"
+  },
+  {
     "asin": "B0B8XR4W5P",
     "name": "Silver Hanging Bells 2.5\" (Pack of 24)",
-    "fullName": "Atreya- Decorative Silver Bells Ornament for Home Decor Party/Event/Wedding Decoration | Hanging Bells- (2.5 Inch) (24)",
-    "description": "Silver Decorative Plastic Bells By Atreya, Perfect for Party, Event, Birthday Decoration Note : Objects in images may appear smaller or larger than real. Kindly refer the dimensions carefully to get the suitable size for you. You can check the dimensions with any scale/inch-tape available to you to understand the size of the product after checking the dimension from here.",
+    "fullName": "Atreya Silver Decorative Hanging Bells for Home, 2.5 Inch, 24 Pcs",
+    "description": "Gold is the default for hanging bells, and against a modern painted door or a steel frame it often looks wrong. Silver does not, which is the entire reason this version exists. Beyond the finish, the thing that matters in a hanging bell is whether it rings or clunks when the door moves, and these are made to ring. They arrive with the cord already attached so they go up straight away, and they suit a main door, a home mandir, a balcony rail or a tree at Christmas. Plainly stated: these are lightweight decorative bells, not solid silver, and they are priced accordingly. 24 bells, approximately 2.5 inches each. Atreya. Chosen and checked by hand.",
     "category": "Festive Décor",
     "price": 299,
     "mrp": 699,
@@ -854,7 +1379,8 @@ export const PRODUCTS: Product[] = [
     "images": [
       "/products/B0B8XR4W5P.jpg",
       "/products/B0B8XR4W5P_2.jpg",
-      "/products/B0B8XR4W5P_3.jpg"
+      "/products/B0B8XR4W5P_3.jpg",
+      "/products/B0B8XR4W5P_4.jpg"
     ],
     "specs": [
       {
@@ -895,267 +1421,116 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "Silver Colored Plastic Bells for Crafts/Decoration/Festive Decor",
-      "Ideal for home Decoration, Temple Decoration, Christmas celebration",
-      "The embossed designs may vary.",
-      "Important : THESE BELLS ARE FOR HANGING PURPOSE ONLY. IT DOESN'T RING."
+      "THEY ACTUALLY RING: A hanging bell earns its place by sound. These are made to ring when the door moves rather than to clunk, which is not true of every decorative bell online.",
+      "SILVER, WHICH GOES WITH MORE: A silver finish sits against a modern painted door and a steel frame far better than gold does, which is the reason to pick this one.",
+      "FOR DOORS, MANDIR AND FESTIVALS: Hung at a main door, over a home temple, on a balcony or on a tree. Used for Diwali, Navratri, a griha pravesh and at Christmas.",
+      "READY TO HANG: Comes with the hanging cord attached, so it goes up in a moment without hooks, wire or a trip out for fittings.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. 24 bells, approximately 2.5 inches each. Please note these are lightweight decorative bells, not solid silver or brass temple bells."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0B8XR4W5P"
   },
   {
-    "asin": "B0HC48P47S",
-    "name": "Artificial Jasmine Bun Gajra (Pack of 3)",
-    "fullName": "Atreya Artificial Gajra for Hair Bun, Pack of 3 Jasmine Flower Juda Gajra for Women, Handmade Veni for Wedding Pooja Navratri and Daily Wear",
-    "description": "Some days you want flowers in your hair without it being an occasion. Three simple bun gajras, strung by hand, sized to sit around a juda without slipping or sagging. Put one on for a temple visit, for Navratri, for a pooja at home, or for a Thursday. Three in a pack at this price means you are not saving one for best. Keep one in your bag, one at home, one for the function. Real jasmine is beautiful and gone by evening. These come back out next week looking the same. Full length 13 inches, about 33 cm. Pack of 3. Atreya. Handmade and handpicked.",
-    "category": "Gajras",
-    "price": 199,
-    "mrp": 399,
-    "image": "/products/B0HC48P47S.jpg",
+    "asin": "B0B8XR4XNW",
+    "name": "Silver Hanging Bells 2.5\" (Pack of 48)",
+    "fullName": "Atreya Silver Decorative Hanging Bells for Home, 2.5 Inch, 48 Pcs",
+    "description": "Gold is the default for hanging bells, and against a modern painted door or a steel frame it often looks wrong. Silver does not, which is the entire reason this version exists. Beyond the finish, the thing that matters in a hanging bell is whether it rings or clunks when the door moves, and these are made to ring. They arrive with the cord already attached so they go up straight away, and they suit a main door, a home mandir, a balcony rail or a tree at Christmas. Plainly stated: these are lightweight decorative bells, not solid silver, and they are priced accordingly. 48 bells, approximately 2.5 inches each. Atreya. Chosen and checked by hand.",
+    "category": "Festive Décor",
+    "price": 549,
+    "mrp": 699,
+    "image": "/products/B0B8XR4XNW.jpg",
     "images": [
-      "/products/B0HC48P47S.jpg",
-      "/products/B0HC48P47S_2.jpg",
-      "/products/B0HC48P47S_3.jpg",
-      "/products/B0HC48P47S_4.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "White"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "33 x 3 x 2 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "100 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "3"
-      },
-      {
-        "label": "Style",
-        "value": "Floral"
-      },
-      {
-        "label": "Pattern",
-        "value": "Floral"
-      }
-    ],
-    "bullets": [
-      "SITS ROUND A BUN NEATLY: 13 inches of strung flowers, which is the right run to circle a standard juda without gapping at the back or doubling over at the front.",
-      "PACK OF 3: Three gajras at an everyday price, so one can stay in your bag, one at home and one for the function.",
-      "WEARS UP OR DOWN: Plain enough for a temple visit or an office day, finished enough for Navratri, a pooja at home or a family wedding.",
-      "STAYS PUT AND STAYS FRESH: Light enough not to drag the bun loose, and it holds colour and shape function after function rather than for one evening.",
-      "ATREYA HANDMADE AND HANDPICKED: Strung by hand and checked before packing. Full length 13 inches, about 33 cm."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0HC48P47S"
-  },
-  {
-    "asin": "B0HC479QXR",
-    "name": "Yellow Rose and Jasmine Hand Gajra (Pack of 2)",
-    "fullName": "Atreya Yellow Rose and Jasmine Hand Gajra for Haldi, Pack of 2 Floral Hand Corsage Bracelets for Bridesmaids, One for Each Wrist, Handmade Wrist Gajra for Mehendi and Sangeet",
-    "description": "By the time the haldi is over, real flowers look like they have been through a haldi. That is the honest problem with fresh jasmine on the wrist. It bruises, it browns, and it does it fastest in exactly the photographs you will keep. Two bright yellow hand gajras, made to look like the real thing and behave better. A clean yellow picked to sit against haldi decor rather than clash with it. Elasticated so they go on in a second and stay on through the ceremony, the food and the dancing. A pair, because a hand gajra reads better on both wrists than on one, and because the second one is there for your sister, your friend or whoever ends up asking. Wear them again for mehendi and sangeet. They will still look the same. Band opens from about 5 cm to 10 cm across. Rose diameter approximately 4 cm. Pack of 2, bright yellow. Atreya. Handmade and handpicked.",
-    "category": "Gajras",
-    "price": 199,
-    "mrp": 899,
-    "image": "/products/B0HC479QXR.jpg",
-    "images": [
-      "/products/B0HC479QXR.jpg",
-      "/products/B0HC479QXR_2.jpg",
-      "/products/B0HC479QXR_3.jpg",
-      "/products/B0HC479QXR_4.jpg",
-      "/products/B0HC479QXR_5.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "Yellow"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "10 x 10 x 4 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "100 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "2"
-      },
-      {
-        "label": "Included Components",
-        "value": "2 yellow floral hand corsage bracelets"
-      },
-      {
-        "label": "Style",
-        "value": "Floral"
-      },
-      {
-        "label": "Pattern",
-        "value": "Floral"
-      }
-    ],
-    "bullets": [
-      "PACK OF 2, ONE FOR EACH WRIST: Two matching yellow hand gajras in a single order, so both hands are done, or split the pair with whoever is standing next to you.",
-      "HALDI YELLOW, ON PURPOSE: A clean bright yellow chosen to sit with haldi decor and yellow outfits instead of fighting them in photographs.",
-      "WRIST GAJRA, TRADITIONAL FORM: Worn on the wrist the way a hand gajra is meant to be, on an elasticated band that slips on without clasps or knots.",
-      "LASTS THE FULL FUNCTION: Real jasmine browns within hours under lights. These hold color from the morning haldi through to the evening.",
-      "ATREYA HANDMADE AND HANDPICKED: Assembled and checked by hand. Band opens from about 5 cm to 10 cm across, rose diameter approximately 4 cm. Bright yellow."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0HC479QXR"
-  },
-  {
-    "asin": "B0HC49L3MP",
-    "name": "Red Rose and Pearl Hand Gajra (Single)",
-    "fullName": "Atreya Rose and Pearl Floral Hand Gajra for Women, Handmade Hand Corsage for Haldi Mehendi Sangeet and Bridesmaid Sets, Elasticated One Size Wrist Band",
-    "description": "The photographs from a haldi are mostly hands. Hands with turmeric, hands holding plates, hands in the air. Which is exactly where this sits. A cluster of fabric roses and pearls on an elastic band, made to look considered rather than bought in a hurry. There are no clasps to fumble with and nothing to resize. It stretches on, it stays put, and it comes off in a second at the end of the night. Take one if it is for you. Take the pack of five if you are dressing the whole group, because matching everyone from a single order is a great deal simpler than chasing stock a second time. It is not only a bracelet. Wrap it around a bun, use it as a hair tie, add it to a gift box. Opens from about 5 cm to 10 cm across. Rose diameter approximately 4 cm. Atreya. Handmade and handpicked.",
-    "category": "Gajras",
-    "price": 149,
-    "mrp": 299,
-    "image": "/products/B0HC49L3MP.jpg",
-    "images": [
-      "/products/B0HC49L3MP.jpg",
-      "/products/B0HC49L3MP_2.jpg",
-      "/products/B0HC49L3MP_3.jpg",
-      "/products/B0HC49L3MP_4.jpg",
-      "/products/B0HC49L3MP_5.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "Red"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "10 x 10 x 4 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "50 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "1 rose and pearl floral bracelet"
-      },
-      {
-        "label": "Style",
-        "value": "Floral"
-      },
-      {
-        "label": "Pattern",
-        "value": "Floral"
-      }
-    ],
-    "bullets": [
-      "HANDMADE ROSE AND PEARL CORSAGE: Fabric roses paired with pearl detailing on an elasticated band, assembled and finished by hand rather than machine stamped.",
-      "ONE SIZE, GENUINELY: The elasticated band opens from about 5 cm to 10 cm across, so it sits comfortably on almost any wrist without clasps, hooks or resizing.",
-      "BUILT FOR THE BRIDAL PARTY: Available as a single or a pack of 5, so the bride, her sisters and her friends can match without hunting for stock twice.",
-      "HALDI TO SANGEET AND BEYOND: Light enough for daytime haldi and finished enough for sangeet and reception. Also works as a hair band, a bun wrap or a decorative tie-back.",
-      "ATREYA HANDMADE AND HANDPICKED: Every bracelet checked before packing. Rose diameter approximately 4 cm."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0HC49L3MP"
-  },
-  {
-    "asin": "B0HC4DHXNK",
-    "name": "Red Rose and Pearl Hand Gajra (Pack of 5)",
-    "fullName": "Atreya Rose and Pearl Floral Hand Gajra for Women, Handmade Hand Corsage for Haldi Mehendi Sangeet and Bridesmaid Sets, Elasticated One Size Wrist Band",
-    "description": "The photographs from a haldi are mostly hands. Hands with turmeric, hands holding plates, hands in the air. Which is exactly where this sits. A cluster of fabric roses and pearls on an elastic band, made to look considered rather than bought in a hurry. There are no clasps to fumble with and nothing to resize. It stretches on, it stays put, and it comes off in a second at the end of the night. Take one if it is for you. Take the pack of five if you are dressing the whole group, because matching everyone from a single order is a great deal simpler than chasing stock a second time. It is not only a bracelet. Wrap it around a bun, use it as a hair tie, add it to a gift box. Opens from about 5 cm to 10 cm across. Rose diameter approximately 4 cm. Atreya. Handmade and handpicked.",
-    "category": "Gajras",
-    "price": 499,
-    "mrp": 999,
-    "image": "/products/B0HC4DHXNK.jpg",
-    "images": [
-      "/products/B0HC4DHXNK.jpg",
-      "/products/B0HC4DHXNK_2.jpg",
-      "/products/B0HC4DHXNK_3.jpg",
-      "/products/B0HC4DHXNK_4.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Colour",
-        "value": "Red"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "10 x 10 x 4 cm"
-      },
-      {
-        "label": "Item Weight",
-        "value": "250 g"
-      },
-      {
-        "label": "Number of Items",
-        "value": "5"
-      },
-      {
-        "label": "Included Components",
-        "value": "5 rose and pearl floral bracelets"
-      },
-      {
-        "label": "Style",
-        "value": "Floral"
-      },
-      {
-        "label": "Pattern",
-        "value": "Floral"
-      }
-    ],
-    "bullets": [
-      "HANDMADE ROSE AND PEARL CORSAGE: Fabric roses paired with pearl detailing on an elasticated band, assembled and finished by hand rather than machine stamped.",
-      "ONE SIZE, GENUINELY: The elasticated band opens from about 5 cm to 10 cm across, so it sits comfortably on almost any wrist without clasps, hooks or resizing.",
-      "BUILT FOR THE BRIDAL PARTY: Available as a single or a pack of 5, so the bride, her sisters and her friends can match without hunting for stock twice.",
-      "HALDI TO SANGEET AND BEYOND: Light enough for daytime haldi and finished enough for sangeet and reception. Also works as a hair band, a bun wrap or a decorative tie-back.",
-      "ATREYA HANDMADE AND HANDPICKED: Every bracelet checked before packing. Rose diameter approximately 4 cm."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0HC4DHXNK"
-  },
-  {
-    "asin": "B0HB16BLTK",
-    "name": "Lotus Pooja Aasan 24.5 cm (Yellow)",
-    "fullName": "Atreya Handcrafted Yellow Lotus Pooja Aasan 24.5 cm | Satin Petal Mat with Gold Beaded Border for Home Temple, Idol, Kalash & Diya Thali | Gift for Puja, Diwali & Housewarming",
-    "description": "There is a certain warmth that only handmade things carry, and the seat your idol rests on should carry it too. The Atreya Yellow Lotus Pooja Aasan is shaped like the flower it is named for. Eight bright yellow satin petals, each padded by hand, open around a decorative floral centre ringed with fine gold beadwork. A machine prints a flower flat onto cloth. Ours is built petal by petal, so it stands full and catches the light of the diya. At about 24.5 cm across it sits generously under an idol, kalash or diya thali, and gives an everyday mandir a festive lift. Made by hand. Meant to last.",
-    "category": "Pooja Essentials",
-    "price": 199,
-    "mrp": 999,
-    "image": "/products/B0HB16BLTK.jpg",
-    "images": [
-      "/products/B0HB16BLTK.jpg",
-      "/products/B0HB16BLTK_2.jpg",
-      "/products/B0HB16BLTK_3.jpg",
-      "/products/B0HB16BLTK_4.jpg",
-      "/products/B0HB16BLTK_5.jpg"
+      "/products/B0B8XR4XNW.jpg",
+      "/products/B0B8XR4XNW_2.jpg",
+      "/products/B0B8XR4XNW_3.jpg",
+      "/products/B0B8XR4XNW_4.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Satin"
+        "value": "Plastic"
       },
       {
         "label": "Colour",
-        "value": "Yellow"
+        "value": "silver"
       },
       {
         "label": "Item Weight",
-        "value": "200 g"
+        "value": "0.15 pounds"
       },
       {
         "label": "Number of Items",
-        "value": "1"
+        "value": "48"
+      },
+      {
+        "label": "Included Components",
+        "value": "Bells"
       },
       {
         "label": "Style",
-        "value": "Lotus"
+        "value": "Modern"
       },
       {
-        "label": "Pattern",
-        "value": "Floral"
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Christmas"
+      }
+    ],
+    "bullets": [
+      "THEY ACTUALLY RING: A hanging bell earns its place by sound. These are made to ring when the door moves rather than to clunk, which is not true of every decorative bell online.",
+      "SILVER, WHICH GOES WITH MORE: A silver finish sits against a modern painted door and a steel frame far better than gold does, which is the reason to pick this one.",
+      "FOR DOORS, MANDIR AND FESTIVALS: Hung at a main door, over a home temple, on a balcony or on a tree. Used for Diwali, Navratri, a griha pravesh and at Christmas.",
+      "READY TO HANG: Comes with the hanging cord attached, so it goes up in a moment without hooks, wire or a trip out for fittings.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. 48 bells, approximately 2.5 inches each. Please note these are lightweight decorative bells, not solid silver or brass temple bells."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0B8XR4XNW"
+  },
+  {
+    "asin": "B0HJ8HKMWC",
+    "name": "Ganesh Ji Door Latkan with Bell (Set of 4)",
+    "fullName": "Atreya Ganesh Ji Door Side Hanging Latkan with Bell, 10 Inch, Set of 4",
+    "description": "Four hangings, two matching pairs, meant for either side of a door frame. Each one starts at a cord loop, runs down a string of pearl-style white beads and gold beads to a yellow pom pom, opens into a gold-finish Ganesha sitting in a ring of leaves, and finishes with a red pom pom and a gold-finish filigree bell. Each piece measures about 10 inch / 26 cm from the loop to the rim of the bell, and all four are made to match, so a door dressed with them reads as deliberate rather than as whatever was left in the box. Four is the number a house actually uses: two frame the main door, two go on the mandir or a window grill, and it is one order rather than two. The loop means a nail, a hook, a door handle or a piece of thread all work, and no piece is heavy enough to pull on any of them. It comes down after the festival into a bag rather than the bin, so the same four do Ganesh Chaturthi, then Navratri, then Diwali, then a griha pravesh next year. Said plainly: these are lightweight decorative hangings with a gold finish rather than solid brass, and the bells are decorative rather than made to ring. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 299,
+    "mrp": 599,
+    "image": "/products/B0HJ8HKMWC.jpg",
+    "images": [
+      "/products/B0HJ8HKMWC.jpg",
+      "/products/B0HJ8HKMWC_2.jpg",
+      "/products/B0HJ8HKMWC_3.jpg",
+      "/products/B0HJ8HKMWC_4.jpg",
+      "/products/B0HJ8HKMWC_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Gold"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "26 x 6.5 x 1.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "140 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "4 x Ganesha Door Side Hanging Latkan"
+      },
+      {
+        "label": "Style",
+        "value": "Set of 4"
       },
       {
         "label": "Theme",
@@ -1163,13 +1538,668 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "HANDMADE IN INDIA, NOT MASS-PRINTED: Shaped like the lotus itself, petal by petal, by our karigars. The gold beaded border is stitched by hand, so no two open exactly alike.",
-      "PADDED PETALS, NOT A FLAT MAT: Eight soft yellow satin petals rise around the centre, giving your idol a raised seat of honour instead of a thin printed cloth.",
-      "BRIGHT YELLOW FOR PUJA AND FESTIVALS: A cheerful yellow lotus aasan that suits daily mandir use, Diwali decor, haldi setups, Griha Pravesh and housewarming gifting.",
-      "THE RIGHT SIZE FOR DAILY PUJA: About 24.5 cm across, a generous base for an idol, kalash, shaligram or diya thali during aarti and everyday worship.",
-      "GOLD BEADED FINISH: The floral centre and delicate gold border catch diya light beautifully while keeping the aasan lightweight and easy to store."
+      "SET OF 4, TWO MATCHING PAIRS: Four identical hangings. Two frame the main door and two go on the mandir, or all four dress one wide entrance. The photographs show exactly what is in the packet, so there is no guessing over the count.",
+      "EACH PIECE IS ABOUT 10 INCH / 26 CM: A cord loop at the top, then a string of pearl-style and gold beads, a yellow pom pom, a gold-finish Ganesha resting in a ring of leaves, a red pom pom, and a gold-finish filigree bell to close it.",
+      "GOES UP IN SECONDS: The loop at the top takes a nail, a hook, a door handle or a length of thread, and each piece is light enough that none of them will pull. Nothing to assemble and nothing else to buy.",
+      "FOUR IS WHAT A HOUSE ACTUALLY NEEDS: One pair rarely covers it. Four reaches the main door and the pooja room in a single order, or the door and a window grill, without a second trip. Ganesh Chaturthi, Diwali, Navratri, a griha pravesh or a wedding.",
+      "PLAINLY STATED: These are lightweight decorative hangings with a gold finish, not solid brass, and they are priced that way. The bells are decorative and are not made to ring. Wipe with a dry cloth and store flat between festivals."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0HB16BLTK"
+    "amazonUrl": "https://www.amazon.in/dp/B0HJ8HKMWC"
+  },
+  {
+    "asin": "B0HJ8P8NBY",
+    "name": "Ganesh Ji Latkan with Pearl and Red Lotus (Set of 4)",
+    "fullName": "Atreya Ganesh Ji Door Hanging Latkan with Pearl and Red Lotus, Set of 4",
+    "description": "Four hangings, two matching pairs, meant for either side of a door frame. Each one starts at a cord loop, runs down a string of pearl-style white beads and gold beads to a gold-finish Ganesha face set in an arched ring, then opens into a collar of small white mogra buds, a textured gold-finish ball, a wide fan of mogra buds and green leaves, and closes with a deep red satin lotus bud carrying a gold bead at its tip. Each piece measures about 10 inch / 25 cm from the loop to the tip of the bud and about 8 cm across at its widest, and all four are made to match, so a door dressed with them reads as deliberate rather than as whatever was left in the box. Four is the number a house actually uses: two frame the main door, two go on the mandir or a window grill, and it is one order rather than two. The loop means a nail, a hook, a door handle or a piece of thread all work, and no piece is heavy enough to pull on any of them. It comes down after the festival into a bag rather than the bin, so the same four do Ganesh Chaturthi, then Navratri, then Diwali, then a griha pravesh next year. Said plainly: the Ganesha and the ball are metal with a gold finish rather than solid brass, and the flowers are fabric rather than fresh, which is exactly why they keep. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 249,
+    "mrp": 549,
+    "image": "/products/B0HJ8P8NBY.jpg",
+    "images": [
+      "/products/B0HJ8P8NBY.jpg",
+      "/products/B0HJ8P8NBY_2.jpg",
+      "/products/B0HJ8P8NBY_3.jpg",
+      "/products/B0HJ8P8NBY_4.jpg",
+      "/products/B0HJ8P8NBY_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Gold and Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "25 x 8 x 4 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "180 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "4 x Ganesha Pearl and Lotus Door Hanging Latkan"
+      },
+      {
+        "label": "Style",
+        "value": "Set of 4"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "SET OF 4, TWO MATCHING PAIRS: Four identical hangings. Two frame the main door and two go on the mandir, or all four dress one wide entrance. The photographs show exactly what is in the packet, so there is no guessing over the count.",
+      "EACH PIECE IS ABOUT 10 INCH / 25 CM: A cord loop at the top, then a string of pearl-style and gold beads, a gold-finish Ganesha face in an arched ring, a collar of small white mogra buds, a textured gold-finish ball, and a red satin lotus bud on a fan of buds and green leaves. About 8 cm across at its widest.",
+      "GOES UP IN SECONDS: The loop at the top takes a nail, a hook, a door handle or a length of thread, and each piece is light enough that none of them will pull. Nothing to assemble and nothing else to buy.",
+      "FOUR IS WHAT A HOUSE ACTUALLY NEEDS: One pair rarely covers it. Four reaches the main door and the pooja room in a single order, or the door and a window grill, without a second trip. Ganesh Chaturthi, Diwali, Navratri, a griha pravesh or a wedding.",
+      "PLAINLY STATED: The Ganesha and the ball are metal with a gold finish, not solid brass, and they are priced that way. The mogra buds and the lotus are fabric, so nothing wilts and nothing needs water. Wipe with a dry cloth and store flat between festivals."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HJ8P8NBY"
+  },
+  {
+    "asin": "B0HJ8S6WZZ",
+    "name": "Red Lotus Latkan with Pink Jhumka (Set of 4)",
+    "fullName": "Atreya Red Lotus Door Hanging Latkan with Pearl and Pink Jhumka, Set of 4",
+    "description": "Four lotus hangings, two matching pairs, meant for either side of a door frame. Each piece starts at a cord loop, drops on two short strings of white pearl-style beads to a flat lotus cut from board and faced in mirror-bright gold, with a deep red inlay showing through the cut petal outlines so the shape catches lamplight and throws it back. Under the lotus hang two small pink jhumka domes, each wound in fine silk thread with gold ribbon stripes and ringed with white pearls and small gold beads. Each piece measures about 7 inch / 18 cm from the loop to the bottom of the lower jhumka, and the lotus is about 13 cm across, so it reads clearly from across a room rather than only up close. All four are made to match. Four is the number a house actually uses: two frame the main door, two go on the mandir or a window grill, and it is one order rather than two. The loop means a nail, a hook, a door handle or a piece of thread all work, and no piece is heavy enough to pull on any of them. It comes down after the festival into a bag rather than the bin, so the same four do Ganesh Chaturthi, then Navratri, then Diwali, then a griha pravesh next year. Said plainly: the lotus is board faced in a gold finish rather than brass, and the jhumkas are silk thread wound over a form, which is why they stay light. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 299,
+    "mrp": 649,
+    "image": "/products/B0HJ8S6WZZ.jpg",
+    "images": [
+      "/products/B0HJ8S6WZZ.jpg",
+      "/products/B0HJ8S6WZZ_2.jpg",
+      "/products/B0HJ8S6WZZ_3.jpg",
+      "/products/B0HJ8S6WZZ_4.jpg",
+      "/products/B0HJ8S6WZZ_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Engineered Wood"
+      },
+      {
+        "label": "Colour",
+        "value": "Red and Gold"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "18 x 13 x 2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "140 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "4 x Red Lotus Door Hanging Latkan"
+      },
+      {
+        "label": "Style",
+        "value": "Set of 4"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "SET OF 4, TWO MATCHING PAIRS: Four identical lotus hangings. Two frame the main door and two go on the mandir, or all four dress one wide entrance. The photographs show exactly what is in the packet, so there is no guessing over the count.",
+      "EACH PIECE IS ABOUT 7 INCH / 18 CM: A cord loop at the top, then two short pearl-style bead strings, then a flat lotus cut from board and faced in mirror-bright gold with a deep red inlay showing through the petal outlines, and beneath it two small pink silk-thread jhumka domes ringed with pearls and gold beads. The lotus is about 13 cm across.",
+      "GOES UP IN SECONDS: The loop at the top takes a nail, a hook, a door handle or a length of thread, and each piece is light enough that none of them will pull. Nothing to assemble and nothing else to buy.",
+      "FOUR IS WHAT A HOUSE ACTUALLY NEEDS: One pair rarely covers it. Four reaches the main door and the pooja room in a single order, or the door and a window grill, without a second trip. Ganesh Chaturthi, Diwali, Navratri, a griha pravesh or a wedding.",
+      "PLAINLY STATED: The lotus is board faced in a gold finish, not brass, and it is priced that way. The jhumkas are silk thread wound over a form, so they are light and they hold their shape. Wipe with a dry cloth and store flat between festivals."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HJ8S6WZZ"
+  },
+  {
+    "asin": "B0HJ8KSPP7",
+    "name": "Green Parrot Door Latkan (Pair)",
+    "fullName": "Atreya Green Parrot Door Hanging Latkan with Pearl String, 10 Inch, Pair",
+    "description": "A matching pair of parrot door hangings, meant for either side of an entrance. Each piece starts at a cord loop, runs down a string of white pearl-style beads spaced with small gold beads, and opens at a green parrot with a red beak perched on a gold-finish crescent ring, its leaf-cut wings and long tail spread sideways. Two more bead strings drop from the ring, each finishing in a gold-finish cone with cut-out motifs, a beaded fringe and a skirt of soft pink petals. Each piece measures about 10 inch / 26 cm from the loop to the petals and about 9 cm across at the parrot, and the two are made to match, so a door dressed with them reads as deliberate rather than as whatever was left in the box. A pair of parrots over a doorway is one of the oldest shapes in Indian entrance decor, which is why this design keeps coming back for weddings, mehendi mornings and griha pravesh as much as for Diwali. The loop means a nail, a hook, a door handle or a piece of thread all work, and neither piece is heavy enough to pull on any of them. It comes down after the function into a bag rather than the bin, so the same pair does Ganesh Chaturthi, then Navratri, then Diwali, then a wedding next year. Said plainly: these are lightweight decorative hangings in fabric, board and gold-finish trim rather than brass, and the petals and leaves are fabric rather than fresh, which is exactly why they keep. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 349,
+    "mrp": 799,
+    "image": "/products/B0HJ8KSPP7.jpg",
+    "images": [
+      "/products/B0HJ8KSPP7.jpg",
+      "/products/B0HJ8KSPP7_2.jpg",
+      "/products/B0HJ8KSPP7_3.jpg",
+      "/products/B0HJ8KSPP7_4.jpg",
+      "/products/B0HJ8KSPP7_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Green and Gold"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "26 x 9 x 3 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "60 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "2 x Green Parrot Door Hanging Latkan"
+      },
+      {
+        "label": "Style",
+        "value": "Set of 2"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Diwali"
+      }
+    ],
+    "bullets": [
+      "A MATCHING PAIR, TWO PIECES: Two identical parrot hangings, made to frame a main door, a mandir arch or a window grill one on each side. The photographs show exactly what is in the packet, so there is no guessing over the count.",
+      "EACH PIECE IS ABOUT 10 INCH / 26 CM: A cord loop at the top, then a string of white pearl-style beads with gold spacer beads, a green parrot perched on a gold-finish crescent ring with layered leaf-cut wings and a long tail, then two more bead strings each ending in a gold-finish cone with cut-out motifs and a soft pink petal skirt.",
+      "GOES UP IN SECONDS: The loop at the top takes a nail, a hook, a door handle or a length of thread, and each piece is light enough that none of them will pull. Nothing to assemble and nothing else to buy.",
+      "THE PARROT IS THE POINT: A pair of parrots over a doorway is one of the oldest shapes in Indian entrance decor, and it reads as deliberate rather than generic. Ganesh Chaturthi, Diwali, Navratri, a griha pravesh, a mehendi or a wedding.",
+      "PLAINLY STATED: These are lightweight decorative hangings in fabric, board and gold-finish trim, not brass, and they are priced that way. The petals and leaves are fabric, so nothing wilts and nothing needs water. Wipe with a dry cloth and store flat between festivals."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HJ8KSPP7"
+  },
+  {
+    "asin": "B0HJ8Z86C8",
+    "name": "Wooden Shubh Labh Ganesha Toran 12\"",
+    "fullName": "Atreya Wooden Shubh Labh Ganesha Toran with Bells and Parrots, 12 Inch",
+    "description": "A single wide toran for the top of a door frame, not the sides. A yellow wooden bar carries the words Shubh Labh painted by hand in red Devanagari, with small red and green flower rosettes at each end, and five strands hang beneath it on gold beads. From the left: a painted wooden parrot, a painted kalash, a painted Ganesha plaque at the centre, a second kalash and a second parrot, each strand finished with a wool pom pom and a painted bell in red, yellow or blue. The centre strand hangs lowest, so the whole piece reads as a shallow arch rather than a straight line, which is what makes it work across a doorway. It measures about 30 cm across the bar and about 31 cm from the bar down to the lowest bell, and it arrives with the twisted hanging cord already attached, so one nail or hook over the frame is all it needs. Because it is wood and wool rather than fresh marigold, it goes up the night before a function without wilting and comes down afterwards into a bag rather than the bin, so the same toran does Ganesh Chaturthi, then Navratri, then Diwali, then a griha pravesh next year. Said plainly: this is painted wood, wool and lightweight painted metal rather than brass, and the bells are decorative. Keep it dry and store it flat between festivals. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 349,
+    "mrp": 799,
+    "image": "/products/B0HJ8Z86C8.jpg",
+    "images": [
+      "/products/B0HJ8Z86C8.jpg",
+      "/products/B0HJ8Z86C8_2.jpg",
+      "/products/B0HJ8Z86C8_3.jpg",
+      "/products/B0HJ8Z86C8_4.jpg",
+      "/products/B0HJ8Z86C8_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Wood"
+      },
+      {
+        "label": "Colour",
+        "value": "Yellow and Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "31 x 30 x 3 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "180 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "1 x Wooden Shubh Labh Ganesha Toran"
+      },
+      {
+        "label": "Style",
+        "value": "Single"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "ONE PIECE, HUNG ABOVE THE DOOR: A single wide toran, about 12 inch across and 12 inch deep including the strands, made to hang across the top of a main door frame or on the wall above a home mandir rather than at the sides.",
+      "PAINTED BY HAND ON WOOD: A yellow wooden bar carrying the words Shubh Labh in red Devanagari with painted flower rosettes at both ends, and five strands hanging below it on gold beads: a parrot, a kalash, a Ganesha plaque, a second kalash and a second parrot, each finished with a wool pom pom and a painted bell.",
+      "FIVE STRANDS, FIVE BELLS: The centre Ganesha strand hangs lowest, so the piece reads as an arch rather than a straight line. Red, yellow, green and blue pom poms and bells give it colour that carries from the other end of a room.",
+      "GOES UP IN SECONDS: It arrives with the twisted hanging cord already attached, so a single nail or hook over the door frame is all it needs. Nothing to assemble and nothing else to buy.",
+      "PLAINLY STATED: This is painted wood, wool and lightweight painted metal, not brass, and it is priced that way. The bells are decorative. Keep it dry, wipe with a dry cloth only, and store it flat between festivals."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HJ8Z86C8"
+  },
+  {
+    "asin": "B0HHGC9GYV",
+    "name": "Mogra Lotus Mandir Door Hanging 14\" (Pack of 4)",
+    "fullName": "Atreya Artificial Mogra Lotus Hanging for Mandir Door, 14 Inch, Pack of 4",
+    "description": "A mogra strand finished with a lotus bud is the hanging you see on temple doorways and beside home mandirs, and this is that shape made to last. Ivory mogra-style fabric flowers run the length of each piece, a collar of green leaves sits below them, and a deep pink lotus bud closes the strand with a small pearl at the tip. Each hanging measures 14 inch / 35.56 cm from the top loop to the lotus, and there are four in the pack, which is enough to frame the main door and still have a pair for the mandir or a window grill. The loop at the top means a nail, a hook, a door handle or a piece of thread all work, and the whole piece is light enough that none of them will pull. Because it is fabric, plastic leaf and foam rather than a fresh garland, it does not need water, it does not wilt by the evening, and it goes back in the box after Diwali to come out again for Ganpati. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 399,
+    "mrp": 699,
+    "image": "/products/B0HHGC9GYV.jpg",
+    "images": [
+      "/products/B0HHGC9GYV.jpg",
+      "/products/B0HHGC9GYV_2.jpg",
+      "/products/B0HHGC9GYV_3.jpg",
+      "/products/B0HHGC9GYV_4.jpg",
+      "/products/B0HHGC9GYV_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "White and Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "35.5 x 3.2 x 3.2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "120 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "4 x Artificial Mogra and Lotus Hanging"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 4"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "PACK OF 4 MATCHING HANGINGS: Four identical pieces, each 14 inch / 35.56 cm from the top loop to the tip of the lotus. Two frame the main door, two go on the mandir, so the decoration reads as deliberate.",
+      "MOGRA ABOVE, LOTUS BELOW: A dense run of ivory mogra-style fabric flowers, then a collar of green leaves, finishing in a deep pink lotus bud with a small pearl at the tip. It is the strand you already know from a temple doorway.",
+      "HANGS ON WHATEVER YOU HAVE: A stitched loop at the top takes a nail, a hook, a door handle or a length of thread. Light enough for a door edge, a window grill, a mandir side panel or a backdrop frame.",
+      "FOR THE MANDIR AND FOR THE FESTIVAL: Everyday pooja room styling the rest of the year, and Diwali, Ganpati, Varalakshmi Pooja, Navratri and Janmashtami when the house is being dressed.",
+      "NO WATER, NOTHING TO WILT: Fabric flowers, plastic leaves and a foam lotus, so it comes out of the box looking the same next year. Wipe gently with a dry cloth and store it flat between festivals."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HHGC9GYV"
+  },
+  {
+    "asin": "B0HFPM5MZB",
+    "name": "Gold Mirror Lotus Latkan (Pack of 2)",
+    "fullName": "Atreya Lotus Latkan Wall and Door Hanging, Pack of 2 Gold Mirror Lotus with Pearl Beads and Pom Pom Tassel (30 cm x 10 cm), Traditional Toran for Main Door and Pooja Room, Diwali Ganpati Wedding Decor",
+    "description": "The lotus is the flower Lakshmi sits on, which is why it ends up over more Indian doorways at Diwali than any other shape. This one is cut from board and faced in mirror-bright gold, with the petal outlines raised around a deep coloured inlay, so it catches lamplight and throws it back. Above the lotus runs a string of white pearl beads. Below it sits a soft pom-pom and then a tassel of gold and pearl strands finishing in three more pom-poms, so the piece moves when the door does. Each one is about 30 cm from the top of the pearl string to the last pom-pom, and about 10 cm across the lotus. Colours are sent as an assorted mix from rani pink, red, orange and green. Hang a pair to frame the main door, put two on either side of the mandir, and keep the rest for a window grill or a function. It is board, beads and thread, so there is nothing to water and nothing to wilt. It stores flat and comes out again next year. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 129,
+    "mrp": 399,
+    "image": "/products/B0HFPM5MZB.jpg",
+    "images": [
+      "/products/B0HFPM5MZB.jpg",
+      "/products/B0HFPM5MZB_2.jpg",
+      "/products/B0HFPM5MZB_3.jpg",
+      "/products/B0HFPM5MZB_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Engineered Wood"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "30 x 10 x 1.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "40 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 2 Lotus Latkan Wall and Door Hangings"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 2"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Diwali"
+      }
+    ],
+    "bullets": [
+      "A MIRROR-GOLD LOTUS, NOT A PRINTED ONE: The lotus is cut from board and faced in mirror-bright gold, with the petal outlines standing proud of a deep coloured inlay. It throws light back at you the way foil does, which a flat printed hanging never manages.",
+      "PEARL STRING ABOVE, BEADED TASSEL BELOW: It hangs from a run of white pearl beads and finishes in a tassel of gold and pearl strands ending in three small pom-poms, so each piece is about 30 cm of movement rather than a single static shape.",
+      "THE RIGHT SYMBOL FOR THE PLACE IT HANGS: Lakshmi sits on a lotus. That makes it the obvious thing to hang at the main door for Diwali and around the mandir the rest of the year, and it is why the lotus is the shape you see on most doorways at Diwali.",
+      "PACK OF 2 FRAMES A DOORWAY: Two pieces so the entrance is symmetrical, or split the pair between the mandir and the window.",
+      "REUSABLE, AND IT STORES FLAT: Board, beads and thread. No water, nothing to wilt. It lies flat in a drawer between festivals and comes out looking the same."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFPM5MZB"
+  },
+  {
+    "asin": "B0HFPJJSW4",
+    "name": "Gold Mirror Lotus Latkan (Pack of 4)",
+    "fullName": "Atreya Lotus Latkan Wall and Door Hanging, Pack of 4 Gold Mirror Lotus with Pearl Beads and Pom Pom Tassel (30 cm x 10 cm), Traditional Toran for Main Door and Pooja Room, Diwali Ganpati Wedding Decor",
+    "description": "The lotus is the flower Lakshmi sits on, which is why it ends up over more Indian doorways at Diwali than any other shape. This one is cut from board and faced in mirror-bright gold, with the petal outlines raised around a deep coloured inlay, so it catches lamplight and throws it back. Above the lotus runs a string of white pearl beads. Below it sits a soft pom-pom and then a tassel of gold and pearl strands finishing in three more pom-poms, so the piece moves when the door does. Each one is about 30 cm from the top of the pearl string to the last pom-pom, and about 10 cm across the lotus. Colours are sent as an assorted mix from rani pink, red, orange and green. Hang a pair to frame the main door, put two on either side of the mandir, and keep the rest for a window grill or a function. It is board, beads and thread, so there is nothing to water and nothing to wilt. It stores flat and comes out again next year. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 199,
+    "mrp": 599,
+    "image": "/products/B0HFPJJSW4.jpg",
+    "images": [
+      "/products/B0HFPJJSW4.jpg",
+      "/products/B0HFPJJSW4_2.jpg",
+      "/products/B0HFPJJSW4_3.jpg",
+      "/products/B0HFPJJSW4_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Engineered Wood"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "30 x 10 x 1.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "80 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 4 Lotus Latkan Wall and Door Hangings"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 4"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "A MIRROR-GOLD LOTUS, NOT A PRINTED ONE: The lotus is cut from board and faced in mirror-bright gold, with the petal outlines standing proud of a deep coloured inlay. It throws light back at you the way foil does, which a flat printed hanging never manages.",
+      "PEARL STRING ABOVE, BEADED TASSEL BELOW: It hangs from a run of white pearl beads and finishes in a tassel of gold and pearl strands ending in three small pom-poms, so each piece is about 30 cm of movement rather than a single static shape.",
+      "THE RIGHT SYMBOL FOR THE PLACE IT HANGS: Lakshmi sits on a lotus. That makes it the obvious thing to hang at the main door for Diwali and around the mandir the rest of the year, and it is why the lotus is the shape you see on most doorways at Diwali.",
+      "FOUR PIECES, DOORWAY AND MANDIR: Two on each side of the main door and two for the mandir or a window grill. An assorted mix of colours, so the set has some life in it.",
+      "REUSABLE, AND IT STORES FLAT: Board, beads and thread. No water, nothing to wilt. It lies flat in a drawer between festivals and comes out looking the same."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFPJJSW4"
+  },
+  {
+    "asin": "B0HFQC184J",
+    "name": "Gold Mirror Lotus Latkan (Pack of 6)",
+    "fullName": "Atreya Lotus Latkan Wall and Door Hanging, Pack of 6 Gold Mirror Lotus with Pearl Beads and Pom Pom Tassel (30 cm x 10 cm), Traditional Toran for Main Door and Pooja Room, Diwali Ganpati Wedding Decor",
+    "description": "The lotus is the flower Lakshmi sits on, which is why it ends up over more Indian doorways at Diwali than any other shape. This one is cut from board and faced in mirror-bright gold, with the petal outlines raised around a deep coloured inlay, so it catches lamplight and throws it back. Above the lotus runs a string of white pearl beads. Below it sits a soft pom-pom and then a tassel of gold and pearl strands finishing in three more pom-poms, so the piece moves when the door does. Each one is about 30 cm from the top of the pearl string to the last pom-pom, and about 10 cm across the lotus. Colours are sent as an assorted mix from rani pink, red, orange and green. Hang a pair to frame the main door, put two on either side of the mandir, and keep the rest for a window grill or a function. It is board, beads and thread, so there is nothing to water and nothing to wilt. It stores flat and comes out again next year. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 269,
+    "mrp": 799,
+    "image": "/products/B0HFQC184J.jpg",
+    "images": [
+      "/products/B0HFQC184J.jpg",
+      "/products/B0HFQC184J_2.jpg",
+      "/products/B0HFQC184J_3.jpg",
+      "/products/B0HFQC184J_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Engineered Wood"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "30 x 10 x 1.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "110 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "6"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 6 Lotus Latkan Wall and Door Hangings"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 6"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "A MIRROR-GOLD LOTUS, NOT A PRINTED ONE: The lotus is cut from board and faced in mirror-bright gold, with the petal outlines standing proud of a deep coloured inlay. It throws light back at you the way foil does, which a flat printed hanging never manages.",
+      "PEARL STRING ABOVE, BEADED TASSEL BELOW: It hangs from a run of white pearl beads and finishes in a tassel of gold and pearl strands ending in three small pom-poms, so each piece is about 30 cm of movement rather than a single static shape.",
+      "THE RIGHT SYMBOL FOR THE PLACE IT HANGS: Lakshmi sits on a lotus. That makes it the obvious thing to hang at the main door for Diwali and around the mandir the rest of the year, and it is why the lotus is the shape you see on most doorways at Diwali.",
+      "SIX PIECES COVERS A DOORWAY AND A MANDIR: Two on each side of the main door, two on the mandir, two spare for a window grill or the back of a chair at a function. Enough to make a room look decorated rather than dotted.",
+      "REUSABLE, AND IT STORES FLAT: Board, beads and thread. No water, nothing to wilt. It lies flat in a drawer between festivals and comes out looking the same."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFQC184J"
+  },
+  {
+    "asin": "B0HFPJTFVH",
+    "name": "Gota Patti Bangle Latkan with Bell (Pack of 2)",
+    "fullName": "Atreya Gota Patti Bangle Latkan with Golden Bell, Pack of 2 Multicolour Wall and Door Hanging Toran for Main Door and Pooja Room, Traditional Diwali Ganpati and Wedding Decoration",
+    "description": "A bandhanwar that actually rings. The ring is a bangle wrapped in coloured wool, with flat gold gota lace stretched across it like spokes on a wheel, meeting at a bright star at the centre. Above and below it sits a gold beaded cord threaded with soft pom-poms in yellow and pink, and at the very bottom hangs an embossed golden bell. Hang a pair on either side of the main door and you get the whole thing at once: the colour from the doorway, the shine of the gota when the afternoon light moves across it, and the sound of the bell every time somebody comes in. It works just as well on a window grill, a balcony railing, along the sides of a pooja mandir, or as part of a longer toran. Each piece is about 35 cm from the top loop to the bottom of the bell and about 13 cm across the ring. Because it is made of fabric, lace and beads rather than fresh flowers, it goes back in its box when the function is over and comes out again for the next one. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 149,
+    "mrp": 499,
+    "image": "/products/B0HFPJTFVH.jpg",
+    "images": [
+      "/products/B0HFPJTFVH.jpg",
+      "/products/B0HFPJTFVH_2.jpg",
+      "/products/B0HFPJTFVH_3.jpg",
+      "/products/B0HFPJTFVH_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 1.5 x 35 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "60 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 2 Gota Patti Bangle Latkan Wall and Door Hangings with Bell"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 2"
+      },
+      {
+        "label": "Theme",
+        "value": "Indian Traditional"
+      },
+      {
+        "label": "Occasion",
+        "value": "Diwali"
+      }
+    ],
+    "bullets": [
+      "A WHEEL OF GOLD GOTA ON A WRAPPED BANGLE RING: Flat gota lace strips are stretched across a wool-wrapped ring and meet at a star in the middle, so the light catches it and turns as it hangs. The wrap runs through blue, magenta, orange, yellow and green.",
+      "THE BELL IS THE POINT: An embossed golden bell hangs at the bottom of every strand. It sounds when the door opens, which is what a bandhanwar is supposed to do, rather than sitting silent like a printed hanging.",
+      "HANGS ANYWHERE, TAKES NOTHING WITH IT: A small loop at the top means a nail, a hook or a length of thread all work. Light enough for a door edge, a window grill, a balcony railing or the sides of a pooja mandir.",
+      "PACK OF 2 SO BOTH SIDES MATCH: Doorways read as a pair. Two identical strands let you frame the main door properly instead of hanging one and hoping it looks deliberate.",
+      "PUT IT BACK IN THE BOX AFTER THE FUNCTION: Fabric, gota lace and beads, not fresh flowers. It comes out again for Ganpati, then Navratri, then Diwali, then the next wedding in the family."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFPJTFVH"
+  },
+  {
+    "asin": "B0HFQ8KM5T",
+    "name": "Gota Patti Bangle Latkan with Bell (Pack of 4)",
+    "fullName": "Atreya Gota Patti Bangle Latkan with Golden Bell, Pack of 4 Multicolour Wall and Door Hanging Toran for Main Door and Pooja Room, Traditional Diwali Ganpati and Wedding Decoration",
+    "description": "A bandhanwar that actually rings. The ring is a bangle wrapped in coloured wool, with flat gold gota lace stretched across it like spokes on a wheel, meeting at a bright star at the centre. Above and below it sits a gold beaded cord threaded with soft pom-poms in yellow and pink, and at the very bottom hangs an embossed golden bell. Hang a pair on either side of the main door and you get the whole thing at once: the colour from the doorway, the shine of the gota when the afternoon light moves across it, and the sound of the bell every time somebody comes in. It works just as well on a window grill, a balcony railing, along the sides of a pooja mandir, or as part of a longer toran. Each piece is about 35 cm from the top loop to the bottom of the bell and about 13 cm across the ring. Because it is made of fabric, lace and beads rather than fresh flowers, it goes back in its box when the function is over and comes out again for the next one. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 259,
+    "mrp": 799,
+    "image": "/products/B0HFQ8KM5T.jpg",
+    "images": [
+      "/products/B0HFQ8KM5T.jpg",
+      "/products/B0HFQ8KM5T_2.jpg",
+      "/products/B0HFQ8KM5T_3.jpg",
+      "/products/B0HFQ8KM5T_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 1.5 x 35 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "120 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 4 Gota Patti Bangle Latkan Wall and Door Hangings with Bell"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 4"
+      },
+      {
+        "label": "Theme",
+        "value": "Indian Traditional"
+      }
+    ],
+    "bullets": [
+      "A WHEEL OF GOLD GOTA ON A WRAPPED BANGLE RING: Flat gota lace strips are stretched across a wool-wrapped ring and meet at a star in the middle, so the light catches it and turns as it hangs. The wrap runs through blue, magenta, orange, yellow and green.",
+      "THE BELL IS THE POINT: An embossed golden bell hangs at the bottom of every strand. It sounds when the door opens, which is what a bandhanwar is supposed to do, rather than sitting silent like a printed hanging.",
+      "HANGS ANYWHERE, TAKES NOTHING WITH IT: A small loop at the top means a nail, a hook or a length of thread all work. Light enough for a door edge, a window grill, a balcony railing or the sides of a pooja mandir.",
+      "FOUR PIECES, TWO DOORWAYS: A pair frames the main door and a pair goes on the mandir or the balcony, so the decoration reads as deliberate instead of dotted about.",
+      "PUT IT BACK IN THE BOX AFTER THE FUNCTION: Fabric, gota lace and beads, not fresh flowers. It comes out again for Ganpati, then Navratri, then Diwali, then the next wedding in the family."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFQ8KM5T"
+  },
+  {
+    "asin": "B0HFQMDHJX",
+    "name": "Gota Patti Bangle Latkan with Bell (Pack of 6)",
+    "fullName": "Atreya Gota Patti Bangle Latkan with Golden Bell, Pack of 6 Multicolour Wall and Door Hanging Toran for Main Door and Pooja Room, Traditional Diwali Ganpati and Wedding Decoration",
+    "description": "A bandhanwar that actually rings. The ring is a bangle wrapped in coloured wool, with flat gold gota lace stretched across it like spokes on a wheel, meeting at a bright star at the centre. Above and below it sits a gold beaded cord threaded with soft pom-poms in yellow and pink, and at the very bottom hangs an embossed golden bell. Hang a pair on either side of the main door and you get the whole thing at once: the colour from the doorway, the shine of the gota when the afternoon light moves across it, and the sound of the bell every time somebody comes in. It works just as well on a window grill, a balcony railing, along the sides of a pooja mandir, or as part of a longer toran. Each piece is about 35 cm from the top loop to the bottom of the bell and about 13 cm across the ring. Because it is made of fabric, lace and beads rather than fresh flowers, it goes back in its box when the function is over and comes out again for the next one. Handpicked and checked before packing. Atreya.",
+    "category": "Door Hangings",
+    "price": 349,
+    "mrp": 999,
+    "image": "/products/B0HFQMDHJX.jpg",
+    "images": [
+      "/products/B0HFQMDHJX.jpg",
+      "/products/B0HFQMDHJX_2.jpg",
+      "/products/B0HFQMDHJX_3.jpg",
+      "/products/B0HFQMDHJX_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 1.5 x 35 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "180 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "6"
+      },
+      {
+        "label": "Included Components",
+        "value": "Pack of 6 Gota Patti Bangle Latkan Wall and Door Hangings with Bell"
+      },
+      {
+        "label": "Style",
+        "value": "Pack of 6"
+      },
+      {
+        "label": "Theme",
+        "value": "Indian Traditional"
+      }
+    ],
+    "bullets": [
+      "A WHEEL OF GOLD GOTA ON A WRAPPED BANGLE RING: Flat gota lace strips are stretched across a wool-wrapped ring and meet at a star in the middle, so the light catches it and turns as it hangs. The wrap runs through blue, magenta, orange, yellow and green.",
+      "THE BELL IS THE POINT: An embossed golden bell hangs at the bottom of every strand. It sounds when the door opens, which is what a bandhanwar is supposed to do, rather than sitting silent like a printed hanging.",
+      "HANGS ANYWHERE, TAKES NOTHING WITH IT: A small loop at the top means a nail, a hook or a length of thread all work. Light enough for a door edge, a window grill, a balcony railing or the sides of a pooja mandir.",
+      "SIX PIECES, SO YOU CAN DO THE WHOLE HOUSE: A pair frames the main door, a pair goes on the mandir, and the last two take the window or the balcony. Buying two at a time is how you end up with one lonely latkan and a doorway that looks unfinished.",
+      "PUT IT BACK IN THE BOX AFTER THE FUNCTION: Fabric, gota lace and beads, not fresh flowers. It comes out again for Ganpati, then Navratri, then Diwali, then the next wedding in the family."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFQMDHJX"
   },
   {
     "asin": "B0HB4N2JSH",
@@ -1227,124 +2257,146 @@ export const PRODUCTS: Product[] = [
     "amazonUrl": "https://www.amazon.in/dp/B0HB4N2JSH"
   },
   {
-    "asin": "B0CMDJR8QM",
-    "name": "Eternal Love Rose Bouquet (Red)",
-    "fullName": "Atreya Eternal Love: Premium Artificial Red Roses Bouquet (Red)",
-    "description": "Celebrate timeless affection with Atreya's Eternal Love bouquet. Meticulously crafted to echo the heartbeats of Indian romance, these artificial roses offer a touch of traditional elegance and charm, seamlessly blending with the rich tapestry of our Indian homes.",
-    "category": "Artificial Flowers",
-    "price": 149,
-    "mrp": 599,
-    "image": "/products/B0CMDJR8QM.jpg",
+    "asin": "B0HF4N37JD",
+    "name": "Lotus Pooja Aasan 24.5 cm (Yellow)",
+    "fullName": "Atreya Handcrafted Yellow Lotus Pooja Aasan 24.5 cm | Satin Petal Mat with Gold Beaded Border for Home Temple, Idol, Kalash & Diya Thali | Gift for Puja, Diwali & Housewarming",
+    "description": "There is a certain warmth that only handmade things carry, and the seat your idol rests on should carry it too. The Atreya Yellow Lotus Pooja Aasan is shaped like the flower it is named for. Eight bright yellow satin petals, each padded by hand, open around a decorative floral centre ringed with fine gold beadwork. A machine prints a flower flat onto cloth. Ours is built petal by petal, so it stands full and catches the light of the diya. At about 24.5 cm across it sits generously under an idol, kalash or diya thali, and gives an everyday mandir a festive lift. Made by hand. Meant to last.",
+    "category": "Pooja Essentials",
+    "price": 199,
+    "mrp": 999,
+    "image": "/products/B0HF4N37JD.jpg",
     "images": [
-      "/products/B0CMDJR8QM.jpg"
+      "/products/B0HF4N37JD.jpg",
+      "/products/B0HF4N37JD_2.jpg",
+      "/products/B0HF4N37JD_3.jpg",
+      "/products/B0HF4N37JD_4.jpg",
+      "/products/B0HF4N37JD_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Polypropylene"
-      },
-      {
-        "label": "Colour",
-        "value": "Red"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "15 x 20 x 30 cm"
-      },
-      {
-        "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "Arrangement Accessories"
-      },
-      {
-        "label": "Occasion",
-        "value": "Wedding"
-      }
-    ],
-    "bullets": [
-      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
-      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
-      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
-      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
-      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0CMDJR8QM"
-  },
-  {
-    "asin": "B0CMDK5J4T",
-    "name": "Eternal Love Rose Bouquet (Pink)",
-    "fullName": "Atreya Eternal Love: Premium Artificial Red Roses Bouquet (Pink)",
-    "description": "Celebrate timeless affection with Atreya's Eternal Love bouquet. Meticulously crafted to echo the heartbeats of Indian romance, these artificial roses offer a touch of traditional elegance and charm, seamlessly blending with the rich tapestry of our Indian homes.",
-    "category": "Artificial Flowers",
-    "price": 149,
-    "mrp": 599,
-    "image": "/products/B0CMDK5J4T.jpg",
-    "images": [
-      "/products/B0CMDK5J4T.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Polypropylene"
-      },
-      {
-        "label": "Colour",
-        "value": "Pink"
-      },
-      {
-        "label": "Product Dimensions",
-        "value": "15 x 20 x 30 cm"
-      },
-      {
-        "label": "Number of Items",
-        "value": "1"
-      },
-      {
-        "label": "Included Components",
-        "value": "Arrangement Accessories"
-      },
-      {
-        "label": "Occasion",
-        "value": "Wedding"
-      }
-    ],
-    "bullets": [
-      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
-      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
-      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
-      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
-      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
-    ],
-    "amazonUrl": "https://www.amazon.in/dp/B0CMDK5J4T"
-  },
-  {
-    "asin": "B0CMDJBYZ4",
-    "name": "Eternal Love Rose Bouquet (Yellow)",
-    "fullName": "Atreya Eternal Love: Premium Artificial Red Roses Bouquet (Yellow)",
-    "description": "Celebrate timeless affection with Atreya's Eternal Love bouquet. Meticulously crafted to echo the heartbeats of Indian romance, these artificial roses offer a touch of traditional elegance and charm, seamlessly blending with the rich tapestry of our Indian homes.",
-    "category": "Artificial Flowers",
-    "price": 149,
-    "mrp": 599,
-    "image": "/products/B0CMDJBYZ4.jpg",
-    "images": [
-      "/products/B0CMDJBYZ4.jpg",
-      "/products/B0CMDJBYZ4_2.jpg"
-    ],
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Polypropylene"
+        "value": "Satin"
       },
       {
         "label": "Colour",
         "value": "Yellow"
       },
       {
+        "label": "Item Weight",
+        "value": "200 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Style",
+        "value": "Lotus"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "HANDMADE IN INDIA, NOT MASS-PRINTED: Shaped like the lotus itself, petal by petal, by our karigars. The gold beaded border is stitched by hand, so no two open exactly alike.",
+      "PADDED PETALS, NOT A FLAT MAT: Eight soft yellow satin petals rise around the centre, giving your idol a raised seat of honour instead of a thin printed cloth.",
+      "BRIGHT YELLOW FOR PUJA AND FESTIVALS: A cheerful yellow lotus aasan that suits daily mandir use, Diwali decor, haldi setups, Griha Pravesh and housewarming gifting.",
+      "THE RIGHT SIZE FOR DAILY PUJA: About 24.5 cm across, a generous base for an idol, kalash, shaligram or diya thali during aarti and everyday worship.",
+      "GOLD BEADED FINISH: The floral centre and delicate gold border catch diya light beautifully while keeping the aasan lightweight and easy to store."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HF4N37JD"
+  },
+  {
+    "asin": "B0HF4PXH7S",
+    "name": "Lotus Pooja Aasan 24.5 cm (Pack of 2, Pink and Yellow)",
+    "fullName": "Atreya Handcrafted Lotus Pooja Aasan Pack of 2 | 1 Rani Pink & 1 Yellow Satin Petal Mat 24.5 cm Each | Gold Beaded Border for Home Temple, Idol, Kalash & Diya Thali",
+    "description": "A ready pair of handmade lotus pooja aasans for a dressed home mandir. This Atreya pack includes one rani pink lotus aasan and one yellow lotus aasan, each about 24.5 cm across when open. Use them together for a pair of idols, keep one for daily puja and one for festivals, or gift the set for Griha Pravesh, Diwali, Navratri, haldi decor or housewarming. Each aasan is shaped petal by petal with padded satin petals, a decorated centre and a gold beaded border that catches the light of the diya. Handmade in India. Meant to last.",
+    "category": "Pooja Essentials",
+    "price": 399,
+    "mrp": 1999,
+    "image": "/products/B0HF4PXH7S.jpg",
+    "images": [
+      "/products/B0HF4PXH7S.jpg",
+      "/products/B0HF4PXH7S_2.jpg",
+      "/products/B0HF4PXH7S_3.jpg",
+      "/products/B0HF4PXH7S_4.jpg",
+      "/products/B0HF4PXH7S_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Satin"
+      },
+      {
+        "label": "Colour",
+        "value": "Rani Pink and Yellow"
+      },
+      {
+        "label": "Item Weight",
+        "value": "400 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Lotus"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      }
+    ],
+    "bullets": [
+      "PACK OF 2 LOTUS AASANS: Includes one rani pink lotus pooja aasan and one yellow lotus pooja aasan, ready for a pair of idols or two mandir setups.",
+      "HANDMADE IN INDIA: Each aasan is shaped petal by petal with padded satin petals and a gold beaded border, so the set feels festive rather than flat or printed.",
+      "24.5 CM EACH: Both aasans open to about 24.5 cm across, a generous base for idols, kalash, shaligram, diya thali or small pooja decor.",
+      "TWO FESTIVE COLOURS: Rani pink gives a rich Diwali and Navratri look, while yellow is bright for haldi, daily puja and housewarming decor.",
+      "GIFT READY PUJA SET: A useful handmade blessing for Griha Pravesh, wedding gifting, festive hampers and everyday home temple use."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HF4PXH7S"
+  },
+  {
+    "asin": "B0HF9ZSQY3",
+    "name": "Gold Meenakari Puja Thali with 2 Lidded Katori",
+    "fullName": "Atreya Gold Puja Thali Set for Home with 2 Lidded Katori, Meenakari",
+    "description": "Most pooja thali sets come with open katori, and anybody who owns one knows what happens next. The roli spills in the cupboard, the akshat goes everywhere, and you end up refilling both bowls before every aarti. This set has lids on both katori, which sounds small and turns out to be the whole difference in daily use. The plate carries meenakari enamel work in the traditional style rather than a printed pattern, so it reads as an object rather than as something given away at a promotion. Sized for a home mandir and daily aarti, and good enough to bring out for Diwali, Karwa Chauth, Rakhi or as a housewarming gift. It is decorative metalware with a gold finish, and honest about that. Atreya. Chosen and checked by hand.",
+    "category": "Pooja Essentials",
+    "price": 399,
+    "mrp": 999,
+    "image": "/products/B0HF9ZSQY3.jpg",
+    "images": [
+      "/products/B0HF9ZSQY3.jpg",
+      "/products/B0HF9ZSQY3_2.jpg",
+      "/products/B0HF9ZSQY3_3.jpg",
+      "/products/B0HF9ZSQY3_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Gold"
+      },
+      {
         "label": "Product Dimensions",
-        "value": "15 x 20 x 30 cm"
+        "value": "16 x 16 x 3 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "175 g"
       },
       {
         "label": "Number of Items",
@@ -1352,27 +2404,316 @@ export const PRODUCTS: Product[] = [
       },
       {
         "label": "Included Components",
-        "value": "Arrangement Accessories"
+        "value": "1 pooja thali and 2 lidded katori"
       },
       {
-        "label": "Occasion",
-        "value": "Wedding"
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
       }
     ],
     "bullets": [
-      "Desi Realism: Every petal, every shade crafted keeping the Indian aesthetics in mind. Feel the lush beauty of a real rose in every glance and touch.",
-      "Premium Quality: Made using top-notch material that not only look authentic but also provide a soft, natural feel.",
-      "Everlasting Beauty: Bypass the worries of natural roses wilting in our tropical climate. Atreya's roses remain vibrant and fresh throughout the seasons.",
-      "Perfect for Indian Festivities: From Diwali puja setups to wedding house decorations or simply elevating the charm of your drawing room, these roses resonate with every occasion.",
-      "Number of Flowers: Contains 12 individual flowers crafted to perfection."
+      "THALI PLUS TWO LIDDED KATORI: The plate and two small bowls with lids, so the roli and the akshat stay where you put them between one aarti and the next.",
+      "THE LIDS ARE THE POINT: Most thali sets give you open bowls, which means the contents spill in the cupboard and get refilled every single time. These close.",
+      "MEENAKARI WORK, NOT A PRINT: Coloured enamel work in the traditional style rather than a printed pattern, which is what keeps it looking like an object rather than a promotional item.",
+      "FOR THE DAILY MANDIR AND THE BIG DAYS: Sized for the home temple and everyday aarti, and presentable enough for Diwali, Karwa Chauth, Rakhi and a housewarming.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Decorative metal with a gold finish and meenakari detail. This is decorative brassware, not solid silver or gold."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0CMDJBYZ4"
+    "amazonUrl": "https://www.amazon.in/dp/B0HF9ZSQY3"
+  },
+  {
+    "asin": "B0HF9ZJXT3",
+    "name": "Meenakari Peacock Puja Thali with 2 Katori",
+    "fullName": "Atreya Meenakari Peacock Puja Thali Set for Rakhi with 2 Katori",
+    "description": "Most rakhi thalis are bought in August and put away in September, which is a lot of money for eleven minutes of use. This one is built to stay out. It is a decorative meenakari peacock plate with two katori, sized to hold the roli, the akshat, the mithai and the rakhi itself without anything sliding off the edge, and small enough to live in a home mandir rather than in a cupboard. The peacock is enamel work in the traditional style rather than a printed pattern, which matters because a print starts looking tired by the second year. Bought for Raksha Bandhan, then used for Bhai Dooj, Diwali, Karwa Chauth and ordinary daily aarti. Decorative metalware, and honest about that. Atreya. Chosen and checked by hand.",
+    "category": "Pooja Essentials",
+    "price": 249,
+    "mrp": 1299,
+    "image": "/products/B0HF9ZJXT3.jpg",
+    "images": [
+      "/products/B0HF9ZJXT3.jpg",
+      "/products/B0HF9ZJXT3_2.jpg",
+      "/products/B0HF9ZJXT3_3.jpg",
+      "/products/B0HF9ZJXT3_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Metal"
+      },
+      {
+        "label": "Colour",
+        "value": "Gold"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 13 x 2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "90 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "1 decorative thali and 2 katori"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "THALI PLUS TWO KATORI: The plate and two small bowls, which is what the rakhi tikka actually needs, one for roli and one for the akshat or the mithai.",
+      "PEACOCK MEENAKARI, NOT A PRINT: Coloured enamel peacock work in the traditional style rather than a printed pattern, so it survives being brought out year after year.",
+      "IT IS NOT ONLY FOR RAKHI: Bought for Raksha Bandhan and then used all year for daily aarti, Bhai Dooj, Diwali and Karwa Chauth. It does not go back in the box in August.",
+      "SIZED FOR THE HOME MANDIR: Big enough to hold the tikka things and the rakhi comfortably, small enough to actually live in a home temple rather than a cupboard.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Decorative metal with meenakari peacock detail. This is decorative brassware, not solid silver."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HF9ZJXT3"
+  },
+  {
+    "asin": "B0HGFGMKDY",
+    "name": "Rakhi Puja Thali Set with Rakhi and 2 Katori",
+    "fullName": "Atreya Rakhi Puja Thali Set for Brother with Rakhi and 2 Katori",
+    "description": "Every year the same thing happens. The rakhi is bought, the sweets are bought, and then somebody realises at nine in the morning that there is no proper thali and no katori for the roli. This is the whole tikka set in one order, plate, two bowls and a rakhi, so the morning does not involve a second shop. The plate is plain steel at about 10.5 inches, which is deliberately unglamorous: it washes, it stacks, it does not chip, and it goes on being useful in the kitchen for years after the decorative ones have been retired. Keep it out for Bhai Dooj and for daily aarti too. Atreya. Chosen and checked by hand.",
+    "category": "Pooja Essentials",
+    "price": 240,
+    "mrp": 499,
+    "image": "/products/B0HGFGMKDY.jpg",
+    "images": [
+      "/products/B0HGFGMKDY.jpg",
+      "/products/B0HGFGMKDY_2.jpg",
+      "/products/B0HGFGMKDY_3.jpg",
+      "/products/B0HGFGMKDY_4.jpg",
+      "/products/B0HGFGMKDY_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Item Weight",
+        "value": "200 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Included Components",
+        "value": "1 thali, 1 rakhi, 2 katori"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Embellished"
+      }
+    ],
+    "bullets": [
+      "THE WHOLE TIKKA SET IN ONE ORDER: The steel plate, two katori and a rakhi together, so nothing is missing on the morning and there is no second shop to visit.",
+      "STEEL, SO IT SURVIVES: A plain steel plate rather than a decorated one, which means it washes, stacks and lasts instead of chipping after two seasons.",
+      "10.5 INCHES, WHICH IS THE USEFUL SIZE: Large enough for the thali plate, the sweets and the rakhi at once, and still small enough to hold in one hand while you do the tikka.",
+      "USED ALL YEAR, NOT ONE MORNING: Bought for Raksha Bandhan, then kept for Bhai Dooj, daily aarti and everyday kitchen use, because a plain steel plate never stops being useful.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Steel plate approximately 10.5 inches across, two katori and one rakhi included."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFGMKDY"
+  },
+  {
+    "asin": "B0HFBM7WZG",
+    "name": "Krishna Matki for Janmashtami",
+    "fullName": "Atreya Krishna Matki for Janmashtami Decoration, Hanging Dahi Handi",
+    "description": "Janmashtami decoration usually arrives as a box of parts and a morning you did not plan to spend. This one hangs straight out of the packet with the cord already attached. It is a handmade matki with small mirrors and beads worked onto it, which is not decoration for its own sake: the mirrors are what pick up diya light in the evening and make the thing visible from across a room rather than only up close. Sized for a real flat, so it is the thing people notice when they walk in without dominating the wall it hangs on. Hung for the dahi handi, then kept up in the mandir, on a balcony or over a doorway, because nothing about it says August. Being handmade, no two are identical. Atreya. Chosen and checked by hand.",
+    "category": "Pooja Essentials",
+    "price": 249,
+    "mrp": 699,
+    "image": "/products/B0HFBM7WZG.jpg",
+    "images": [
+      "/products/B0HFBM7WZG.jpg",
+      "/products/B0HFBM7WZG_2.jpg",
+      "/products/B0HFBM7WZG_3.jpg",
+      "/products/B0HFBM7WZG_4.jpg",
+      "/products/B0HFBM7WZG_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Fabric"
+      },
+      {
+        "label": "Colour",
+        "value": "Multicolour"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "11 x 8 x 6 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "50 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      },
+      {
+        "label": "Theme",
+        "value": "Religious"
+      },
+      {
+        "label": "Occasion",
+        "value": "Janmashtami"
+      }
+    ],
+    "bullets": [
+      "HANGS STRAIGHT OUT OF THE BOX: Comes ready to hang with the cord attached, so the mandir or the doorway is done in a minute rather than becoming a morning project.",
+      "MIRROR AND BEAD WORK BY HAND: Small mirrors and beads worked onto the pot by hand, which is what catches the diya light in the evening and makes it read across a room.",
+      "JANMASHTAMI AND THEN THE REST OF THE YEAR: Hung for Janmashtami and the dahi handi, then kept up in the mandir, on a balcony or over a doorway because it does not read as seasonal.",
+      "SIZED FOR A HOME, NOT A HALL: Big enough to be the thing people look at when they walk in, small enough to hang in an actual flat without taking over the room.",
+      "HAND CHECKED AND HAND PACKED: Inspected before packing. Handmade hanging matki with mirror and bead detail and an attached cord. Colours may vary slightly between pieces."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFBM7WZG"
+  },
+  {
+    "asin": "B0GDXXM3PR",
+    "name": "Mini Crochet Hearts (Set of 12)",
+    "fullName": "Atreya Mini Crochet Hearts Set of 12, Handmade Yarn Bowl Filler Decor",
+    "description": "The problem with bowl fillers is quantity. Four of anything in a bowl looks like the start of a collection rather than a finished thing, and most sets sold online are four. This is twelve, which is enough to actually fill a bowl, a tiered tray or a shelf corner and have it look intentional. Each heart is crocheted by hand in soft yarn, so it has texture and a bit of weight instead of the flat identical look of a moulded ornament, and because it is yarn nothing breaks when a child gets hold of it or when the box goes back in the cupboard. Being hand crocheted, no two are exactly alike. Atreya. Chosen and checked by hand.",
+    "category": "Crochet",
+    "price": 1299,
+    "mrp": 1699,
+    "image": "/products/B0GDXXM3PR.jpg",
+    "images": [
+      "/products/B0GDXXM3PR.jpg",
+      "/products/B0GDXXM3PR_2.jpg",
+      "/products/B0GDXXM3PR_3.jpg",
+      "/products/B0GDXXM3PR_4.jpg",
+      "/products/B0GDXXM3PR_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Mix"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "5 x 2 x 2 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "Gajra"
+      },
+      {
+        "label": "Style",
+        "value": "Casual"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Occasion",
+        "value": "Valentine's Day"
+      }
+    ],
+    "bullets": [
+      "TWELVE MINI HEARTS: Small enough to fill a bowl, a tiered tray or a shelf corner properly, which is what a set of three or four never manages to do.",
+      "CROCHETED BY HAND, NOT MOULDED: Worked stitch by stitch in soft yarn, so each one has texture and weight rather than the flat sameness of a moulded ornament.",
+      "FOR BOWLS, TRAYS AND SHELVES: Made as a filler rather than as a hanging ornament, so they sit well in a bowl, a tiered tray, a bookshelf or a nursery shelf.",
+      "SOFT, SO NOTHING BREAKS: Yarn survives being dropped, packed, unpacked and handled by children, which is not true of anything glass or ceramic.",
+      "HAND CHECKED AND HAND PACKED: All twelve inspected before packing. Mini yarn hearts. Because every piece is crocheted by hand, no two are exactly identical and small variations in stitch and size are normal."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GDXXM3PR"
+  },
+  {
+    "asin": "B0GC6KJCSC",
+    "name": "Mini Crochet Hearts (Set of 6, Multicolor)",
+    "fullName": "Atreya Mini Crochet Hearts Set of 6, Multicolour Handmade Bowl Filler",
+    "description": "Six of the same colour in a bowl reads as a bag of parts. Six different colours reads as somebody arranged it, which is the whole reason this set is multicolour rather than matched. Each heart is crocheted by hand in soft yarn, stitch by stitch, so it carries texture and a little weight instead of the flat identical finish of a moulded ornament, and because it is yarn nothing chips or shatters when it is dropped or when a child decides to investigate. Sized as a filler for a bowl, a tiered tray, a bookshelf or a nursery shelf. Being hand crocheted, no two come out exactly alike. Atreya. Chosen and checked by hand.",
+    "category": "Crochet",
+    "price": 699,
+    "mrp": 999,
+    "image": "/products/B0GC6KJCSC.jpg",
+    "images": [
+      "/products/B0GC6KJCSC.jpg",
+      "/products/B0GC6KJCSC_2.jpg",
+      "/products/B0GC6KJCSC_3.jpg",
+      "/products/B0GC6KJCSC_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "1.25 x 1 x 1 inches"
+      },
+      {
+        "label": "Item Weight",
+        "value": "500 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "12"
+      },
+      {
+        "label": "Theme",
+        "value": "Love"
+      },
+      {
+        "label": "Occasion",
+        "value": "Valentine's Day"
+      }
+    ],
+    "bullets": [
+      "SIX HEARTS, SIX COLOURS: A multicolour set rather than six of the same, so a bowl or a tray gets variation instead of looking like a bag of identical parts.",
+      "CROCHETED BY HAND, NOT MOULDED: Worked stitch by stitch in soft yarn, so each one has texture and weight rather than the flat sameness of a moulded ornament.",
+      "FOR BOWLS, TRAYS AND SHELVES: Sized as a filler, so they sit well in a bowl, a tiered tray, a bookshelf or a child's room without needing to be hung.",
+      "SOFT, SO NOTHING BREAKS: Yarn survives being dropped, packed and handled by children, which is not true of anything glass or ceramic.",
+      "HAND CHECKED AND HAND PACKED: All six inspected before packing. Multicolour mini yarn hearts. Because every piece is crocheted by hand, no two are exactly identical and small variations in stitch and size are normal."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0GC6KJCSC"
   },
   {
     "asin": "B0HC44WKBT",
     "name": "White Artificial Mogra Flowers (50 g Pack)",
-    "fullName": "Atreya Artificial Mogra Flowers for Hair, Loose Jasmine Flowers 50 g Pack, White, Handpicked for Gajra Making, Pooja, Wedding and Festive Decoration",
-    "description": "Real mogra lasts an evening. This lasts every evening. Fifty grams of loose artificial mogra buds, finished and sorted by hand, ready for you to string exactly how you like. Make a short gajra for a weekday bun or a full-length veni for a wedding. Wrap a few around a kalash. Scatter them across a pooja thali. Each flower holds its shape and its white through the whole function. No wilting halfway through the evening, no browning edges in photographs, nothing to keep in the fridge the night before. Each bud sits on a green stem, so they twist and tie together easily. That gives you something a ready-made gajra cannot: control. Build to your hair length, mix in your own beads or moti, take it apart and rework it for the next occasion. Flower diameter approximately 1.5 cm. Pack weight 50 g. Soft foam flowers on green stems, white. Atreya. Handmade and handpicked.",
+    "fullName": "Atreya Artificial Mogra Flowers for Hair, Loose Jasmine Buds, 50 g",
+    "description": "The trouble with making your own gajra from fresh mogra is that the flowers start browning while you are still threading them, which means the work has to happen at six in the morning on the day itself. This is 50 grams of loose artificial mogra buds sold by weight, so you can string a gajra, a veni or a braid dressing to whatever length you actually need, and you can do it the night before without anything wilting in the meantime. It is a material rather than a finished product, which is why people also use it for torans, for pooja thali filling, for mandir decoration and for craft. About 50 g in the pack. Atreya. Chosen and checked by hand.",
     "category": "Artificial Flowers",
     "price": 199,
     "mrp": 399,
@@ -1418,44 +2759,105 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "HANDPICKED LOOSE MOGRA: A 50 g pack of individually finished artificial mogra buds, sorted by hand so every flower in the pack holds its shape and colour.",
-      "MAKE YOUR OWN GAJRA: Each flower sits on a green stem, so you can twist, tie or wire them into a gajra, veni or juda mala at exactly the length you want instead of settling for a fixed size.",
-      "STAYS FRESH ALL DAY: Unlike real mogra, these hold colour and shape through a full function, with no wilting by evening and no watering.",
-      "FOR HAIR AND FOR DECOR: Works equally for hair styling, pooja thali, kalash and idol decoration, rangoli borders, gift wrapping and mandap detailing.",
-      "ATREYA HANDMADE AND HANDPICKED: Checked piece by piece before packing. Flower diameter approximately 1.5 cm, pack weight 50 g, soft foam flowers on green stems."
+      "50 GRAMS OF LOOSE BUDS: Sold by weight rather than by strand, so you get enough to actually make something rather than enough to decorate one thing and run out.",
+      "MAKE IT THE LENGTH YOU WANT: String your own gajra, veni or braid dressing to the exact length you need, which is the thing you cannot do with a ready made strand.",
+      "IT WILL NOT WILT WHILE YOU WORK: Fresh buds brown while you are still threading them. These do not, so you can make the gajra the night before instead of at six in the morning.",
+      "FOR MAKERS AND FOR DECOR: Used for hair work, for stringing torans, for filling a pooja thali, for craft and for decorating a mandir at home. It is a material, not a finished thing.",
+      "HAND CHECKED AND HAND PACKED: Weighed and inspected before packing. Approximately 50 g of white mogra style buds. Please note there is no fragrance."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B0HC44WKBT"
   },
   {
-    "asin": "B0GDY75WHT",
-    "name": "Wooden Floor Vase with Brass Work",
-    "fullName": "Atreya Handcrafted Wooden Decorative Floor Vase with Brass Work | Antique Finish",
-    "description": "Add timeless elegance to your living space with this Atreya handcrafted wooden decorative vase, beautifully adorned with intricate brass floral motifs and detailed hand carving. The rich antique brown finish paired with golden brass accents creates a royal, ethnic look that instantly elevates any interior. Perfect as a floor vase, console décor, or statement centerpiece, this tall vase blends traditional craftsmanship with modern home styling.",
-    "category": "Home Décor",
-    "price": 2699,
-    "mrp": 4999,
-    "image": "/products/B0GDY75WHT.jpg",
+    "asin": "B0HGM61K1N",
+    "name": "Artificial Lotus Buds (Pack of 12)",
+    "fullName": "Atreya Artificial Lotus Buds for Pooja and Home Decor, Pack of 12",
+    "description": "Atreya lotus buds bring the calm of a temple flower into your home without the upkeep of a fresh one. Each bud is shaped from soft foam petals in a deep pink that holds its colour, finished with a paper-wrapped stem you can trim to suit a vase, a thali or a shallow bowl of water. At 5 cm across and 6 cm tall and packed as a set of twelve, they are equally at home in your mandir through Janmashtami and Diwali or on a side table all year round. No water, no sunlight, no mess. Atreya. Handpicked.",
+    "category": "Artificial Flowers",
+    "price": 199,
+    "mrp": 399,
+    "image": "/products/B0HGM61K1N.jpg",
     "images": [
-      "/products/B0GDY75WHT.jpg",
-      "/products/B0GDY75WHT_2.jpg",
-      "/products/B0GDY75WHT_3.jpg"
+      "/products/B0HGM61K1N.jpg",
+      "/products/B0HGM61K1N_2.jpg",
+      "/products/B0HGM61K1N_3.jpg",
+      "/products/B0HGM61K1N_4.jpg",
+      "/products/B0HGM61K1N_5.jpg"
     ],
     "specs": [
       {
         "label": "Material",
-        "value": "Wood"
+        "value": "Foam and Paper"
       },
       {
         "label": "Colour",
-        "value": "Brown"
+        "value": "Pink"
       },
       {
         "label": "Product Dimensions",
-        "value": "70 x 16 x 18 cm"
+        "value": "5 x 5 x 6 cm"
       },
       {
         "label": "Item Weight",
-        "value": "2 kilograms"
+        "value": "180 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "12"
+      },
+      {
+        "label": "Included Components",
+        "value": "12 artificial lotus buds"
+      },
+      {
+        "label": "Style",
+        "value": "Floral"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "SET OF 12 LOTUS BUDS: Twelve handpicked lotus buds in a deep pink finish, ready to place straight out of the box",
+      "FOAM PETALS, PAPER-WRAPPED STEM: Soft foam petals over a paper-wrapped stem that holds its shape and can be trimmed to the length you need",
+      "COMPACT SIZE: Each bud measures 5 cm across and 6 cm tall, the right scale for a pooja thali, an urli or a small vase",
+      "FOR POOJA AND MANDIR: Sits well on a thali, in a mandir, or floating in a water bowl for Janmashtami, Diwali and Navratri",
+      "NO WATER, NO UPKEEP: Keeps its colour without watering, sunlight or mess. Wipe gently with a dry cloth",
+      "VERSATILE PLACEMENT: Use these artificial lotus buds in your home decor, on side tables, or as floating decorations in water bowls throughout the year"
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGM61K1N"
+  },
+  {
+    "asin": "B0HGFFKH66",
+    "name": "Kids Pink Bear Sunglasses with Bow Clips",
+    "fullName": "Atreya Kids Pink Bear Sunglasses with 2 Bow Hair Clips, 3-8 Years",
+    "description": "Any parent who has tried to keep sunglasses on a four year old knows how this normally goes. They come off in under a minute. These stay on, and the reason is the round bear ears on the frame, which turn them from a thing being put on her into a thing she has decided to wear. The set comes with pink bear sunglasses and two bow hair clips, so the whole look turns up in one parcel. Made for small faces between about three and eight, light enough not to slide down or press behind the ears, and honestly bought for the photographs more than for the sun. On that, one plain thing: these are a dress up accessory, not certified UV eyewear. Atreya. Chosen and checked by hand.",
+    "category": "Kids",
+    "price": 199,
+    "mrp": 799,
+    "image": "/products/B0HGFFKH66.jpg",
+    "images": [
+      "/products/B0HGFFKH66.jpg",
+      "/products/B0HGFFKH66_2.jpg",
+      "/products/B0HGFFKH66_3.jpg",
+      "/products/B0HGFFKH66_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 11 x 3.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "65 g"
       },
       {
         "label": "Number of Items",
@@ -1468,37 +2870,279 @@ export const PRODUCTS: Product[] = [
       {
         "label": "Pattern",
         "value": "Floral"
-      },
-      {
-        "label": "Theme",
-        "value": "Flowers"
-      },
-      {
-        "label": "Occasion",
-        "value": "New Year"
       }
     ],
     "bullets": [
-      "Handcrafted Excellence | Detailed hand carving with embedded brass leaf motifs",
-      "Antique Finish | Rich brown tone with golden highlights for a luxurious look",
-      "Premium Solid Wood | Made from high-quality seasoned wood for durability",
-      "Versatile Décor | Ideal for living rooms, bedrooms, offices, hotels & lobbies",
-      "Standalone Showpiece | Looks stunning with or without artificial flowers"
+      "SUNGLASSES PLUS 2 BOW HAIR CLIPS: Pink bear sunglasses and two bow hair clips in one order, so the whole look arrives together instead of arriving as two parcels on two different days.",
+      "THE BEAR EARS ARE WHY THEY WEAR THEM: Children take sunglasses off. They keep these on, because the round bear ears make them a toy she has chosen rather than a thing you put on her.",
+      "FOR THE PHOTOGRAPH YOU ARE ACTUALLY BUYING: Birthdays, holidays, the beach, a day out, a shoot. This is a props set as much as an accessory, and it is priced like one.",
+      "SIZED FOR 3 TO 8 YEARS: Made for small faces, with a light frame that does not slide down a child's nose every thirty seconds or leave marks behind the ears.",
+      "HAND CHECKED AND HAND PACKED: Every set inspected before packing. Please note these are a fashion accessory for dress up and photographs, not certified UV protection eyewear."
     ],
-    "amazonUrl": "https://www.amazon.in/dp/B0GDY75WHT"
+    "amazonUrl": "https://www.amazon.in/dp/B0HGFFKH66"
+  },
+  {
+    "asin": "B0HGF9GXPP",
+    "name": "Kids Brown Bear Sunglasses with Lace Bow Clips",
+    "fullName": "Atreya Kids Brown Bear Sunglasses with 2 Lace Bow Hair Clips, 3-8 Years",
+    "description": "Any parent who has tried to keep sunglasses on a four year old knows how this normally goes. They come off in under a minute. These stay on, and the reason is the round bear ears on the frame, which turn them from a thing being put on her into a thing she has decided to wear. The set comes with brown bear sunglasses and two lace bow clips, so the whole look turns up in one parcel. Made for small faces between about three and eight, light enough not to slide down or press behind the ears, and honestly bought for the photographs more than for the sun. On that, one plain thing: these are a dress up accessory, not certified UV eyewear. Atreya. Chosen and checked by hand.",
+    "category": "Kids",
+    "price": 199,
+    "mrp": 799,
+    "image": "/products/B0HGF9GXPP.jpg",
+    "images": [
+      "/products/B0HGF9GXPP.jpg",
+      "/products/B0HGF9GXPP_2.jpg",
+      "/products/B0HGF9GXPP_3.jpg",
+      "/products/B0HGF9GXPP_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "13 x 11 x 3.5 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "65 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "1"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "SUNGLASSES PLUS 2 LACE BOW CLIPS: Brown bear sunglasses and two lace bow clips in one order, so the whole look arrives together instead of arriving as two parcels on two different days.",
+      "THE BEAR EARS ARE WHY THEY WEAR THEM: Children take sunglasses off. They keep these on, because the round bear ears make them a toy she has chosen rather than a thing you put on her.",
+      "FOR THE PHOTOGRAPH YOU ARE ACTUALLY BUYING: Birthdays, holidays, the beach, a day out, a shoot. This is a props set as much as an accessory, and it is priced like one.",
+      "SIZED FOR 3 TO 8 YEARS: Made for small faces, with a light frame that does not slide down a child's nose every thirty seconds or leave marks behind the ears.",
+      "HAND CHECKED AND HAND PACKED: Every set inspected before packing. Please note these are a fashion accessory for dress up and photographs, not certified UV protection eyewear."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HGF9GXPP"
+  },
+  {
+    "asin": "B0HF9XYGT7",
+    "name": "Kids Bear Sunglasses with Bow Clips (Pink and Brown, Pack of 2)",
+    "fullName": "Atreya Kids Bear Sunglasses with 2 Bow Hair Clips, 3-8 Years",
+    "description": "Any parent who has tried to keep sunglasses on a four year old knows how this normally goes. They come off in under a minute. These stay on, and the reason is the round bear ears on the frame, which turn them from a thing being put on her into a thing she has decided to wear. The set comes with bear sunglasses and two hair bow clips, so the whole look turns up in one parcel. Made for small faces between about three and eight, light enough not to slide down or press behind the ears, and honestly bought for the photographs more than for the sun. On that, one plain thing: these are a dress up accessory, not certified UV eyewear. Atreya. Chosen and checked by hand.",
+    "category": "Kids",
+    "price": 299,
+    "mrp": 1499,
+    "image": "/products/B0HF9XYGT7.jpg",
+    "images": [
+      "/products/B0HF9XYGT7.jpg",
+      "/products/B0HF9XYGT7_2.jpg",
+      "/products/B0HF9XYGT7_3.jpg",
+      "/products/B0HF9XYGT7_4.jpg",
+      "/products/B0HF9XYGT7_5.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Colour",
+        "value": "Pink and Brown"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "15 x 13 x 6 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "130 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Style",
+        "value": "Traditional"
+      },
+      {
+        "label": "Pattern",
+        "value": "Floral"
+      }
+    ],
+    "bullets": [
+      "SUNGLASSES PLUS 2 HAIR BOW CLIPS: Bear sunglasses and two hair bow clips in one order, so the whole look arrives together instead of arriving as two parcels on two different days.",
+      "THE BEAR EARS ARE WHY THEY WEAR THEM: Children take sunglasses off. They keep these on, because the round bear ears make them a toy she has chosen rather than a thing you put on her.",
+      "FOR THE PHOTOGRAPH YOU ARE ACTUALLY BUYING: Birthdays, holidays, the beach, a day out, a shoot. This is a props set as much as an accessory, and it is priced like one.",
+      "SIZED FOR 3 TO 8 YEARS: Made for small faces, with a light frame that does not slide down a child's nose every thirty seconds or leave marks behind the ears.",
+      "HAND CHECKED AND HAND PACKED: Every set inspected before packing. Please note these are a fashion accessory for dress up and photographs, not certified UV protection eyewear."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HF9XYGT7"
+  },
+  {
+    "asin": "B0HFPS29NW",
+    "name": "Strawberry Paper Soap Sheets (2 Tubes)",
+    "fullName": "Atreya Paper Soap Sheets for Travel, Pack of 2 Tubes Strawberry Scented Portable Hand Wash Strips, Flower Shaped Disposable Mini Soap Paper for School Office and Outdoor Use",
+    "description": "Public washrooms run out of soap. Trains never had any. This is the answer that fits in the front pocket of a bag: a slim screw-cap tube packed with thin paper soap flakes, cut into little flowers and discs and scented with strawberry. Take out one sheet, wet your hands, and rub. It breaks down into a full lather and rinses off clean, leaving nothing behind and nothing to store wet. Because the sheets are dry there is no bottle to leak, nothing to spill through your clothes, and nothing to declare as a liquid. 2 tubes in the pack, and each tube is 14 cm tall and 2.8 cm across, so one lives in a school bag or a handbag and the next in the car or the suitcase. Atreya.",
+    "category": "Travel Essentials",
+    "price": 129,
+    "mrp": 399,
+    "image": "/products/B0HFPS29NW.jpg",
+    "images": [
+      "/products/B0HFPS29NW.jpg",
+      "/products/B0HFPS29NW_2.jpg",
+      "/products/B0HFPS29NW_3.jpg",
+      "/products/B0HFPS29NW_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "14 x 2.8 x 2.8 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "40 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "2"
+      },
+      {
+        "label": "Included Components",
+        "value": "2 x Strawberry Paper Soap Tube"
+      }
+    ],
+    "bullets": [
+      "A HAND WASH THAT FITS IN A POCKET: Each tube is 14 cm tall and under 3 cm across and holds a stack of thin paper soap flakes. Two tubes in the pack, one for a bag and one for the car, so there is soap wherever the tap has none.",
+      "ONE FLAKE, A LITTLE WATER, REAL LATHER: Take a single sheet, wet your palms and rub. It dissolves completely into a proper lather and rinses away clean, with no bar to keep dry and no bottle to leak in a bag.",
+      "STRAWBERRY SCENTED, IN FLOWER AND ROUND SHAPES: Soft pink flakes cut as little flowers and discs with a light strawberry scent, which is what gets children to wash their hands without an argument.",
+      "NOTHING TO SPILL IN YOUR LUGGAGE: Dry sheets in a screw-cap tube. No liquid, so nothing bursts at altitude, nothing counts against a cabin liquids limit, and nothing soaks the inside of a bag.",
+      "FOR SCHOOL BAGS, TRAINS, TREKS AND PUBLIC WASHROOMS: Anywhere the soap has run out, or you would rather not touch the one that is there."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFPS29NW"
+  },
+  {
+    "asin": "B0HFQ1KFPJ",
+    "name": "Strawberry Paper Soap Sheets (4 Tubes)",
+    "fullName": "Atreya Paper Soap Sheets for Travel, Pack of 4 Tubes Strawberry Scented Portable Hand Wash Strips, Flower Shaped Disposable Mini Soap Paper for School Office and Outdoor Use",
+    "description": "Public washrooms run out of soap. Trains never had any. This is the answer that fits in the front pocket of a bag: a slim screw-cap tube packed with thin paper soap flakes, cut into little flowers and discs and scented with strawberry. Take out one sheet, wet your hands, and rub. It breaks down into a full lather and rinses off clean, leaving nothing behind and nothing to store wet. Because the sheets are dry there is no bottle to leak, nothing to spill through your clothes, and nothing to declare as a liquid. 4 tubes in the pack, and each tube is 14 cm tall and 2.8 cm across, so one lives in a school bag or a handbag and the next in the car or the suitcase. Atreya.",
+    "category": "Travel Essentials",
+    "price": 199,
+    "mrp": 599,
+    "image": "/products/B0HFQ1KFPJ.jpg",
+    "images": [
+      "/products/B0HFQ1KFPJ.jpg",
+      "/products/B0HFQ1KFPJ_2.jpg",
+      "/products/B0HFQ1KFPJ_3.jpg",
+      "/products/B0HFQ1KFPJ_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "14 x 2.8 x 2.8 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "80 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "4"
+      },
+      {
+        "label": "Included Components",
+        "value": "4 x Strawberry Paper Soap Tube"
+      }
+    ],
+    "bullets": [
+      "A HAND WASH THAT FITS IN A POCKET: Each tube is 14 cm tall and under 3 cm across and holds a stack of thin paper soap flakes. Four tubes in the pack, so there is one in the school bag, one in the handbag, one in the car and one in the suitcase, so there is soap wherever the tap has none.",
+      "ONE FLAKE, A LITTLE WATER, REAL LATHER: Take a single sheet, wet your palms and rub. It dissolves completely into a proper lather and rinses away clean, with no bar to keep dry and no bottle to leak in a bag.",
+      "STRAWBERRY SCENTED, IN FLOWER AND ROUND SHAPES: Soft pink flakes cut as little flowers and discs with a light strawberry scent, which is what gets children to wash their hands without an argument.",
+      "NOTHING TO SPILL IN YOUR LUGGAGE: Dry sheets in a screw-cap tube. No liquid, so nothing bursts at altitude, nothing counts against a cabin liquids limit, and nothing soaks the inside of a bag.",
+      "FOR SCHOOL BAGS, TRAINS, TREKS AND PUBLIC WASHROOMS: Anywhere the soap has run out, or you would rather not touch the one that is there."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFQ1KFPJ"
+  },
+  {
+    "asin": "B0HFPLPKXM",
+    "name": "Strawberry Paper Soap Sheets (6 Tubes)",
+    "fullName": "Atreya Paper Soap Sheets for Travel, Pack of 6 Tubes Strawberry Scented Portable Hand Wash Strips, Flower Shaped Disposable Mini Soap Paper for School Office and Outdoor Use",
+    "description": "Public washrooms run out of soap. Trains never had any. This is the answer that fits in the front pocket of a bag: a slim screw-cap tube packed with thin paper soap flakes, cut into little flowers and discs and scented with strawberry. Take out one sheet, wet your hands, and rub. It breaks down into a full lather and rinses off clean, leaving nothing behind and nothing to store wet. Because the sheets are dry there is no bottle to leak, nothing to spill through your clothes, and nothing to declare as a liquid. 6 tubes in the pack, and each tube is 14 cm tall and 2.8 cm across, so one lives in a school bag or a handbag and the next in the car or the suitcase. Atreya.",
+    "category": "Travel Essentials",
+    "price": 249,
+    "mrp": 749,
+    "image": "/products/B0HFPLPKXM.jpg",
+    "images": [
+      "/products/B0HFPLPKXM.jpg",
+      "/products/B0HFPLPKXM_2.jpg",
+      "/products/B0HFPLPKXM_3.jpg",
+      "/products/B0HFPLPKXM_4.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Colour",
+        "value": "Pink"
+      },
+      {
+        "label": "Product Dimensions",
+        "value": "14 x 2.8 x 2.8 cm"
+      },
+      {
+        "label": "Item Weight",
+        "value": "120 g"
+      },
+      {
+        "label": "Number of Items",
+        "value": "6"
+      },
+      {
+        "label": "Included Components",
+        "value": "6 x Strawberry Paper Soap Tube"
+      }
+    ],
+    "bullets": [
+      "A HAND WASH THAT FITS IN A POCKET: Each tube is 14 cm tall and under 3 cm across and holds a stack of thin paper soap flakes. Six tubes in the pack, enough for every bag in the house, so there is soap wherever the tap has none.",
+      "ONE FLAKE, A LITTLE WATER, REAL LATHER: Take a single sheet, wet your palms and rub. It dissolves completely into a proper lather and rinses away clean, with no bar to keep dry and no bottle to leak in a bag.",
+      "STRAWBERRY SCENTED, IN FLOWER AND ROUND SHAPES: Soft pink flakes cut as little flowers and discs with a light strawberry scent, which is what gets children to wash their hands without an argument.",
+      "NOTHING TO SPILL IN YOUR LUGGAGE: Dry sheets in a screw-cap tube. No liquid, so nothing bursts at altitude, nothing counts against a cabin liquids limit, and nothing soaks the inside of a bag.",
+      "FOR SCHOOL BAGS, TRAINS, TREKS AND PUBLIC WASHROOMS: Anywhere the soap has run out, or you would rather not touch the one that is there."
+    ],
+    "amazonUrl": "https://www.amazon.in/dp/B0HFPLPKXM"
   },
   {
     "asin": "B09Y29QS4V",
     "name": "White Pearl Beads 6mm (1000 pcs)",
-    "fullName": "Atreya- White Pearls Beads for Art Craft, Jewellery ,Embroidery, Making Purpose Round Shape - 1000 Pieces (6MM, 100g)",
-    "description": "6mm ivory pearl beads, 1.5mm hole for jewellery, flower sprays, vines and DIY & wedding craft. Faux/Acrylic/plastic beads For jewelry, wedding lace/dress embellishment, framing and all kinds of craft.",
+    "fullName": "Atreya White Pearl Beads for Craft and Jewellery Making, 1000 Pieces",
+    "description": "Anyone who has run out of beads two thirds of the way through a project knows why quantity matters more than it should. This is a thousand pieces, which is enough to finish what you started and still have some left for the next thing. They are 6 mm round, the size most jewellery and embroidery patterns quietly assume, small enough for fine work and big enough to thread without squinting. Sorted before packing so they actually match each other, which is where cheap mixed lots fall down: you get halfway through a necklace and the last fifty are visibly a different size. Used for jewellery, embroidery, tassels, hair work, card making and school projects. Plainly stated, these are craft beads, not natural pearls. Atreya. Chosen and checked by hand.",
     "category": "Craft Supplies",
     "price": 199,
     "mrp": 799,
     "image": "/products/B09Y29QS4V.jpg",
     "images": [
       "/products/B09Y29QS4V.jpg",
-      "/products/B09Y29QS4V_2.jpg"
+      "/products/B09Y29QS4V_2.jpg",
+      "/products/B09Y29QS4V_3.jpg",
+      "/products/B09Y29QS4V_4.jpg",
+      "/products/B09Y29QS4V_5.jpg"
     ],
     "specs": [
       {
@@ -1515,12 +3159,11 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "bullets": [
-      "White Pearls Beads- Round Shape",
-      "QTY - 1000 Pieces , 100 Gram",
-      "Materials: Plastic & Resin",
-      "Bead size: 6 millimetres",
-      "Bead hole size: 1.5 millimetres",
-      "For jewelry, wedding lace/dress embellishment, framing and all kinds of craft."
+      "1000 PIECES, SO YOU DO NOT RUN OUT: Bought by the thousand rather than by the handful, which is the difference between finishing a project and stopping halfway to reorder.",
+      "6 MM ROUND, THE USEFUL SIZE: Small enough for jewellery and embroidery, large enough to handle and thread without a magnifier. This is the size most patterns assume.",
+      "FOR JEWELLERY, EMBROIDERY AND CRAFT: Used for necklaces, earrings, embroidery, tassels, hair accessories, rangoli, card making and school projects.",
+      "CONSISTENT SIZE AND FINISH: Sorted before packing so the beads actually match each other, which is where cheap mixed lots usually fail once you start threading.",
+      "HAND CHECKED AND HAND PACKED: Counted and inspected before packing. Approximately 1000 white round beads, 6 mm. These are craft beads, not natural pearls."
     ],
     "amazonUrl": "https://www.amazon.in/dp/B09Y29QS4V"
   }

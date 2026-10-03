@@ -1,20 +1,33 @@
-@import '@fontsource-variable/fraunces';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
+@import '@fontsource-variable/cormorant-garamond/wght.css';
+@import '@fontsource-variable/cormorant-garamond/wght-italic.css';
+@import '@fontsource-variable/jost/wght.css';
 @import 'tailwindcss';
 
+/* Palette from E:/atreya/brand_showcase/BRAND_SYSTEM.md section 4.4, the same
+   one the Amazon Brand Store art uses, so the site and the store read as one
+   house. Cormorant Garamond for display, Jost for everything small.
+
+   Contrast rule: brass is a HAIRLINE colour only. Gold text on cream measures
+   about 2.5:1 and fails, so every small gold-looking label uses `gold`, which
+   is a deep bronze (7:1 on cream). */
 @theme {
-  --color-cream: #fbf7f1;
-  --color-sand: #f3eade;
-  --color-ink: #2c2420;
-  --color-soft: #6b5d54;
-  --color-terra: #a64b35;
-  --color-terra-dark: #8c3d2a;
-  --color-gold: #c9973f;
-  --color-blush: #f3e2d9;
-  --font-display: 'Fraunces Variable', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --color-cream: #faf6ef;
+  --color-paper: #f4ede1;
+  --color-sand: #efe5d6;
+  --color-ink: #2a2018;
+  --color-soft: #5e4f43;
+  --color-terra: #a6543a;
+  --color-terra-dark: #8a4229;
+  --color-gold: #74501d;
+  --color-brass: #b08d3f;
+  --color-blush: #e9dccb;
+  --color-leaf: #4e6b4a;
+  /* Diwali season only (see FESTIVE in src/config.ts). Night is the ground of
+     the Diwali bands; marigold is their one accent, 8.6:1 on night. */
+  --color-night: #1c120c;
+  --color-marigold: #e2a345;
+  --font-display: 'Cormorant Garamond Variable', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost Variable', 'Jost', system-ui, sans-serif;
 }
 
 html {
@@ -23,8 +36,76 @@ html {
 
 body {
   @apply bg-cream text-ink font-body antialiased;
+  font-size: 16.5px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
 ::selection {
   background: var(--color-blush);
+}
+
+/* Small tracked label above a heading. */
+.kicker {
+  @apply text-[11px] font-medium uppercase tracking-[0.28em] text-gold;
+}
+
+/* The one decorative device: hairline, small diamond, hairline. Same mark as
+   the Amazon store art. Decorative only, so it is hidden from screen readers. */
+.ornament {
+  @apply flex items-center gap-3 text-brass;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  @apply h-px w-14 bg-brass;
+}
+.ornament > span {
+  @apply block h-1.5 w-1.5 rotate-45 bg-brass;
+}
+
+/* Buttons. Square-shouldered and tracked rather than pill shaped. */
+.btn-solid,
+.btn-terra,
+.btn-line {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.2em] transition-colors;
+}
+.btn-solid {
+  @apply bg-ink text-cream hover:bg-terra;
+}
+.btn-terra {
+  @apply bg-terra text-white hover:bg-terra-dark;
+}
+.btn-line {
+  @apply border border-ink/70 text-ink hover:bg-ink hover:text-cream;
+}
+
+/* Text link with an underline that draws in on hover. */
+.link-draw {
+  @apply relative inline-flex items-center gap-2 pb-1 text-[12px] font-medium uppercase tracking-[0.2em] text-ink;
+}
+.link-draw::after {
+  content: '';
+  @apply absolute bottom-0 left-0 h-px w-full origin-left bg-ink transition-transform duration-300;
+}
+.link-draw:hover::after {
+  @apply scale-x-50;
+}
+
+.prose-story p + p {
+  @apply mt-4;
+}
+
+/* Diwali night: the dark ground with a soft warm glow in one corner, as if a
+   diya were just out of frame. A gradient, not an illustration: the brand
+   system rules out clip art, and this needs no artwork to read as lamplight. */
+.diwali-night {
+  background-color: var(--color-night);
+  background-image:
+    radial-gradient(60% 70% at 85% 15%, rgb(226 163 69 / 0.16), transparent 70%),
+    radial-gradient(45% 55% at 10% 95%, rgb(166 84 58 / 0.18), transparent 70%);
 }

@@ -60,7 +60,7 @@ export default function Shipping() {
 
   return (
     <section className="mx-auto max-w-3xl px-4 py-14">
-      <h1 className="font-display text-3xl font-semibold sm:text-4xl">Shipping and returns</h1>
+      <h1 className="font-display text-[40px] font-medium leading-tight sm:text-5xl">Shipping and returns</h1>
       <p className="mt-4 leading-relaxed text-soft">
         The short version: we are a catalogue, Amazon is the shop. Every product here is a live
         Amazon.in listing, so your payment, your delivery and your returns all run through Amazon
@@ -82,8 +82,8 @@ export default function Shipping() {
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl bg-blush/60 p-6 sm:p-8">
-        <h2 className="font-display text-xl font-semibold">Still stuck?</h2>
+      <div className="mt-10 bg-paper p-6 sm:p-8">
+        <h2 className="font-display text-2xl font-medium">Still stuck?</h2>
         <p className="mt-2 text-sm leading-relaxed text-soft">
           If your question is about an order that has already shipped, Amazon can act on it and we
           cannot. For anything else, including bulk quotes, wrong or missing items and questions
@@ -94,13 +94,13 @@ export default function Shipping() {
             href={whatsappLink('Hi Atreya! I have a question about shipping or a return.')}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex justify-center rounded-full bg-terra px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-terra-dark"
+            className="btn-terra"
           >
             Message us on WhatsApp
           </a>
           <Link
             to="/contact"
-            className="inline-flex justify-center rounded-full border border-terra px-6 py-3 text-sm font-semibold text-terra transition-colors hover:bg-terra hover:text-white"
+            className="btn-line"
           >
             Other ways to reach us
           </Link>

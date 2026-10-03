@@ -7,6 +7,7 @@ import WhatsAppFab from './components/WhatsAppFab'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Collection from './pages/Collection'
+import DiwaliGifting from './pages/DiwaliGifting'
 import ProductDetail from './pages/ProductDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/collections/:slug" element={<Collection />} />
+          <Route path="/diwali-gifting" element={<DiwaliGifting />} />
           <Route path="/product/:asin" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

@@ -21,6 +21,35 @@ OUT = os.path.join(os.path.dirname(ROOT), "atreya-store-dist.zip")
 if not os.path.isdir(DIST):
     sys.exit("dist/ not found: run npm run build first")
 
+# public/products also holds the 2000px Amazon listing uploads (ATR-...jpg and
+# friends, around 30 MB) because the image-hosting branch is cut from this
+# repo. The site never shows them, so they are pruned from dist/ here, before
+# the zip and before deploy_cpanel.py uploads the folder. Only files that
+# products.ts references survive. Checked 2026-10-03: no live listing points
+# at atreya.store for an image, so nothing outside the site needs them.
+import re
+
+with open(os.path.join(ROOT, "src", "data", "products.ts"), encoding="utf-8") as fh:
+    used = set(re.findall(r'"/products/([^"]+)"', fh.read()))
+assert used, "no product images parsed from products.ts"
+pdir = os.path.join(DIST, "products")
+tdir = os.path.join(pdir, "400")
+thumbs = {u[:-4] + ".webp" for u in used}
+pruned = 0
+for name in os.listdir(pdir):
+    if os.path.isfile(os.path.join(pdir, name)) and name not in used:
+        os.remove(os.path.join(pdir, name))
+        pruned += 1
+for name in os.listdir(tdir):
+    if name not in thumbs:
+        os.remove(os.path.join(tdir, name))
+        pruned += 1
+missing = [u for u in used if not os.path.exists(os.path.join(pdir, u))]
+assert not missing, f"products.ts references images that are not in dist: {missing[:5]}"
+nothumb = [t for t in thumbs if not os.path.exists(os.path.join(tdir, t))]
+assert not nothumb, f"thumbnails missing, run python scripts/product-thumbs.py: {nothumb[:5]}"
+print(f"pruned {pruned} unreferenced files from dist/products, kept {len(used)}")
+
 names = []
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
     for folder, _dirs, files in os.walk(DIST):

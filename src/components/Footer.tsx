@@ -4,13 +4,6 @@ import { AMAZON_STOREFRONT, CONTACT_EMAIL, whatsappLink } from '../config'
 import { CATEGORIES } from '../data/products'
 import { categoryPath } from '../data/collections'
 
-const TRUST = [
-  { title: 'Handmade & handpicked', sub: 'Made by us or chosen by us' },
-  { title: 'Sourced in India', sub: 'Indian makers and Indian markets' },
-  { title: 'Secure payments', sub: 'Checkout safely on Amazon.in' },
-  { title: 'Bulk orders welcome', sub: 'Weddings, events & corporate' },
-]
-
 export default function Footer() {
   const [email, setEmail] = useState('')
 
@@ -24,42 +17,51 @@ export default function Footer() {
     setEmail('')
   }
 
+  const heading = 'text-[11px] font-medium uppercase tracking-[0.24em] text-brass'
+  const item = 'text-cream/75 transition-colors hover:text-cream'
+
   return (
-    <footer className="border-t border-blush bg-sand">
-      {/* Trust strip (Craftroots-style) */}
-      <div className="border-b border-blush bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-6 lg:grid-cols-4">
-          {TRUST.map((t) => (
-            <div key={t.title} className="text-center">
-              <p className="text-sm font-semibold text-ink">{t.title}</p>
-              <p className="mt-0.5 text-xs text-soft">{t.sub}</p>
-            </div>
-          ))}
+    <footer className="bg-ink text-cream">
+      {/* Sign off */}
+      <div className="border-b border-cream/10">
+        <div className="mx-auto max-w-3xl px-4 py-16 text-center">
+          <img
+            src="/brand/atreya-wordmark-light.svg"
+            alt="Atreya"
+            width={1033}
+            height={239}
+            loading="lazy"
+            className="mx-auto h-14 w-auto sm:h-[72px]"
+          />
+          <div className="ornament mt-5 justify-center" aria-hidden="true">
+            <span />
+          </div>
+          <p className="mt-5 font-display text-2xl italic text-cream/85">Beautiful things for you and your home.</p>
+          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cream/65">
+            Hand checked and hand packed, every piece. Delivered across India by Amazon.in.
+          </p>
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Our roots */}
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-xl font-semibold text-terra">Atreya</p>
-          <p className="mt-2 text-sm leading-relaxed text-soft">
-            Crochet keepsakes and lotus pooja aasans from our own workshop, plus gajras, festive garlands and everlasting flowers handpicked across India.
-          </p>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/about" className="text-ink hover:text-terra">Our story</Link></li>
-            <li><Link to="/contact" className="text-ink hover:text-terra">Contact us</Link></li>
-            <li><Link to="/shipping-returns" className="text-ink hover:text-terra">Shipping &amp; returns</Link></li>
-            <li><Link to="/privacy" className="text-ink hover:text-terra">Privacy policy</Link></li>
+          <p className={heading}>The house</p>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            <li><Link to="/about" className={item}>Our story</Link></li>
+            <li><Link to="/shop" className={item}>Shop all</Link></li>
+            <li><Link to="/diwali-gifting" className={item}>Diwali gifting</Link></li>
+            <li><Link to="/contact" className={item}>Contact us</Link></li>
+            <li><Link to="/shipping-returns" className={item}>Shipping &amp; returns</Link></li>
+            <li><Link to="/privacy" className={item}>Privacy policy</Link></li>
           </ul>
         </div>
 
-        {/* Categories */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-soft">Categories</p>
-          <ul className="mt-3 space-y-2 text-sm">
+          <p className={heading}>Collections</p>
+          <ul className="mt-4 space-y-2.5 text-sm">
             {CATEGORIES.map((c) => (
               <li key={c}>
-                <Link to={categoryPath(c)} className="text-ink hover:text-terra">
+                <Link to={categoryPath(c)} className={item}>
                   {c}
                 </Link>
               </li>
@@ -67,107 +69,66 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Quick links */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-soft">Quick links</p>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><Link to="/shop" className="text-ink hover:text-terra">Shop all</Link></li>
+          <p className={heading}>Talk to us</p>
+          <ul className="mt-4 space-y-2.5 text-sm">
             <li>
-              <a
-                href={whatsappLink('Hi Atreya! I would like a quote for a bulk / corporate order.')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ink hover:text-terra"
-              >
-                Bulk order
+              <a href={whatsappLink('Hi Atreya! I have a question about your products.')} target="_blank" rel="noopener noreferrer" className={item}>
+                WhatsApp +91 97115 48517
               </a>
             </li>
             <li>
-              <a href={AMAZON_STOREFRONT} target="_blank" rel="noopener noreferrer" className="text-ink hover:text-terra">
-                Amazon.in storefront
-              </a>
+              <a href={`mailto:${CONTACT_EMAIL}`} className={item}>{CONTACT_EMAIL}</a>
             </li>
             <li>
               <a
-                href={whatsappLink('Hi Atreya! I have a question about your products.')}
+                href={whatsappLink('Hi Atreya! I would like a quote for a bulk / wedding / corporate order.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-ink hover:text-terra"
+                className={item}
               >
-                WhatsApp us
+                Bulk &amp; wedding orders
               </a>
             </li>
             <li>
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-ink hover:text-terra">{CONTACT_EMAIL}</a>
+              <a href={AMAZON_STOREFRONT} target="_blank" rel="noopener noreferrer" className={item}>
+                Our Amazon.in store
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/atreyastore" target="_blank" rel="noopener noreferrer" className={item}>
+                Instagram
+              </a>
             </li>
           </ul>
         </div>
 
-        {/* Join the circle (Craftroots-style newsletter) */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-soft">Join the Atreya circle</p>
-          <p className="mt-3 text-sm leading-relaxed text-soft">
-            Be first to see new pieces and festive collections. We'll reach you on WhatsApp. No spam, ever.
+          <p className={heading}>Join the Atreya circle</p>
+          <p className="mt-4 text-sm leading-relaxed text-cream/75">
+            New pieces and festive collections, before anyone else. We will reach you on WhatsApp. No spam, ever.
           </p>
-          <form onSubmit={joinCircle} className="mt-4 flex gap-2">
+          <form onSubmit={joinCircle} className="mt-5 flex items-end gap-3">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
               aria-label="Email address"
-              className="w-full min-w-0 rounded-full border border-ink/10 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-soft/70 focus:border-terra focus:outline-none"
+              className="w-full min-w-0 border-0 border-b border-cream/35 bg-transparent px-0 py-2 text-sm text-cream placeholder:text-cream/55 focus:border-cream focus:outline-none"
             />
             <button
               type="submit"
-              className="shrink-0 rounded-full bg-terra px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-terra-dark"
+              className="shrink-0 border border-cream/70 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:bg-cream hover:text-ink"
             >
               Join
             </button>
           </form>
-          <div className="mt-5 flex gap-3">
-            <a
-              href="https://www.instagram.com/atreyastore"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Atreya on Instagram"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink transition-colors hover:border-terra hover:text-terra"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
-              </svg>
-            </a>
-            <a
-              href={whatsappLink('Hi Atreya!')}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Atreya on WhatsApp"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink transition-colors hover:border-terra hover:text-terra"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                <path d="M3 20l1.2-3.6A8.5 8.5 0 1 1 7.6 19L3 20Z" />
-              </svg>
-            </a>
-            <a
-              href={AMAZON_STOREFRONT}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Atreya on Amazon"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink transition-colors hover:border-terra hover:text-terra"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                <path d="M6 8h12l1.5 12h-15L6 8Z" />
-                <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
 
-      <div className="border-t border-blush py-4 text-center text-xs text-soft">
-        © {new Date().getFullYear()} Atreya · Handmade &amp; handpicked in India. All rights reserved.
+      <div className="border-t border-cream/10 px-4 py-5 text-center text-xs text-cream/55">
+        © {new Date().getFullYear()} Atreya · Handmade &amp; handpicked in India
       </div>
     </footer>
   )

@@ -1,7 +1,7 @@
 # atreya.store
 
-Brand + catalogue website for **Atreya** — handmade crochet keepsakes, festive décor and
-artificial flowers. Every product links to its live listing on Amazon.in (no on-site checkout).
+Brand + catalogue website for **Atreya**: gajras and hair flowers, pooja essentials,
+latkans and festive decor, plus crochet and lotus aasans from its own workshop. Every product links to its live listing on Amazon.in (no on-site checkout).
 
 Built with React 19, Vite, TypeScript, Tailwind CSS v4 and React Router.
 
@@ -25,15 +25,42 @@ Products are generated from the Amazon **Active Listings Report**:
 
 Contact details (WhatsApp number, email) live in `src/config.ts`.
 
-## Production build: run all five steps, in this order
+## Production build: run these steps, in this order
 
 ```bash
-node scripts/fetch-products.mjs   # products.ts + the base sitemap URL list
+node scripts/fetch-products.mjs   # products.ts, the base sitemap, the .htaccess 410 list
+python scripts/product-thumbs.py  # 400px WebP thumbnails for cards and galleries
 npm run build                     # outputs dist/
-node scripts/prerender.mjs        # a static snapshot per route, for crawlers
+node scripts/prerender.mjs        # a static snapshot per route, for crawlers (+ font preloads)
 node scripts/sitemap.mjs          # stamps lastmod + image entries into the sitemap
-python scripts/makezip.py         # builds the upload zip, and asserts the above ran
+python scripts/makezip.py         # prunes unused images from dist/, builds the upload zip
 ```
+
+Before `fetch-products.mjs`, refresh the inputs when the catalogue changes:
+
+```bash
+node list-listings.js                          # in E:/atreya/listing/atreya-aplus
+cp all_listings.tsv E:/atreya/Active+Listings+Report_<MM-DD-YYYY>.txt   # and update REPORT
+node live-listing-state.js <sku>...            # BUYABLE check, in atreya-aplus
+node scripts/fetch-catalog-spapi.mjs <ASIN>... # images, copy and specs from SP-API
+```
+
+Lifestyle photography for the story sections lives in `public/story/` and is
+rebuilt with `python scripts/story-images.py` (sources are listing photos with
+no text on them; the mapping is in the script). The share card is
+`python scripts/og-image.py`.
+
+The lotus wordmark (navbar, footer, favicon, share card, schema logo) is traced
+from `brand/atreya-lotus-wordmark-source.png`. To change it, replace that file and
+run `python scripts/brand-logo.py` (SVGs), `node scripts/brand-rasters.mjs`
+(PNGs and favicon.ico), then `python scripts/og-image.py`.
+
+The Diwali theme (announcement bar, nav link, home page band) is switched by
+`FESTIVE.diwali` in `src/config.ts`. Turn it off after Bhai Dooj; the
+`/diwali-gifting` page itself stays up.
+
+Checks: `node scripts/_clickthrough.mjs` drives in-app navigation at desktop and
+phone widths on a local preview (pass a URL to run it against the live site).
 
 `npm run preview` smoke-tests the built site locally.
 
@@ -46,6 +73,11 @@ ignore.
 
 The site is plain static files served by Apache from the `atreya.store` addon-domain
 document root (`/home/<user>/atreya.store`).
+
+**One command (preferred):** after the build steps above,
+`python E:/_shared/cpanel/deploy_cpanel.py atreya.store E:/atreya/atreya-store/dist`
+uploads dist/ over the cPanel API, swaps assets/, extracts and checks the live
+homepage serves the new bundle. The manual route below still works.
 
 1. Run the five build steps above.
 2. Upload `E:/atreya/atreya-store-dist.zip` (built by `makezip.py`, which already

@@ -35,8 +35,9 @@ RewriteRule ^(product|collections)/?$ /shop [R=301,L]
 # test here without verifying it on the live host first. Any URL not on this
 # list still self-reports noindex from the React 404 route.
 #
-# Add an ASIN here when you remove it from CATALOG in fetch-products.mjs.
-RewriteRule ^product/(B09QJV7VXZ|B09Y3J9PSQ)(\.html)?/?$ - [G,L]
+# The ASIN list below is WRITTEN by scripts/fetch-products.mjs from its
+# HELD_OUT array. Edit HELD_OUT, not this line, or the next build undoes it.
+RewriteRule ^product/(B0GG5BVR7R|B0G95YC1T9|B0GDY7RSXY|B0GDY4D9FN|B0GDV4HTRJ|B0GDY833NN|B0CMDJR8QM|B0CMDK5J4T|B0CMDJBYZ4|B0GDY75WHT|B09Y3J9PSQ|B0HB16BLTK)(\.html)?/?$ - [G,L]
 
 # Serve prerendered snapshots: /shop → /shop.html, /product/X → /product/X.html
 RewriteCond %{REQUEST_FILENAME} !-f

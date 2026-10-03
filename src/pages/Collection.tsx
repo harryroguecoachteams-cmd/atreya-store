@@ -4,6 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import { PRODUCTS } from '../data/products'
 import { COLLECTIONS, collectionBySlug } from '../data/collections'
 import ProductCard from '../components/ProductCard'
+import StoryImage from '../components/StoryImage'
 import NotFound from './NotFound'
 import { SITE_URL, isHandmade, whatsappLink } from '../config'
 
@@ -82,39 +83,59 @@ export default function Collection() {
   if (!collection) return <NotFound />
 
   const others = COLLECTIONS.filter((c) => c.slug !== collection.slug)
-  const madeByUs = isHandmade(collection.category)
+  // Pooja Essentials mixes our own aasans with handpicked thalis, so the kicker
+  // has a middle case rather than claiming the whole shelf either way.
+  const ours = items.filter((p) => isHandmade(p.category, p.asin)).length
+  const kicker =
+    ours === 0 ? 'Handpicked by us' : ours === items.length ? 'Handmade by us' : 'Handmade and handpicked by us'
   const bulkMessage = `Hi Atreya! I'd like a bulk quote for ${collection.category}. Quantity and date: `
 
   return (
     <>
-      <section className="mx-auto max-w-7xl px-4 py-8">
-        <nav aria-label="Breadcrumb" className="text-xs text-soft">
-          <Link to="/" className="hover:text-terra">Home</Link>
-          <span className="mx-1.5">/</span>
-          <Link to="/shop" className="hover:text-terra">Shop</Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-ink">{collection.category}</span>
-        </nav>
-
-        <div className="mt-6 max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
-            {madeByUs ? 'Handmade by us' : 'Handpicked by us'}
-          </p>
-          <h1 className="mt-2 font-display text-3xl font-semibold leading-tight sm:text-4xl">
-            {collection.heading}
-          </h1>
-          <p className="mt-4 leading-relaxed text-soft">{collection.intro}</p>
+      {/* Banner: the words on cream, a photograph of the range in use */}
+      <section className="border-b border-blush">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 pb-12 pt-6 lg:grid-cols-12 lg:items-center lg:gap-14 lg:pb-16">
+          <div className="lg:col-span-6">
+            <nav aria-label="Breadcrumb" className="text-[11px] uppercase tracking-[0.2em] text-soft">
+              <Link to="/" className="hover:text-terra">Home</Link>
+              <span className="mx-2">/</span>
+              <Link to="/shop" className="hover:text-terra">Shop</Link>
+              <span className="mx-2">/</span>
+              <span className="text-ink">{collection.category}</span>
+            </nav>
+            <p className="kicker mt-10">{kicker}</p>
+            <h1 className="mt-4 font-display text-[38px] font-medium leading-[1.05] text-ink sm:text-5xl lg:text-[54px]">
+              {collection.heading}
+            </h1>
+            <p className="mt-6 max-w-xl leading-relaxed text-soft">{collection.intro}</p>
+            <a href="#pieces" className="link-draw mt-8">
+              See the {items.length} {items.length === 1 ? 'piece' : 'pieces'}
+            </a>
+          </div>
+          <div className="order-first lg:order-none lg:col-span-6">
+            <div className="overflow-hidden bg-sand">
+              <StoryImage
+                name={collection.image}
+                alt={collection.imageAlt}
+                priority
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[4/3] w-full object-cover lg:aspect-[5/5.2]"
+              />
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-9 flex items-end justify-between">
-          <h2 className="font-display text-xl font-semibold">
+      <section id="pieces" className="mx-auto max-w-7xl scroll-mt-28 px-4 py-14">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <h2 className="font-display text-3xl font-medium">
             {items.length} {items.length === 1 ? 'piece' : 'pieces'} in {collection.category}
           </h2>
-          <Link to="/shop" className="text-sm font-semibold text-terra hover:text-terra-dark">
-            Shop everything →
+          <Link to="/shop" className="link-draw">
+            Shop everything
           </Link>
         </div>
-        <div className="mt-5 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
           {items.map((p) => (
             <ProductCard key={p.asin} product={p} />
           ))}
@@ -123,29 +144,33 @@ export default function Collection() {
 
       {/* The buying guide. This is the part that earns the ranking, so it is
           real advice rather than keyword filler. */}
-      <section className="bg-sand py-14">
+      <section className="bg-paper py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          {collection.body.map((b) => (
-            <article key={b.heading} className="mb-9 last:mb-0">
-              <h2 className="font-display text-2xl font-semibold">{b.heading}</h2>
-              <p className="mt-3 leading-relaxed text-soft">{b.text}</p>
+          <p className="kicker text-center">The buying guide</p>
+          <div className="ornament mt-5 justify-center" aria-hidden="true">
+            <span />
+          </div>
+          {collection.body.map((b, i) => (
+            <article key={b.heading} className="mt-12 first-of-type:mt-10">
+              <p className="font-display text-lg italic text-gold">{['I', 'II', 'III', 'IV', 'V', 'VI'][i]}</p>
+              <h2 className="mt-1 font-display text-[30px] font-medium leading-tight">{b.heading}</h2>
+              <p className="mt-4 leading-relaxed text-soft">{b.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      {/* FAQs. Rendered open in the markup with <details open> would be noisy on
-          mobile, so they collapse, but the answers stay in the HTML either way,
+      {/* FAQs. They collapse, but the answers stay in the HTML either way,
           which is what crawlers and answer engines read. */}
-      <section className="py-14">
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-2xl font-semibold">Questions people ask</h2>
-          <div className="mt-6 divide-y divide-blush border-y border-blush">
+          <h2 className="text-center font-display text-[34px] font-medium">Questions people ask</h2>
+          <div className="mt-8 divide-y divide-blush border-y border-blush">
             {collection.faqs.map((f) => (
-              <details key={f.q} className="group py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-ink marker:hidden">
+              <details key={f.q} className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-xl font-medium text-ink marker:hidden">
                   {f.q}
-                  <span className="shrink-0 text-terra transition-transform group-open:rotate-45" aria-hidden="true">
+                  <span className="shrink-0 text-2xl font-light text-terra transition-transform group-open:rotate-45" aria-hidden="true">
                     +
                   </span>
                 </summary>
@@ -154,9 +179,9 @@ export default function Collection() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-2xl bg-blush/60 p-6 text-center sm:p-8">
-            <h2 className="font-display text-xl font-semibold">Buying for a wedding or an event?</h2>
-            <p className="mt-2 text-sm leading-relaxed text-soft">
+          <div className="mt-14 bg-ink px-6 py-10 text-center text-cream sm:px-10">
+            <h2 className="font-display text-[28px] font-medium">Buying for a wedding or an event?</h2>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cream/75">
               Quantities beyond the multi-packs are a conversation, not an order form. Tell us the
               count and the date and we will quote for it.
             </p>
@@ -164,7 +189,7 @@ export default function Collection() {
               href={whatsappLink(bulkMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-terra px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-terra-dark"
+              className="mt-7 inline-flex border border-cream/70 px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:bg-cream hover:text-ink"
             >
               Ask for a bulk quote
             </a>
@@ -172,37 +197,26 @@ export default function Collection() {
         </div>
       </section>
 
-      <section className="border-t border-blush py-12">
+      <section className="border-t border-blush py-16">
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="font-display text-xl font-semibold">Browse the other collections</h2>
-          <div className="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {others.map((c) => {
-              const p = PRODUCTS.find((q) => q.asin === c.heroAsin)
-              return (
-                <Link
-                  key={c.slug}
-                  to={`/collections/${c.slug}`}
-                  className="group overflow-hidden rounded-2xl border border-blush bg-white shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <div className="aspect-[4/3] overflow-hidden bg-sand">
-                    {p?.image && (
-                      <img
-                        src={p.image}
-                        alt={`${p.name}, from the Atreya ${c.category} collection`}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    )}
-                  </div>
-                  <div className="p-3">
-                    <p className="text-sm font-semibold text-ink group-hover:text-terra">{c.category}</p>
-                    <p className="mt-0.5 text-xs text-soft">
-                      {PRODUCTS.filter((q) => q.category === c.category).length} pieces
-                    </p>
-                  </div>
-                </Link>
-              )
-            })}
+          <h2 className="text-center font-display text-[34px] font-medium">The other collections</h2>
+          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+            {others.map((c) => (
+              <Link key={c.slug} to={`/collections/${c.slug}`} className="group block text-center">
+                <div className="overflow-hidden bg-sand">
+                  <StoryImage
+                    name={c.image}
+                    alt={c.imageAlt}
+                    sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <p className="mt-3 font-display text-xl font-medium leading-tight text-ink group-hover:text-terra">{c.category}</p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-soft">
+                  {PRODUCTS.filter((q) => q.category === c.category).length} pieces
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

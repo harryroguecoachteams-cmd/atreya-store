@@ -11,63 +11,121 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // writes all_listings.tsv in this exact schema, then copy it here with the new
 // date. The old July report predated the entire gajra, garland and pooja aasan
 // range, so every new product was invisible to this script.
-const REPORT = 'E:/atreya/Active+Listings+Report_08-05-2026.txt';
+const REPORT = 'E:/atreya/Active+Listings+Report_10-03-2026.txt';
 const IMG_DIR = join(ROOT, 'public', 'products');
 const OUT = join(ROOT, 'src', 'data', 'products.ts');
+const HTACCESS = join(ROOT, 'public', '.htaccess');
 
 // Curated catalog: display name + category per ASIN. Price and MRP come from
 // the listings report; copy, specs and images come from catalog-raw.json.
+// Category order here is the order of the shop filters, home tiles and footer.
 //
 // Only BUYABLE listings belong here. A listing that is DISCOVERABLE but not
 // BUYABLE still renders a detail page, so linking to it sends a shopper to a
 // page with no buy box. Check with:
 //   node live-listing-state.js --all   (in E:/atreya/listing/atreya-aplus)
-//
-// Held out as not buyable on 2026-08-05:
-//   B09QJV7VXZ  Golden Jingle Bells (24)  offer paused after cancelled orders
-//   B09Y3J9PSQ  Sunflower Heads (20)      no sellable stock set
-// Both return to the site automatically once reactivated in Seller Central.
-// Older dead listings: B09MNTPWCL, B09TZ32SND, B09MNSR7RT.
+// Anything taken out goes into HELD_OUT below, which answers 410 for it.
 const CATALOG = [
-  // specOverrides: correct known-wrong attributes in the Amazon listing backend.
-  { asin: 'B0GG5BVR7R', shortName: 'Crochet Evil Eye Hanging Charm', category: 'Crochet', specOverrides: { Colour: 'Blue' } },
-  { asin: 'B0GDXXM3PR', shortName: 'Mini Crochet Hearts (Set of 12)', category: 'Crochet' },
-  { asin: 'B0GC6KJCSC', shortName: 'Mini Crochet Hearts (Set of 6, Multicolor)', category: 'Crochet' },
-  { asin: 'B0G95YC1T9', shortName: 'Crochet Heart Ornaments (Set of 12, Red)', category: 'Crochet' },
-  { asin: 'B0GDY7RSXY', shortName: 'Crochet Cherry Keychain', category: 'Crochet' },
-  { asin: 'B0GDY4D9FN', shortName: 'Crochet Heart Keychain with Flower', category: 'Crochet' },
-  { asin: 'B0GDV4HTRJ', shortName: 'Crochet Rose Gajra / Hair Parandi (Pair)', category: 'Crochet' },
-  { asin: 'B0GDY833NN', shortName: 'Crochet Popcorn-Stitch Scrunchie', category: 'Crochet' },
-  { asin: 'B0B8XR4XNW', shortName: 'Silver Hanging Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
-  { asin: 'B0B8XRDHPW', shortName: 'Silver Hanging Bells 2.5" (Pack of 12)', category: 'Festive Décor' },
-  { asin: 'B09QJVDNFW', shortName: 'Golden Jingle Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
-  { asin: 'B09Y2B4XHL', shortName: 'Jasmine Door Toran (Set of 4)', category: 'Festive Décor' },
-  // Garlands and ladis hang like the toran and bells, so they share that shelf.
-  { asin: 'B0HC4FD2F4', shortName: 'White Flower Ladi 5 ft (Pack of 4)', category: 'Festive Décor' },
-  { asin: 'B0HCCGJKQ4', shortName: 'Red and White Mogra Garland 2.5 ft (Pack of 4)', category: 'Festive Décor' },
-  { asin: 'B0HCPKG6HW', shortName: 'Multicolor Pom Pom Garland 5 ft (Pack of 4)', category: 'Festive Décor' },
-  { asin: 'B0B8XR4W5P', shortName: 'Silver Hanging Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
-
-  // Worn on the body, so none of the old shelves fitted. "Gajras" is the word
-  // an Indian shopper actually types.
+  // Worn on the body, so none of the decor shelves fitted. "Gajras" is the
+  // word an Indian shopper actually types.
   { asin: 'B0HC48P47S', shortName: 'Artificial Jasmine Bun Gajra (Pack of 3)', category: 'Gajras' },
+  { asin: 'B0HGFMB8JJ', shortName: 'White Jasmine Bun Gajra Wreath (Pack of 2)', category: 'Gajras' },
+  { asin: 'B0HF9ZT32L', shortName: 'Red Rose and Jasmine Hair Gajra (Pack of 2)', category: 'Gajras' },
+  { asin: 'B0HFBKJ8Q6', shortName: 'Long White Jasmine Gajra for Braid (Pack of 2)', category: 'Gajras' },
   { asin: 'B0HC479QXR', shortName: 'Yellow Rose and Jasmine Hand Gajra (Pack of 2)', category: 'Gajras' },
+  { asin: 'B0HFB5PHDK', shortName: 'Red Rose Hand Gajra (Pack of 2)', category: 'Gajras' },
+  { asin: 'B0HFBN6VKM', shortName: 'Rani Pink Rose Hand Gajra (Pack of 2)', category: 'Gajras' },
   { asin: 'B0HC49L3MP', shortName: 'Red Rose and Pearl Hand Gajra (Single)', category: 'Gajras' },
   { asin: 'B0HC4DHXNK', shortName: 'Red Rose and Pearl Hand Gajra (Pack of 5)', category: 'Gajras' },
 
-  // A devotional seat for an idol or kalash, not decor. Shoppers filtering for
-  // puja articles would look under neither Festive nor Home.
-  { asin: 'B0HB16BLTK', shortName: 'Lotus Pooja Aasan 24.5 cm (Cream)', category: 'Pooja Essentials' },
-  { asin: 'B0HB4N2JSH', shortName: 'Lotus Pooja Aasan 24.5 cm (Rani Pink)', category: 'Pooja Essentials' },
+  // Pins, clips and a comb: hair flowers that are not strung like a gajra.
+  { asin: 'B0HD2V6K1M', shortName: 'Yellow Rose Hair Pins (Pack of 2)', category: 'Hair Accessories' },
+  { asin: 'B0HD2H3LF4', shortName: 'Rani Pink Rose Hair Pins (Pack of 2)', category: 'Hair Accessories' },
+  { asin: 'B0HGFHN4BR', shortName: 'Baby Pink Rose Hair Pins (Pack of 2)', category: 'Hair Accessories' },
+  { asin: 'B0HGFKDXZD', shortName: 'Red Rose Hair Pins (Pack of 2)', category: 'Hair Accessories' },
+  { asin: 'B0HGFJ5DD1', shortName: 'Red Rose Hair Clips with Pearls (Pack of 2)', category: 'Hair Accessories' },
+  { asin: 'B0HGFJRY4C', shortName: 'Pink Rose Hair Clip with Pearls', category: 'Hair Accessories' },
+  { asin: 'B0HGFLGL4V', shortName: 'Rani Pink Rose Juda Comb with Pearls', category: 'Hair Accessories' },
 
-  { asin: 'B0CMDJR8QM', shortName: 'Eternal Love Rose Bouquet (Red)', category: 'Artificial Flowers' },
-  { asin: 'B0CMDK5J4T', shortName: 'Eternal Love Rose Bouquet (Pink)', category: 'Artificial Flowers' },
-  { asin: 'B0CMDJBYZ4', shortName: 'Eternal Love Rose Bouquet (Yellow)', category: 'Artificial Flowers' },
-  // "Artificial" is load bearing in this name: the listing sells loose mogra
+  // Flower strings, torans and bells: the things that hang along a frame.
+  { asin: 'B09Y2B4XHL', shortName: 'Jasmine Door Toran (Set of 4)', category: 'Festive Décor' },
+  { asin: 'B0HGFSRC4W', shortName: 'Mogra Jasmine Door Toran 2.5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HC4FD2F4', shortName: 'White Flower Ladi 5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B09MD5M6YP', shortName: 'Mogra Garland with Golden Bells 5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HCCGJKQ4', shortName: 'Red and White Mogra Garland 2.5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HCPKG6HW', shortName: 'Multicolor Pom Pom Garland 5 ft (Pack of 4)', category: 'Festive Décor' },
+  { asin: 'B0HFQDY4K3', shortName: 'Golden Jingle Bells 2.5" (Pack of 12)', category: 'Festive Décor' },
+  { asin: 'B09QJV7VXZ', shortName: 'Golden Jingle Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
+  { asin: 'B09QJVDNFW', shortName: 'Golden Jingle Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
+  { asin: 'B0B8XRDHPW', shortName: 'Silver Hanging Bells 2.5" (Pack of 12)', category: 'Festive Décor' },
+  { asin: 'B0B8XR4W5P', shortName: 'Silver Hanging Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
+  { asin: 'B0B8XR4XNW', shortName: 'Silver Hanging Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
+
+  // Latkans hang at the sides of a door or mandir, one piece per drop, which
+  // is a different purchase from a garland run across the top.
+  { asin: 'B0HJ8HKMWC', shortName: 'Ganesh Ji Door Latkan with Bell (Set of 4)', category: 'Door Hangings' },
+  { asin: 'B0HJ8P8NBY', shortName: 'Ganesh Ji Latkan with Pearl and Red Lotus (Set of 4)', category: 'Door Hangings' },
+  { asin: 'B0HJ8S6WZZ', shortName: 'Red Lotus Latkan with Pink Jhumka (Set of 4)', category: 'Door Hangings' },
+  { asin: 'B0HJ8KSPP7', shortName: 'Green Parrot Door Latkan (Pair)', category: 'Door Hangings' },
+  { asin: 'B0HJ8Z86C8', shortName: 'Wooden Shubh Labh Ganesha Toran 12"', category: 'Door Hangings' },
+  { asin: 'B0HHGC9GYV', shortName: 'Mogra Lotus Mandir Door Hanging 14" (Pack of 4)', category: 'Door Hangings' },
+  { asin: 'B0HFPM5MZB', shortName: 'Gold Mirror Lotus Latkan (Pack of 2)', category: 'Door Hangings' },
+  { asin: 'B0HFPJJSW4', shortName: 'Gold Mirror Lotus Latkan (Pack of 4)', category: 'Door Hangings' },
+  { asin: 'B0HFQC184J', shortName: 'Gold Mirror Lotus Latkan (Pack of 6)', category: 'Door Hangings' },
+  { asin: 'B0HFPJTFVH', shortName: 'Gota Patti Bangle Latkan with Bell (Pack of 2)', category: 'Door Hangings' },
+  { asin: 'B0HFQ8KM5T', shortName: 'Gota Patti Bangle Latkan with Bell (Pack of 4)', category: 'Door Hangings' },
+  { asin: 'B0HFQMDHJX', shortName: 'Gota Patti Bangle Latkan with Bell (Pack of 6)', category: 'Door Hangings' },
+
+  // A devotional seat, thali or matki is a puja article, not decor. Shoppers
+  // filtering for puja things would look under neither Festive nor Home.
+  { asin: 'B0HB4N2JSH', shortName: 'Lotus Pooja Aasan 24.5 cm (Rani Pink)', category: 'Pooja Essentials' },
+  { asin: 'B0HF4N37JD', shortName: 'Lotus Pooja Aasan 24.5 cm (Yellow)', category: 'Pooja Essentials' },
+  { asin: 'B0HF4PXH7S', shortName: 'Lotus Pooja Aasan 24.5 cm (Pack of 2, Pink and Yellow)', category: 'Pooja Essentials' },
+  { asin: 'B0HF9ZSQY3', shortName: 'Gold Meenakari Puja Thali with 2 Lidded Katori', category: 'Pooja Essentials' },
+  { asin: 'B0HF9ZJXT3', shortName: 'Meenakari Peacock Puja Thali with 2 Katori', category: 'Pooja Essentials' },
+  { asin: 'B0HGFGMKDY', shortName: 'Rakhi Puja Thali Set with Rakhi and 2 Katori', category: 'Pooja Essentials' },
+  { asin: 'B0HFBM7WZG', shortName: 'Krishna Matki for Janmashtami', category: 'Pooja Essentials' },
+
+  { asin: 'B0GDXXM3PR', shortName: 'Mini Crochet Hearts (Set of 12)', category: 'Crochet' },
+  { asin: 'B0GC6KJCSC', shortName: 'Mini Crochet Hearts (Set of 6, Multicolor)', category: 'Crochet' },
+
+  // "Artificial" is load bearing in the mogra name: the listing sells loose
   // buds for gajra making and the word must never be dropped from the tile.
   { asin: 'B0HC44WKBT', shortName: 'White Artificial Mogra Flowers (50 g Pack)', category: 'Artificial Flowers' },
-  { asin: 'B0GDY75WHT', shortName: 'Wooden Floor Vase with Brass Work', category: 'Home Décor' },
+  { asin: 'B0HGM61K1N', shortName: 'Artificial Lotus Buds (Pack of 12)', category: 'Artificial Flowers' },
+
+  { asin: 'B0HGFFKH66', shortName: 'Kids Pink Bear Sunglasses with Bow Clips', category: 'Kids' },
+  { asin: 'B0HGF9GXPP', shortName: 'Kids Brown Bear Sunglasses with Lace Bow Clips', category: 'Kids' },
+  { asin: 'B0HF9XYGT7', shortName: 'Kids Bear Sunglasses with Bow Clips (Pink and Brown, Pack of 2)', category: 'Kids' },
+
+  { asin: 'B0HFPS29NW', shortName: 'Strawberry Paper Soap Sheets (2 Tubes)', category: 'Travel Essentials' },
+  { asin: 'B0HFQ1KFPJ', shortName: 'Strawberry Paper Soap Sheets (4 Tubes)', category: 'Travel Essentials' },
+  { asin: 'B0HFPLPKXM', shortName: 'Strawberry Paper Soap Sheets (6 Tubes)', category: 'Travel Essentials' },
+
   { asin: 'B09Y29QS4V', shortName: 'White Pearl Beads 6mm (1000 pcs)', category: 'Craft Supplies' },
+];
+
+// Listings that have left the site. Every one answers 410 Gone, because each
+// was in a published sitemap and Google has it. This script writes the 410
+// rule in public/.htaccess from this list, so restocking a product is one move:
+// put it back in CATALOG and take it out of here.
+//
+// Out of stock (Inactive, qty 0) on 2026-10-03; return them when restocked:
+const HELD_OUT = [
+  'B0GG5BVR7R', // Crochet Evil Eye Hanging Charm
+  'B0G95YC1T9', // Crochet Heart Ornaments (Set of 12, Red)
+  'B0GDY7RSXY', // Crochet Cherry Keychain
+  'B0GDY4D9FN', // Crochet Heart Keychain with Flower
+  'B0GDV4HTRJ', // Crochet Rose Gajra / Hair Parandi (Pair)
+  'B0GDY833NN', // Crochet Popcorn-Stitch Scrunchie
+  'B0CMDJR8QM', // Eternal Love Rose Bouquet (Red)
+  'B0CMDK5J4T', // Eternal Love Rose Bouquet (Pink)
+  'B0CMDJBYZ4', // Eternal Love Rose Bouquet (Yellow)
+  'B0GDY75WHT', // Wooden Floor Vase with Brass Work
+  'B09Y3J9PSQ', // Sunflower Heads (20), no sellable stock since August
+  // Gone for good: the yellow aasan SKU moved to B0HF4N37JD, and this ASIN no
+  // longer appears in the listings report at all.
+  'B0HB16BLTK',
 ];
 
 // Product copy, specs and gallery, fetched from SP-API by
@@ -79,8 +137,17 @@ if (!existsSync(RAW_PATH)) {
 }
 const CATALOG_RAW = JSON.parse(readFileSync(RAW_PATH, 'utf8'));
 
+// A product in both lists would be on the site and answering 410 at once.
+const both = HELD_OUT.filter((a) => CATALOG.some((c) => c.asin === a));
+if (both.length) {
+  console.error(`In CATALOG and HELD_OUT at once: ${both.join(', ')}. Remove it from one.`);
+  process.exit(1);
+}
+
 const rows = readFileSync(REPORT, 'utf8').split('\n').filter(Boolean);
-const header = rows[0].split('\t');
+// The Reports API writes a UTF-8 BOM, which glues itself to the first column
+// name and makes col('item-name') come back -1.
+const header = rows[0].replace(/^﻿/, '').split('\t');
 const col = (name) => header.indexOf(name);
 // An ASIN can carry more than one SKU (B09QJVDNFW has an Active one at 529 and
 // an Inactive duplicate at 699). Take the ACTIVE row, otherwise the displayed
@@ -318,6 +385,7 @@ if (!slugs.length) console.error('WARNING: no collection slugs parsed, sitemap w
 const urls = [
   { loc: '/', changefreq: 'weekly', priority: '1.0' },
   { loc: '/shop', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/diwali-gifting', changefreq: 'weekly', priority: '0.9' },
   ...slugs.map((s) => ({ loc: `/collections/${s}`, changefreq: 'weekly', priority: '0.9' })),
   { loc: '/about', changefreq: 'monthly', priority: '0.6' },
   { loc: '/contact', changefreq: 'monthly', priority: '0.6' },
@@ -332,3 +400,16 @@ ${urls.map((u) => `  <url><loc>${SITE}${u.loc}</loc><changefreq>${u.changefreq}<
 `;
 writeFileSync(join(ROOT, 'public', 'sitemap.xml'), sitemap);
 console.log(`Sitemap: ${urls.length} URLs → public/sitemap.xml`);
+
+// The 410 list in .htaccess used to be edited by hand, which meant a restocked
+// product kept answering 410 until somebody remembered the second file. Write
+// it from HELD_OUT so the two cannot disagree.
+const RULE_410 = /^RewriteRule \^product\/\([A-Z0-9|]+\)\(\\\.html\)\?\/\?\$ - \[G,L\]$/m;
+const htaccess = readFileSync(HTACCESS, 'utf8');
+if (!RULE_410.test(htaccess)) {
+  console.error('WARNING: 410 RewriteRule not found in public/.htaccess, left untouched');
+} else {
+  writeFileSync(HTACCESS, htaccess.replace(RULE_410,
+    `RewriteRule ^product/(${HELD_OUT.join('|')})(\\.html)?/?$ - [G,L]`));
+  console.log(`.htaccess: ${HELD_OUT.length} held-out ASINs answer 410`);
+}

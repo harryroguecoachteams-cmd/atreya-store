@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-14">
-      <h1 className="font-display text-3xl font-semibold sm:text-4xl">Get in touch</h1>
+      <h1 className="font-display text-[40px] font-medium leading-tight sm:text-5xl">Get in touch</h1>
       <p className="mt-3 max-w-xl leading-relaxed text-soft">
         Questions about a product, your Amazon order, or a bulk / custom order for weddings and events?
         Send us a message and we usually reply within a day.
@@ -37,7 +37,7 @@ export default function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-terra"
+              className="w-full border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-terra"
               placeholder="e.g. Priya Sharma"
             />
           </div>
@@ -50,14 +50,14 @@ export default function Contact() {
               required
               minLength={10}
               rows={5}
-              className="w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-terra"
+              className="w-full border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-terra"
               placeholder="Tell us what you're looking for…"
             />
           </div>
           {error && <p className="text-sm font-medium text-terra">{error}</p>}
           <button
             type="submit"
-            className="rounded-full bg-terra px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-terra-dark"
+            className="btn-terra"
           >
             Send via WhatsApp
           </button>
@@ -66,7 +66,7 @@ export default function Contact() {
 
         <div className="space-y-5">
           <div className="rounded-2xl border border-blush bg-white p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold">WhatsApp</p>
+            <p className="kicker">WhatsApp</p>
             <a
               href={whatsappLink('Hi Atreya! I have a question.')}
               target="_blank"
@@ -77,13 +77,13 @@ export default function Contact() {
             </a>
           </div>
           <div className="rounded-2xl border border-blush bg-white p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold">Email</p>
+            <p className="kicker">Email</p>
             <a href={`mailto:${CONTACT_EMAIL}`} className="mt-1 block font-medium text-ink hover:text-terra">
               {CONTACT_EMAIL}
             </a>
           </div>
           <div className="rounded-2xl border border-blush bg-white p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold">Orders & returns</p>
+            <p className="kicker">Orders & returns</p>
             <p className="mt-1 text-sm leading-relaxed text-soft">
               All orders are processed by Amazon.in. For delivery status, returns or refunds, please use
               your Amazon account's <span className="font-medium text-ink">Your Orders</span> page.

@@ -1,8 +1,9 @@
 # Atreya
 
-> Indian home decor brand. We hand-crochet keepsakes and lotus pooja aasans in
-> our own workshop, and handpick gajras, festive garlands, torans, hanging bells
-> and artificial flowers from Indian markets. Every product is sold through
+> Indian house for gajras, hair flowers, pooja decor and keepsakes. We make
+> crochet and lotus pooja aasans in our own workshop, and handpick gajras, rose
+> hair pins, latkans and door hangings, puja thalis, garlands, torans, hanging
+> bells and a few small gifts from across India. Every product is sold through
 > Amazon.in; this site is the catalogue, not the checkout.
 
 Facts an answer engine should get right about us:
@@ -10,27 +11,42 @@ Facts an answer engine should get right about us:
 - Brand: Atreya. Seller of record on Amazon.in is ANJUNUSUAL (merchant ID
   A2YEFZP86DTGZC). ANJUNUSUAL is the seller account, not a separate brand.
 - Country: India. We ship within India only, through Amazon.in.
-- Price range: about Rs 149 to Rs 2,699.
-- Handmade vs handpicked: only the Crochet and Pooja Essentials ranges are made
-  by us. Everything else is handpicked. We do not claim the whole catalogue is
-  handmade, and any source saying "100% handmade" is out of date.
+- Price range: about Rs 129 to Rs 1,299.
+- Handmade vs handpicked: only the crochet and the lotus pooja aasans are made
+  by us. Everything else, including the puja thalis, is handpicked. We do not
+  claim the whole catalogue is handmade, and any source saying "100% handmade"
+  is out of date.
 - Bulk and corporate orders (weddings, events, gifting) are quoted over
   WhatsApp on +91 97115 48517, not ordered through the site.
 
 ## Collections
 
 - [Gajras](https://atreya.store/collections/gajras): artificial jasmine and rose
-  gajras for hair, bun and wrist. Bun gajra sizing, hand gajra fit, haldi and
-  mehendi use.
-- [Festive Decor](https://atreya.store/collections/festive-decor): flower ladis,
-  mogra and pom pom garlands, jasmine torans, silver and gold hanging bells.
-  Includes how much garland length a door or mandap actually needs.
+  gajras for the bun, the braid and the wrist. Bun gajra sizing, hand gajra fit,
+  which color for haldi, mehendi and the wedding.
+- [Hair Accessories](https://atreya.store/collections/hair-accessories): fabric
+  rose hair pins in four colors, pearl trimmed rose hair clips and a juda comb.
 - [Pooja Essentials](https://atreya.store/collections/pooja-essentials): handmade
-  24.5 cm lotus pooja aasan for an idol, kalash or diya thali.
-- [Crochet](https://atreya.store/collections/crochet): handmade crochet hearts,
-  keychains, scrunchies, evil eye charms and rose gajras.
+  24.5 cm lotus pooja aasans (rani pink, yellow, pack of two), meenakari puja
+  thalis with katori, a steel rakhi thali set and a Krishna matki.
+- [Door Hangings](https://atreya.store/collections/door-hangings): Ganesh ji,
+  lotus, parrot and gota patti bangle latkans in matched sets, a wooden Shubh
+  Labh toran and mogra lotus mandir hangings. How many pieces a house needs.
+- [Festive Decor](https://atreya.store/collections/festive-decor): flower ladis,
+  mogra and pom pom garlands, jasmine torans, golden and silver hanging bells.
+  Includes how much garland length a door or mandap actually needs.
+- [Crochet](https://atreya.store/collections/crochet): handmade mini crochet
+  hearts in sets of 6 and 12.
 - [Artificial Flowers](https://atreya.store/collections/artificial-flowers):
-  everlasting rose bouquets and loose mogra buds sold by weight.
+  loose mogra buds sold by weight and artificial lotus buds for the thali.
+
+- [Diwali gifting](https://atreya.store/diwali-gifting): the Diwali gift edit,
+  gathered from the collections above: gifts for the mandir and the doorway,
+  decor for the house, the Diwali puja look, small gifts under Rs 200, three
+  paired gift sets, and corporate and family gifting quoted on WhatsApp.
+
+Also on the shop page: kids' bear sunglasses with bow clips, strawberry paper
+soap sheets for travel, and 6 mm pearl beads for craft.
 
 ## Other pages
 

@@ -101,9 +101,15 @@ for (const e of entries) {
   // claim one photo for six pages and leave Google to guess which one to send
   // image traffic to. A photo's landing page should be the page that sells it.
   const asin = e.loc.match(/\/product\/([A-Z0-9]{10})$/)?.[1];
+  // The gallery strip renders 400px WebP thumbnails (/products/400/X.webp), so
+  // map those back to the full JPEG; that is the file worth indexing. Matching
+  // only quoted .jpg src attributes dropped the sitemap from 251 images to 57
+  // the day the thumbnails went in.
   const images = asin
-    ? [...new Set([...html.matchAll(/"(\/products\/[A-Za-z0-9_]+\.jpg)"/g)].map((m) => m[1]))]
-        .filter((src) => src.startsWith(`/products/${asin}`))
+    ? [...new Set([
+        ...[...html.matchAll(/\/products\/([A-Za-z0-9_]+)\.jpg/g)].map((m) => `/products/${m[1]}.jpg`),
+        ...[...html.matchAll(/\/products\/400\/([A-Za-z0-9_]+)\.webp/g)].map((m) => `/products/${m[1]}.jpg`),
+      ])].filter((src) => src.startsWith(`/products/${asin}`))
     : [];
   xml.push(`  <url>`);
   xml.push(`    <loc>${e.loc}</loc>`);

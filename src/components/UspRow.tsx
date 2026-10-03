@@ -1,67 +1,37 @@
-const USPS = [
+// The house rules, stated once and the same way everywhere. Text only: the
+// brand system rules out icons in circles and every other kind of clip art.
+const PROMISES = [
   {
-    title: 'Handmade & handpicked',
-    sub: 'Crocheted by us, the rest chosen by us',
-    icon: (
-      <path d="M12 21s-7-4.5-9.5-9C.9 8.6 2.7 5 6 5c2 0 3.2 1 4 2.2C10.8 6 12 5 14 5c3.3 0 5.1 3.6 3.5 7-2.5 4.5-9.5 9-9.5 9h4z" />
-    ),
+    n: 'I',
+    title: 'Made by us, or chosen by us',
+    sub: 'The crochet and the lotus aasans come from our own workshop. Everything else we pick, piece by piece.',
   },
   {
-    title: 'Sourced in India',
-    sub: 'Indian makers and Indian markets',
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-      </>
-    ),
+    n: 'II',
+    title: 'Hand checked, hand packed',
+    sub: 'Every order is looked over before it ships. The same rule on every listing, without exception.',
   },
   {
-    title: 'Secure Amazon checkout',
-    sub: 'Prices, delivery & returns on Amazon.in',
-    icon: (
-      <>
-        <path d="M6 8h12l1.5 12h-15L6 8Z" />
-        <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-      </>
-    ),
+    n: 'III',
+    title: 'Delivered by Amazon.in',
+    sub: 'Secure checkout, delivery across India, and Amazon\'s own return policy and buyer protection.',
   },
   {
-    title: 'Bulk & corporate orders',
-    sub: 'Weddings, events & gifting on WhatsApp',
-    icon: (
-      <>
-        <path d="M3 20l1.2-3.6A8.5 8.5 0 1 1 7.6 19L3 20Z" />
-        <path d="M9 10h6M9 13h4" />
-      </>
-    ),
+    n: 'IV',
+    title: 'Weddings and bulk',
+    sub: 'Favors, mandap decor and gifting in quantity, quoted on WhatsApp.',
   },
 ]
 
 export default function UspRow() {
   return (
-    <section className="border-y border-blush bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 lg:grid-cols-4">
-        {USPS.map((u) => (
-          <div key={u.title} className="flex items-start gap-3">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mt-0.5 shrink-0 text-terra"
-              aria-hidden="true"
-            >
-              {u.icon}
-            </svg>
-            <div>
-              <p className="text-sm font-semibold text-ink">{u.title}</p>
-              <p className="mt-0.5 text-xs leading-relaxed text-soft">{u.sub}</p>
-            </div>
+    <section aria-label="Our promise" className="border-y border-blush bg-paper">
+      <div className="mx-auto grid max-w-7xl gap-y-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-blush">
+        {PROMISES.map((p) => (
+          <div key={p.n} className="px-0 text-center sm:px-6">
+            <p className="font-display text-xl italic text-gold">{p.n}</p>
+            <p className="mt-2 font-display text-[22px] font-medium leading-tight text-ink">{p.title}</p>
+            <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-soft">{p.sub}</p>
           </div>
         ))}
       </div>

@@ -29,7 +29,7 @@ export default function Shop() {
 
   usePageMeta(
     'Shop | Atreya',
-    'Browse Atreya crochet keepsakes, gajras, lotus pooja aasans, festive garlands and bells, artificial flowers and craft supplies. Handmade or handpicked, every product ships via Amazon.in.',
+    'Browse every Atreya piece: gajras, rose hair pins, door latkans, lotus pooja aasans, puja thalis, festive garlands and bells, crochet hearts and more. Every order ships via Amazon.in.',
     { canonicalPath: collection ? `/collections/${collection.slug}` : '/shop' },
   )
   const price = params.get('price')
@@ -65,133 +65,144 @@ export default function Shop() {
   const hasFilters = Boolean(category || price || q)
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10">
-      <h1 className="font-display text-3xl font-semibold sm:text-4xl">The collection</h1>
-      <p className="mt-2 text-soft">
-        Every piece is fulfilled through Amazon.in. Tap “Amazon” for delivery, reviews and secure checkout.
-      </p>
+    <>
+      <section className="border-b border-blush">
+        <div className="mx-auto max-w-7xl px-4 pb-10 pt-12 text-center sm:pt-16">
+          <p className="kicker">The collection</p>
+          <h1 className="mt-4 font-display text-[44px] font-medium leading-[1.05] sm:text-6xl">
+            {category ?? 'Everything in the house'}
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-soft">
+            {PRODUCTS.length} pieces, each one made by us or chosen by us. Every order is delivered by
+            Amazon.in, with its secure checkout and returns.
+          </p>
 
-      {/* Real links to the collection pages. The sidebar chips are a filter and
-          render no href, so without these a crawler never reaches them. */}
-      <nav aria-label="Collections" className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-        <span className="text-soft">Collections:</span>
-        {COLLECTIONS.map((c) => (
-          <Link key={c.slug} to={`/collections/${c.slug}`} className="font-medium text-terra hover:text-terra-dark">
-            {c.category}
-          </Link>
-        ))}
-      </nav>
-
-      {collection && (
-        <p className="mt-4 rounded-xl border border-blush bg-white px-4 py-3 text-sm text-soft">
-          Not sure which one you need?{' '}
-          <Link to={`/collections/${collection.slug}`} className="font-semibold text-terra hover:text-terra-dark">
-            Read the {collection.category.toLowerCase()} buying guide
-          </Link>
-          .
-        </p>
-      )}
-
-      <div className="mt-8 gap-10 lg:flex">
-        {/* Filters (Floreal-style sidebar on desktop) */}
-        <aside className="mb-6 shrink-0 lg:mb-0 lg:w-56">
-          <div className="flex items-baseline justify-between">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-soft">Filters</p>
-            {hasFilters && (
-              <button
-                onClick={() => setParams(sort !== 'featured' ? { sort } : {})}
-                className="text-xs font-semibold text-terra hover:text-terra-dark"
-              >
-                Clear all
-              </button>
-            )}
-          </div>
-
-          {q && (
-            <p className="mt-3 rounded-xl border border-blush bg-white px-3 py-2 text-sm text-soft">
-              Search: <span className="font-semibold text-ink">“{params.get('q')}”</span>
-            </p>
-          )}
-
-          <p className="mt-5 text-sm font-semibold text-ink">Category</p>
-          <div className="mt-2 flex flex-wrap gap-2 lg:flex-col lg:gap-1.5">
-            <FilterChip active={!category} label={`All (${PRODUCTS.length})`} onClick={() => setParam('category', null)} />
-            {CATEGORIES.map((c) => (
-              <FilterChip
-                key={c}
-                active={category === c}
-                label={`${c} (${PRODUCTS.filter((p) => p.category === c).length})`}
-                onClick={() => setParam('category', category === c ? null : c)}
-              />
+          {/* Real links to the collection pages. The filter chips below render
+              no href, so without these a crawler never reaches them. */}
+          <nav aria-label="Collections" className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {COLLECTIONS.map((c) => (
+              <Link key={c.slug} to={`/collections/${c.slug}`} className="link-draw">
+                {c.category}
+              </Link>
             ))}
-          </div>
+          </nav>
+        </div>
+      </section>
 
-          <p className="mt-6 text-sm font-semibold text-ink">Price</p>
-          <div className="mt-2 flex flex-wrap gap-2 lg:flex-col lg:gap-1.5">
-            {PRICE_RANGES.map((r) => (
-              <FilterChip
-                key={r.key}
-                active={price === r.key}
-                label={r.label}
-                onClick={() => setParam('price', price === r.key ? null : r.key)}
-              />
-            ))}
-          </div>
-        </aside>
+      <section className="mx-auto max-w-7xl px-4 py-10">
+        {collection && (
+          <p className="mb-8 border-l-2 border-brass bg-paper px-5 py-4 text-sm text-soft">
+            Not sure which one you need?{' '}
+            <Link to={`/collections/${collection.slug}`} className="font-medium text-terra underline-offset-4 hover:underline">
+              Read the {collection.category.toLowerCase()} buying guide
+            </Link>
+            .
+          </p>
+        )}
 
-        {/* Grid + sort toolbar */}
-        <div className="flex-1">
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-sm text-soft">
-              {shown.length} {shown.length === 1 ? 'piece' : 'pieces'}
-            </p>
-            <label className="flex items-center gap-2 text-sm text-soft">
-              Sort
-              <select
-                value={sort}
-                onChange={(e) => setParam('sort', e.target.value === 'featured' ? null : e.target.value)}
-                className="rounded-full border border-ink/10 bg-white px-3 py-1.5 text-sm text-ink focus:border-terra focus:outline-none"
-              >
-                {SORTS.map((s) => (
-                  <option key={s.key} value={s.key}>{s.label}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-
-          {shown.length === 0 ? (
-            <div className="mt-10 rounded-2xl border border-blush bg-white p-10 text-center">
-              <p className="font-display text-xl font-semibold">No pieces match that</p>
-              <p className="mt-2 text-sm text-soft">Try clearing a filter or searching for something else.</p>
-              <button
-                onClick={() => setParams({})}
-                className="mt-5 rounded-full bg-terra px-5 py-2.5 text-sm font-semibold text-white hover:bg-terra-dark"
-              >
-                Show everything
-              </button>
+        <div className="gap-12 lg:flex">
+          {/* Filters */}
+          <aside className="mb-8 shrink-0 lg:mb-0 lg:w-56">
+            <div className="flex items-baseline justify-between">
+              <p className="kicker">Refine</p>
+              {hasFilters && (
+                <button
+                  onClick={() => setParams(sort !== 'featured' ? { sort } : {})}
+                  className="text-[11px] uppercase tracking-[0.2em] text-terra hover:text-terra-dark"
+                >
+                  Clear all
+                </button>
+              )}
             </div>
-          ) : (
-            <div className="mt-5 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3">
-              {shown.map((p) => (
-                <ProductCard key={p.asin} product={p} />
+
+            {q && (
+              <p className="mt-4 border border-blush bg-white px-3 py-2 text-sm text-soft">
+                Search: <span className="font-medium text-ink">“{params.get('q')}”</span>
+              </p>
+            )}
+
+            <p className="mt-6 font-display text-xl font-medium text-ink">Category</p>
+            <div className="mt-2 flex flex-wrap gap-2 lg:flex-col lg:gap-0">
+              <FilterChip active={!category} label="All" count={PRODUCTS.length} onClick={() => setParam('category', null)} />
+              {CATEGORIES.map((c) => (
+                <FilterChip
+                  key={c}
+                  active={category === c}
+                  label={c}
+                  count={PRODUCTS.filter((p) => p.category === c).length}
+                  onClick={() => setParam('category', category === c ? null : c)}
+                />
               ))}
             </div>
-          )}
+
+            <p className="mt-7 font-display text-xl font-medium text-ink">Price</p>
+            <div className="mt-2 flex flex-wrap gap-2 lg:flex-col lg:gap-0">
+              {PRICE_RANGES.map((r) => (
+                <FilterChip
+                  key={r.key}
+                  active={price === r.key}
+                  label={r.label}
+                  onClick={() => setParam('price', price === r.key ? null : r.key)}
+                />
+              ))}
+            </div>
+          </aside>
+
+          {/* Grid + sort toolbar */}
+          <div className="flex-1">
+            {/* Cards carry h3 titles; this keeps the outline h1 > h2 > h3. */}
+            <h2 className="sr-only">Products</h2>
+            <div className="flex items-center justify-between gap-3 border-b border-blush pb-4">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-soft">
+                {shown.length} {shown.length === 1 ? 'piece' : 'pieces'}
+              </p>
+              <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-soft">
+                Sort
+                <select
+                  value={sort}
+                  onChange={(e) => setParam('sort', e.target.value === 'featured' ? null : e.target.value)}
+                  className="border-0 border-b border-ink/25 bg-transparent py-1 pr-6 text-sm normal-case tracking-normal text-ink focus:border-ink focus:outline-none"
+                >
+                  {SORTS.map((s) => (
+                    <option key={s.key} value={s.key}>{s.label}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {shown.length === 0 ? (
+              <div className="mt-10 border border-blush bg-paper p-10 text-center">
+                <p className="font-display text-2xl font-medium">No pieces match that</p>
+                <p className="mt-2 text-sm text-soft">Try clearing a filter or searching for something else.</p>
+                <button onClick={() => setParams({})} className="btn-solid mt-6">
+                  Show everything
+                </button>
+              </div>
+            ) : (
+              <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-3">
+                {shown.map((p) => (
+                  <ProductCard key={p.asin} product={p} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
-function FilterChip({ active, label, onClick }: { active: boolean; label: string; onClick: () => void }) {
+function FilterChip({ active, label, count, onClick }: { active: boolean; label: string; count?: number; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-full px-4 py-2 text-left text-sm font-medium transition-colors lg:rounded-xl ${
-        active ? 'bg-ink text-white' : 'border border-ink/10 bg-white text-soft hover:text-ink lg:border-transparent lg:bg-transparent'
+      aria-pressed={active}
+      className={`border px-3.5 py-2 text-left text-sm transition-colors lg:flex lg:w-full lg:items-baseline lg:justify-between lg:border-0 lg:px-0 lg:py-1.5 ${
+        active ? 'border-ink bg-ink text-cream lg:bg-transparent lg:font-medium lg:text-terra' : 'border-blush bg-white text-soft hover:text-ink lg:bg-transparent'
       }`}
     >
-      {label}
+      <span>{label}</span>
+      {count !== undefined && <span className={`ml-1.5 text-xs ${active ? 'lg:text-terra' : 'text-soft/80'}`}>{count}</span>}
     </button>
   )
 }

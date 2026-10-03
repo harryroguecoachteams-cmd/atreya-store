@@ -21,16 +21,16 @@ export default function SearchBar({ className = '', onSubmitted }: { className?:
         type="search"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="Search torans, bouquets, keepsakes…"
+        placeholder="Search gajras, latkans, thalis"
         aria-label="Search products"
-        className="w-full rounded-full border border-ink/10 bg-white py-2.5 pl-4 pr-11 text-sm text-ink placeholder:text-soft/70 focus:border-terra focus:outline-none"
+        className="w-full border-0 border-b border-ink/25 bg-transparent py-2 pl-0 pr-8 text-sm text-ink placeholder:text-soft/80 focus:border-ink focus:outline-none"
       />
       <button
         type="submit"
         aria-label="Search"
-        className="absolute right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-terra text-white transition-colors hover:bg-terra-dark"
+        className="absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center text-ink/70 transition-colors hover:text-terra"
       >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" />
         </svg>

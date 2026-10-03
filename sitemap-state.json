@@ -1,158 +1,286 @@
 {
   "https://atreya.store/": {
-    "hash": "64d1ed3aba54a345",
-    "lastmod": "2026-08-05"
+    "hash": "9a9c4c34ba040d28",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/shop": {
-    "hash": "fe410cf949fc8722",
-    "lastmod": "2026-08-05"
+    "hash": "6d182d2a3c17ed28",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/diwali-gifting": {
+    "hash": "05cefcce25a22afa",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/collections/gajras": {
-    "hash": "d307c73eaec63094",
-    "lastmod": "2026-08-05"
+    "hash": "01cfd15fda3ea6fd",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/collections/festive-decor": {
-    "hash": "eb9f3a59dcb19279",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/collections/hair-accessories": {
+    "hash": "a52c2140774d2a20",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/collections/pooja-essentials": {
-    "hash": "b16f3783042aa1ac",
-    "lastmod": "2026-08-05"
+    "hash": "219aadede18c82f7",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/collections/door-hangings": {
+    "hash": "905334b3685654c8",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/collections/festive-decor": {
+    "hash": "9da7a71dd9cd157c",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/collections/crochet": {
-    "hash": "9afd6b2715161a05",
-    "lastmod": "2026-08-05"
+    "hash": "ff8d2176067df1c1",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/collections/artificial-flowers": {
-    "hash": "0f23e1d11154d14e",
-    "lastmod": "2026-08-05"
+    "hash": "9c4aa14290415916",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/about": {
-    "hash": "f5f67a3cb6b744d0",
-    "lastmod": "2026-08-05"
+    "hash": "b9f8e27287e1ef31",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/contact": {
-    "hash": "cd8230d36c0131fe",
-    "lastmod": "2026-08-05"
+    "hash": "3285dd48b253a23e",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/shipping-returns": {
-    "hash": "20df456884c122c2",
-    "lastmod": "2026-08-05"
+    "hash": "fa15649d0ab45816",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/privacy": {
-    "hash": "2b081469e71c8c6d",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GG5BVR7R": {
-    "hash": "a9b868ef7d6f90fa",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GDXXM3PR": {
-    "hash": "9e30ebe70c0dad02",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GC6KJCSC": {
-    "hash": "ec0ef09cb509985b",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0G95YC1T9": {
-    "hash": "3deee54366ea18fb",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GDY7RSXY": {
-    "hash": "67ef91df5ad6b4f4",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GDY4D9FN": {
-    "hash": "e57208fd2b56a1a5",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GDV4HTRJ": {
-    "hash": "7972568eb19901b1",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0GDY833NN": {
-    "hash": "6861ef59d2941b85",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0B8XR4XNW": {
-    "hash": "eff06559d402058b",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0B8XRDHPW": {
-    "hash": "84ce07688874a553",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B09QJVDNFW": {
-    "hash": "4374264f5645f285",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B09Y2B4XHL": {
-    "hash": "02e7238947ff3d24",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0HC4FD2F4": {
-    "hash": "43c8023183ee560d",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0HCCGJKQ4": {
-    "hash": "35d116985a919192",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0HCPKG6HW": {
-    "hash": "1f61bf1a0a7fd8bd",
-    "lastmod": "2026-08-05"
-  },
-  "https://atreya.store/product/B0B8XR4W5P": {
-    "hash": "bca0ade19d929768",
-    "lastmod": "2026-08-05"
+    "hash": "62edb4b9301337eb",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HC48P47S": {
-    "hash": "bb35008394fd6935",
-    "lastmod": "2026-08-05"
+    "hash": "f0746ccabe784ef8",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFMB8JJ": {
+    "hash": "967c33367169f3b8",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HF9ZT32L": {
+    "hash": "f63d4a200ca9beb2",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFBKJ8Q6": {
+    "hash": "c83e67e5a2111ea7",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HC479QXR": {
-    "hash": "56a954797bb6337a",
-    "lastmod": "2026-08-05"
+    "hash": "36963a37d5b70117",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFB5PHDK": {
+    "hash": "41ccb04c3ab47034",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFBN6VKM": {
+    "hash": "8bae58c5f131e1d7",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HC49L3MP": {
-    "hash": "e244509f915b4617",
-    "lastmod": "2026-08-05"
+    "hash": "dc33373b6a5221c0",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HC4DHXNK": {
-    "hash": "3a42d4782b2a656b",
-    "lastmod": "2026-08-05"
+    "hash": "8c34aa8af0c08363",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/product/B0HB16BLTK": {
-    "hash": "51985066e6a89864",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/product/B0HD2V6K1M": {
+    "hash": "75dd1130f1f58b99",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HD2H3LF4": {
+    "hash": "1a9028eb3fa87a0d",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFHN4BR": {
+    "hash": "8d6b682a0868f147",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFKDXZD": {
+    "hash": "eca8cc537ae80977",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFJ5DD1": {
+    "hash": "433b77f5920af7f7",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFJRY4C": {
+    "hash": "709118644599892f",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFLGL4V": {
+    "hash": "1cb499ac39615bff",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B09Y2B4XHL": {
+    "hash": "635982f7d065d6ea",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HC4FD2F4": {
+    "hash": "4b7f2bafb0c918a9",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B09MD5M6YP": {
+    "hash": "1b24ee83b401ae9c",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HCCGJKQ4": {
+    "hash": "1748021f8367ea04",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HCPKG6HW": {
+    "hash": "9ae9f33d3a11ffbb",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFQDY4K3": {
+    "hash": "4afeade560522204",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B09QJV7VXZ": {
+    "hash": "5a3477db2873446a",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B09QJVDNFW": {
+    "hash": "60ab21ac22f96f7f",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0B8XRDHPW": {
+    "hash": "a5129af117388b05",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0B8XR4W5P": {
+    "hash": "0a3b5dcef8e636f7",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0B8XR4XNW": {
+    "hash": "5c00bdac45e90325",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HJ8HKMWC": {
+    "hash": "7bb2f48202dbe3c2",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HJ8P8NBY": {
+    "hash": "84584f5dbf03abe8",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HJ8S6WZZ": {
+    "hash": "3176a2245c5a2236",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HJ8KSPP7": {
+    "hash": "4a5225d59ce31dc5",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HJ8Z86C8": {
+    "hash": "24f8a9e555064bc7",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HHGC9GYV": {
+    "hash": "4627ab85b1066ef9",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFPM5MZB": {
+    "hash": "bfac87ce19afc320",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFPJJSW4": {
+    "hash": "b1b7163c49592923",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFQC184J": {
+    "hash": "1c0b2451e0de0ba6",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFPJTFVH": {
+    "hash": "ddcb3842a319d37c",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFQ8KM5T": {
+    "hash": "7b14887941b82b1f",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFQMDHJX": {
+    "hash": "1284dfcacf39b2de",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HB4N2JSH": {
-    "hash": "11f0b4c7db97d97d",
-    "lastmod": "2026-08-05"
+    "hash": "8c235ca16f4d6008",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/product/B0CMDJR8QM": {
-    "hash": "9dccb3fd1c51a850",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/product/B0HF4N37JD": {
+    "hash": "1040aedaa4d19460",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/product/B0CMDK5J4T": {
-    "hash": "fcd912f93ffedf76",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/product/B0HF4PXH7S": {
+    "hash": "0a7a310c8b247578",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/product/B0CMDJBYZ4": {
-    "hash": "f88d934455dafcd9",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/product/B0HF9ZSQY3": {
+    "hash": "9bd93499db252a6f",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HF9ZJXT3": {
+    "hash": "88a8d7dd4724e598",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFGMKDY": {
+    "hash": "0369edd1c2dc4d7f",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFBM7WZG": {
+    "hash": "7689316d8b19b1e0",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0GDXXM3PR": {
+    "hash": "6f1048c448179ec0",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0GC6KJCSC": {
+    "hash": "eca1f7d9a8f1b466",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B0HC44WKBT": {
-    "hash": "35e82686b773b46a",
-    "lastmod": "2026-08-05"
+    "hash": "ed4e1d898ba5b878",
+    "lastmod": "2026-10-03"
   },
-  "https://atreya.store/product/B0GDY75WHT": {
-    "hash": "8a978adaf3f68a82",
-    "lastmod": "2026-08-05"
+  "https://atreya.store/product/B0HGM61K1N": {
+    "hash": "7cd552803c4677ab",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGFFKH66": {
+    "hash": "afdff85dade37369",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HGF9GXPP": {
+    "hash": "2f360f7a192c2ac7",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HF9XYGT7": {
+    "hash": "b72582c75208c037",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFPS29NW": {
+    "hash": "3ebb302399b761d4",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFQ1KFPJ": {
+    "hash": "429475c8da400811",
+    "lastmod": "2026-10-03"
+  },
+  "https://atreya.store/product/B0HFPLPKXM": {
+    "hash": "6a3a5cd2c0e07098",
+    "lastmod": "2026-10-03"
   },
   "https://atreya.store/product/B09Y29QS4V": {
-    "hash": "01553e866cc63700",
-    "lastmod": "2026-08-05"
+    "hash": "9d531db665a366e0",
+    "lastmod": "2026-10-03"
   }
 }
