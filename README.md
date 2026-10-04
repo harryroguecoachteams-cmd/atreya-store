@@ -30,6 +30,7 @@ Contact details (WhatsApp number, email) live in `src/config.ts`.
 ```bash
 node scripts/fetch-products.mjs   # products.ts, the base sitemap, the .htaccess 410 list
 python scripts/product-thumbs.py  # 400px WebP thumbnails for cards and galleries
+node scripts/bestsellers.mjs      # Bestsellers order (needs: node orders-trend.js 45 --items 45 in atreya-aplus)
 npm run build                     # outputs dist/
 node scripts/prerender.mjs        # a static snapshot per route, for crawlers (+ font preloads)
 node scripts/sitemap.mjs          # stamps lastmod + image entries into the sitemap
@@ -48,7 +49,8 @@ node scripts/fetch-catalog-spapi.mjs <ASIN>... # images, copy and specs from SP-
 Lifestyle photography for the story sections lives in `public/story/` and is
 rebuilt with `python scripts/story-images.py` (sources are listing photos with
 no text on them; the mapping is in the script). The share card is
-`python scripts/og-image.py`.
+`python scripts/og-image.py`. The home page category circles are 192px crops made by
+`python scripts/circle-thumbs.py` (run it after story-images.py).
 
 The lotus wordmark (navbar, footer, favicon, share card, schema logo) is traced
 from `brand/atreya-lotus-wordmark-source.png`. To change it, replace that file and
