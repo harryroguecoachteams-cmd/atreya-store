@@ -59,8 +59,16 @@ try {
     await state('back -> product');
     await click('a[aria-label="Atreya, home"]');
     await state('-> home (wordmark)');
-    await click('a[href="/collections/pooja-essentials"].link-draw');
-    await state('-> pooja (chapter link)');
+    // Bestsellers tabs: a client-side filter on the hydrated home page.
+    await page.evaluate(() => [...document.querySelectorAll('#popular button')].find((b) => b.textContent === 'Gajras').click());
+    await sleep(300);
+    const tabOk = await page.evaluate(() => {
+      const cats = [...document.querySelectorAll('#popular article p.text-gold')].map((p) => p.textContent);
+      return cats.length > 0 && cats.every((c) => c === 'Gajras');
+    });
+    steps.push(`${width} ${tabOk ? 'OK  ' : 'FAIL'} bestsellers tab Gajras`);
+    await click('main ul li a[href="/collections/pooja-essentials"]');
+    await state('-> pooja (category circle)');
     await click('footer a[href="/diwali-gifting"]');
     await state('-> diwali (footer)');
     await click('footer a[href="/about"]');

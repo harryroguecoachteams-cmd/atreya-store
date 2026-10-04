@@ -6,7 +6,10 @@ const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
 
 // No discount badge. Percent-off bursts are the discount theatre the brand
 // system rules out, and the MRP is still shown, quietly, beside the price.
-export default function ProductCard({ product }: { product: Product }) {
+// `priority` is for the first cards of a grid that opens above the fold: their
+// photo is the largest thing on the first screen, so it must not wait for lazy
+// loading.
+export default function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const hoverImage = product.images[1]
 
   return (
@@ -18,7 +21,8 @@ export default function ProductCard({ product }: { product: Product }) {
             srcSet={thumbSrcSet(product.image)}
             sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, 46vw"
             alt={`${product.name} by Atreya`}
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : undefined}
             decoding="async"
             className={`h-full w-full object-cover transition-all duration-500 ${
               hoverImage ? 'group-hover:opacity-0' : 'group-hover:scale-[1.03]'

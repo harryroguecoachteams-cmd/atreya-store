@@ -8,6 +8,8 @@ import StoryImage from '../components/StoryImage'
 import NotFound from './NotFound'
 import { SITE_URL, isHandmade, whatsappLink } from '../config'
 
+const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
+
 export default function Collection() {
   const { slug } = useParams()
   const collection = slug ? collectionBySlug(slug) : undefined
@@ -88,63 +90,89 @@ export default function Collection() {
   const ours = items.filter((p) => isHandmade(p.category, p.asin)).length
   const kicker =
     ours === 0 ? 'Handpicked by us' : ours === items.length ? 'Handmade by us' : 'Handmade and handpicked by us'
+  const minPrice = Math.min(...items.map((p) => p.price))
   const bulkMessage = `Hi Atreya! I'd like a bulk quote for ${collection.category}. Quantity and date: `
 
   return (
     <>
-      {/* Banner: the words on cream, a photograph of the range in use */}
+      {/* Compact banner: what the shelf is, how many, from what price, and the
+          products right under it. The lead paragraph is clamped, not cut, so
+          the whole of it is still in the page for crawlers. */}
       <section className="border-b border-blush">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 pb-12 pt-6 lg:grid-cols-12 lg:items-center lg:gap-14 lg:pb-16">
-          <div className="lg:col-span-6">
-            <nav aria-label="Breadcrumb" className="text-[11px] uppercase tracking-[0.2em] text-soft">
-              <Link to="/" className="hover:text-terra">Home</Link>
-              <span className="mx-2">/</span>
-              <Link to="/shop" className="hover:text-terra">Shop</Link>
-              <span className="mx-2">/</span>
-              <span className="text-ink">{collection.category}</span>
-            </nav>
-            <p className="kicker mt-10">{kicker}</p>
-            <h1 className="mt-4 font-display text-[38px] font-medium leading-[1.05] text-ink sm:text-5xl lg:text-[54px]">
-              {collection.heading}
-            </h1>
-            <p className="mt-6 max-w-xl leading-relaxed text-soft">{collection.intro}</p>
-            <a href="#pieces" className="link-draw mt-8">
-              See the {items.length} {items.length === 1 ? 'piece' : 'pieces'}
-            </a>
-          </div>
-          <div className="order-first lg:order-none lg:col-span-6">
-            <div className="overflow-hidden bg-sand">
-              <StoryImage
-                name={collection.image}
-                alt={collection.imageAlt}
-                priority
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="aspect-[4/3] w-full object-cover lg:aspect-[5/5.2]"
-              />
+        <div className="mx-auto max-w-7xl px-4 pb-6 pt-6 sm:pt-8">
+          <nav aria-label="Breadcrumb" className="text-[11px] uppercase tracking-[0.2em] text-soft">
+            <Link to="/" className="hover:text-terra">Home</Link>
+            <span className="mx-2">/</span>
+            <Link to="/shop" className="hover:text-terra">Shop</Link>
+            <span className="mx-2">/</span>
+            <span className="text-ink">{collection.category}</span>
+          </nav>
+          <div className="mt-5 grid gap-6 lg:grid-cols-12 lg:items-center lg:gap-12">
+            <div className="lg:col-span-8">
+              <p className="kicker">{kicker}</p>
+              <h1 className="mt-3 font-display text-[34px] font-medium leading-[1.05] text-ink sm:text-[44px]">
+                {collection.heading}
+              </h1>
+              <p className="mt-3 text-[13px] font-medium uppercase tracking-[0.16em] text-terra">
+                {items.length} {items.length === 1 ? 'product' : 'products'}, from {inr(minPrice)}
+                <span className="text-soft"> · Delivered by Amazon.in</span>
+              </p>
+              <p className="mt-3 line-clamp-3 max-w-2xl leading-relaxed text-soft lg:line-clamp-2">{collection.intro}</p>
+              <a href="#guide" className="mt-2 inline-block text-[13px] font-medium text-ink underline underline-offset-4 hover:text-terra">
+                Read the buying guide
+              </a>
+            </div>
+            <div className="hidden lg:col-span-4 lg:block">
+              <div className="overflow-hidden bg-sand">
+                <StoryImage
+                  name={collection.image}
+                  alt={collection.imageAlt}
+                  priority
+                  sizes="30vw"
+                  className="aspect-[16/11] w-full object-cover"
+                />
+              </div>
             </div>
           </div>
+          <nav aria-label="Other collections" className="no-scrollbar -mx-4 mt-6 flex gap-2 overflow-x-auto px-4">
+            {COLLECTIONS.map((c) =>
+              c.slug === collection.slug ? (
+                <span key={c.slug} aria-current="page" className="shrink-0 border border-ink bg-ink px-3.5 py-1.5 text-[13px] text-cream">
+                  {c.category}
+                </span>
+              ) : (
+                <Link
+                  key={c.slug}
+                  to={`/collections/${c.slug}`}
+                  className="shrink-0 border border-blush bg-white px-3.5 py-1.5 text-[13px] text-soft transition-colors hover:border-ink/40 hover:text-ink"
+                >
+                  {c.category}
+                </Link>
+              ),
+            )}
+          </nav>
         </div>
       </section>
 
-      <section id="pieces" className="mx-auto max-w-7xl scroll-mt-28 px-4 py-14">
+      <section id="pieces" className="mx-auto max-w-7xl scroll-mt-28 px-4 pb-14 pt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="font-display text-3xl font-medium">
-            {items.length} {items.length === 1 ? 'piece' : 'pieces'} in {collection.category}
+          <h2 className="font-display text-[26px] font-medium">
+            {items.length} {items.length === 1 ? 'product' : 'products'} in {collection.category}
           </h2>
           <Link to="/shop" className="link-draw">
             Shop everything
           </Link>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
-          {items.map((p) => (
-            <ProductCard key={p.asin} product={p} />
+        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4">
+          {items.map((p, i) => (
+            <ProductCard key={p.asin} product={p} priority={i < 2} />
           ))}
         </div>
       </section>
 
       {/* The buying guide. This is the part that earns the ranking, so it is
           real advice rather than keyword filler. */}
-      <section className="bg-paper py-16 sm:py-20">
+      <section id="guide" className="scroll-mt-28 bg-paper py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <p className="kicker text-center">The buying guide</p>
           <div className="ornament mt-5 justify-center" aria-hidden="true">
@@ -213,7 +241,7 @@ export default function Collection() {
                 </div>
                 <p className="mt-3 font-display text-xl font-medium leading-tight text-ink group-hover:text-terra">{c.category}</p>
                 <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-soft">
-                  {PRODUCTS.filter((q) => q.category === c.category).length} pieces
+                  {PRODUCTS.filter((q) => q.category === c.category).length} products
                 </p>
               </Link>
             ))}

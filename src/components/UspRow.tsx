@@ -26,12 +26,12 @@ const PROMISES = [
 export default function UspRow() {
   return (
     <section aria-label="Our promise" className="border-y border-blush bg-paper">
-      <div className="mx-auto grid max-w-7xl gap-y-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-blush">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 gap-y-8 px-4 py-10 sm:py-12 lg:grid-cols-4 lg:gap-x-0 lg:divide-x lg:divide-blush">
         {PROMISES.map((p) => (
           <div key={p.n} className="px-0 text-center sm:px-6">
             <p className="font-display text-xl italic text-gold">{p.n}</p>
-            <p className="mt-2 font-display text-[22px] font-medium leading-tight text-ink">{p.title}</p>
-            <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-soft">{p.sub}</p>
+            <p className="mt-2 font-display text-[19px] font-medium leading-tight text-ink sm:text-[22px]">{p.title}</p>
+            <p className="mx-auto mt-2 max-w-xs text-[13px] leading-relaxed text-soft sm:text-sm">{p.sub}</p>
           </div>
         ))}
       </div>
