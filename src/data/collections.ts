@@ -259,7 +259,7 @@ export const COLLECTIONS: Collection[] = [
     description:
       'Artificial flower ladis, mogra and pom pom garlands, jasmine torans and golden and silver hanging bells for Diwali, pooja rooms, mandaps and wedding decor. From Rs 189, ships via Amazon.in.',
     intro:
-      'Everything on this page hangs. Door frames, mandap poles, pooja room shelves, staircase railings and the back of a photo booth are the places these end up, and the reason people buy artificial rather than fresh is simple: a marigold ladi strung on the morning of Diwali is brown by the third day, and the decoration has to last the whole festival.',
+      'Almost everything on this page hangs. Door frames, mandap poles, pooja room shelves, staircase railings and the back of a photo booth are the places these end up, and the reason people buy artificial rather than fresh is simple: a marigold ladi strung on the morning of Diwali is brown by the third day, and the decoration has to last the whole festival. The one exception is the green fabric parrots, which have no loop: they are tied onto a toran or a jhula, laid on a shagun tray, or glued into craft work.',
     body: [
       {
         heading: 'How much length you actually need',
@@ -268,6 +268,10 @@ export const COLLECTIONS: Collection[] = [
       {
         heading: 'Bells: pack sizes and where they go',
         text: 'Hanging bells at 2.5 inches are the size used on torans, door hangings and jhoolas, small enough to sound bright rather than heavy. A pack of 12 covers one door hanging. A pack of 24 does a door and a window. The pack of 48 is for people decorating a whole house for Diwali or making torans to sell, and works out cheapest per bell by a distance. Silver suits cooler palettes and white flowers; gold sits better with marigold and traditional red. Both come in all three pack sizes.',
+      },
+      {
+        heading: 'Fabric parrots: a pair or two pairs',
+        text: 'The green parrots are made for tying, laying and gluing rather than standing: they have no stand or base and do not sit up on their own. Each is built from small leaf-cut pieces of lime-green cotton layered like feathers, with a stone-set red collar and a glossy maroon beak, about 22 cm from beak to tail. A few turns of thread fix one onto a toran, a bandhanwar or a jhula post; they lie well on a shagun or trousseau tray or in a gift hamper; and craft glue sets them into wreaths and wall hangings. A pair suits one toran or tray, and the pack of four covers a toran and a jhula in one order.',
       },
       {
         heading: 'Storing decor between festivals',
@@ -352,12 +356,12 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: 'artificial-flowers',
     category: 'Artificial Flowers',
-    heading: 'Artificial flowers: loose mogra buds and lotus buds',
-    title: 'Artificial Mogra Flowers & Lotus Buds for Pooja | Atreya',
+    heading: 'Artificial flowers: mogra buds, lotus buds and velvet roses',
+    title: 'Artificial Mogra, Lotus Buds & Velvet Rose Heads | Atreya',
     description:
-      'Loose white artificial mogra buds by the 50 g pack for gajra making and craft, and deep pink artificial lotus buds in a pack of 12 for the thali, urli and mandir. Ships via Amazon.in.',
+      'Loose white artificial mogra buds by the 50 g pack for gajra making and craft, deep pink lotus buds and dark red velvet rose heads in packs of 12 for the thali, mandir, gift boxes and craft. Ships via Amazon.in.',
     intro:
-      'Both things on this page are raw material rather than finished decor. The loose mogra is sold by weight for people who are making something: gajras, torans, hair work and craft. The lotus buds are single stems you place yourself, on a pooja thali, in an urli, in the mandir or floating in a water bowl.',
+      'Everything on this page is raw material rather than finished decor. The loose mogra is sold by weight for people who are making something: gajras, torans, hair work and craft. The lotus buds and the velvet rose heads are single flowers you place yourself, on a pooja thali, in the mandir, on a gift box or in craft work.',
     body: [
       {
         heading: 'Buying mogra buds by weight',
@@ -366,6 +370,10 @@ export const COLLECTIONS: Collection[] = [
       {
         heading: 'Lotus buds for the thali and the urli',
         text: 'Each bud is about 5 cm across and 6 cm tall, which is the scale for a pooja thali, an urli or a small vase rather than a floor arrangement. The petals are soft foam over a paper wrapped stem that can be trimmed to whatever length the container needs. Twelve is enough to ring a thali or float a handful in a water bowl for Janmashtami, Diwali or Navratri, and they hold their deep pink without water or sunlight.',
+      },
+      {
+        heading: 'Velvet rose heads, and where they go',
+        text: 'The rose heads are deep red velvet, about 5 cm across and 3 cm deep, with no stem, so they sit face up exactly where you put them: in a ring around a diya on a thali, down the posts of a Janmashtami jhula, on the lid of a gift box or in the corner of a wedding hamper. Twelve does one thali or one tray properly. Velvet is the one material on this page that must stay dry, so these are for placing, never for floating.',
       },
       {
         heading: 'Keeping artificial flowers looking new',
@@ -379,7 +387,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         q: 'Can the lotus buds float in water?',
-        a: 'Yes. They are made to sit on a thali or float in a water bowl or an urli. Take them out and let them dry after the pooja rather than leaving them in water for days.',
+        a: 'Yes. They are made to sit on a thali or float in a water bowl or an urli. Take them out and let them dry after the pooja rather than leaving them in water for days. The velvet rose heads are different: velvet marks in water, so keep those dry.',
       },
       {
         q: 'Do artificial flowers have a smell?',
@@ -391,7 +399,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         q: 'Can I order these in bulk?',
-        a: 'For events, salons and decorators, yes. Message us on WhatsApp with the quantity. The mogra is white and the lotus buds are deep pink.',
+        a: 'For events, salons and decorators, yes. Message us on WhatsApp with the quantity. The mogra is white, the lotus buds are deep pink and the rose heads are dark red.',
       },
     ],
     heroAsin: 'B0HC44WKBT',

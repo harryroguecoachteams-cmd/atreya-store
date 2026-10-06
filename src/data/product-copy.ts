@@ -173,4 +173,10 @@ export const PRODUCT_COPY: Record<string, string> = {
   // Craft Supplies
   B09Y29QS4V:
     'A thousand white pearl beads at 6 mm, the working size for jewelry making, gajra and veni stringing, embroidery, rangoli edges, invitation cards and school craft. Six millimeters is small enough to read as detail and large enough to thread without losing your temper. Sold in bulk because anyone who needs pearl beads needs more than a handful, and running out halfway through a set is worse than over-ordering.',
+  B0HM3GW6VM:
+    'A matching pair of green fabric parrots, each built leaf by leaf from small cut pieces of lime-green cotton layered like feathers, with a red collar set with small clear stones and a glossy maroon beak. Each is about 22 cm from beak to tail. They have no stand or base, so they are made to be tied, laid or glued: a few turns of thread fix them onto a toran or the posts of a Janmashtami jhula, they lie on a shagun or trousseau tray or nestle into a gift hamper, and craft glue sets them into wreaths and wall hangings. Fabric rather than carved wood, so keep them dry and box them between festivals.',
+  B0HM3J4BCW:
+    'Four green fabric parrots, two matching pairs, each made of small leaf-cut pieces of lime-green cotton layered like feathers, finished with a stone-set red collar and a glossy maroon beak, about 22 cm from beak to tail. With no stand or base they are tied, laid or glued rather than stood up: four covers a toran and a jhula in one order, or a whole wedding tray. Thread and glue are not included. Fabric, light in the hand: keep them dry and store them boxed.',
+  B0HM382PGK:
+    'Twelve deep red velvet rose heads, about 5 cm across and 3 cm deep, with no stems, so each one sits face up exactly where you place it. Ring a diya on a pooja thali, line the posts of a Janmashtami jhula, top a gift box or finish a wedding hamper, or glue them into a toran, a wreath or hair work. The velvet has a soft sheen that reads as real flowers across a room. Nothing wilts and nothing needs water; velvet must stay dry, so these are for placing, never for floating.',
 }

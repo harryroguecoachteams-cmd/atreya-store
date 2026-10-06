@@ -11,7 +11,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // writes all_listings.tsv in this exact schema, then copy it here with the new
 // date. The old July report predated the entire gajra, garland and pooja aasan
 // range, so every new product was invisible to this script.
-const REPORT = 'E:/atreya/Active+Listings+Report_10-03-2026.txt';
+const REPORT = 'E:/atreya/Active+Listings+Report_10-06-2026.txt';
 const IMG_DIR = join(ROOT, 'public', 'products');
 const OUT = join(ROOT, 'src', 'data', 'products.ts');
 const HTACCESS = join(ROOT, 'public', '.htaccess');
@@ -60,6 +60,8 @@ const CATALOG = [
   { asin: 'B0B8XRDHPW', shortName: 'Silver Hanging Bells 2.5" (Pack of 12)', category: 'Festive Décor' },
   { asin: 'B0B8XR4W5P', shortName: 'Silver Hanging Bells 2.5" (Pack of 24)', category: 'Festive Décor' },
   { asin: 'B0B8XR4XNW', shortName: 'Silver Hanging Bells 2.5" (Pack of 48)', category: 'Festive Décor' },
+  { asin: 'B0HM3GW6VM', shortName: 'Green Fabric Parrots for Toran and Jhula (Pack of 2)', category: 'Festive Décor' },
+  { asin: 'B0HM3J4BCW', shortName: 'Green Fabric Parrots for Toran and Jhula (Pack of 4)', category: 'Festive Décor' },
 
   // Latkans hang at the sides of a door or mandir, one piece per drop, which
   // is a different purchase from a garland run across the top.
@@ -93,6 +95,7 @@ const CATALOG = [
   // buds for gajra making and the word must never be dropped from the tile.
   { asin: 'B0HC44WKBT', shortName: 'White Artificial Mogra Flowers (50 g Pack)', category: 'Artificial Flowers' },
   { asin: 'B0HGM61K1N', shortName: 'Artificial Lotus Buds (Pack of 12)', category: 'Artificial Flowers' },
+  { asin: 'B0HM382PGK', shortName: 'Dark Red Velvet Rose Heads (Pack of 12)', category: 'Artificial Flowers' },
 
   { asin: 'B0HGFFKH66', shortName: 'Kids Pink Bear Sunglasses with Bow Clips', category: 'Kids' },
   { asin: 'B0HGF9GXPP', shortName: 'Kids Brown Bear Sunglasses with Lace Bow Clips', category: 'Kids' },
