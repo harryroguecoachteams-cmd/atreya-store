@@ -104,7 +104,16 @@ export default function ProductDetail() {
 
   if (!product) return <NotFound />
 
-  const related = PRODUCTS.filter((p) => p.category === product.category && p.asin !== product.asin).slice(0, 4)
+  // Rotate through the category instead of always taking its first four, so
+  // every product gets linked from its siblings (a fixed slice left the later
+  // products with no internal links and Google never crawled them). Small
+  // categories are topped up with the next products in the catalogue.
+  const siblings = PRODUCTS.filter((p) => p.category === product.category)
+  const at = siblings.findIndex((p) => p.asin === product.asin)
+  const rotated = [...siblings.slice(at + 1), ...siblings.slice(0, at)]
+  const pos = PRODUCTS.findIndex((p) => p.asin === product.asin)
+  const others = [...PRODUCTS.slice(pos + 1), ...PRODUCTS.slice(0, pos)].filter((p) => p.category !== product.category)
+  const related = [...rotated, ...others].slice(0, 4)
   const bulkMessage = `Hi Atreya! I'd like a bulk quote for: ${product.name} (${product.asin}). Quantity: `
   const ours = isHandmade(product.category, product.asin)
   // The first sentence of the story is set large, as the lead, and the rest
